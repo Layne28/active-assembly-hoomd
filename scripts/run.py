@@ -292,11 +292,15 @@ def main():
     simulation.operations.writers.append(gsd_writer)
 
     #Add logger
-    logger = hoomd.logging.Logger(categories=['scalar', 'string'])
-    logger.add(simulation, quantities=['timestep'])
+    progress_logger = hoomd.logging.Logger(categories=['scalar', 'string'])
+    logger = hoomd.logging.Logger()
+    progress_logger.add(simulation, quantities=['timestep', 'tps'])
+    logger.add(wca, quantities=['energies', 'forces', 'virials'])
     table = hoomd.write.Table(trigger=hoomd.trigger.Periodic(period=freq),
-                              logger=logger)
+                              logger=progress_logger)
     simulation.operations.writers.append(table)
+
+    gsd_writer.logger = logger
 
     #Run
     print('running...')
@@ -309,6 +313,7 @@ def main():
         active_force = ActiveForce.ActiveNoiseForce(xp.array(noisetraj), params['chunksize'], edges, spacing, interpolation, simulation.device)
         integrator.forces.append(active_force)
         simulation.run(stepChunkSize)
+        gsd_writer.flush()
         integrator.forces.remove(active_force)
     print('done')
 
