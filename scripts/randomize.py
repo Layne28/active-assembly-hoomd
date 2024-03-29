@@ -6,7 +6,7 @@ import gsd.hoomd
 import numpy as np
 import argparse
 import os
-import GPUtil
+#import GPUtil
 
 def main():
 
@@ -40,7 +40,7 @@ def main():
                         help="Folder to which to save file",
                         type=str,
                         dest="out_folder",
-                        default="initial_configurations/equil")
+                        default="$SCRATCH/active-assembly-hoomd/initial_configurations/equil")
     
     parser.add_argument("-s", "--seed",
                         help="Random seed (indexes line in seed file)",
@@ -52,7 +52,7 @@ def main():
                         help="File containing random seeds",
                         type=str,
                         dest="seed_file",
-                        default="master_seeds.txt")
+                        default="$HOME/master_seeds.txt")
 
     args = parser.parse_args()
 
@@ -62,6 +62,8 @@ def main():
     init_style = args.init_style
     seed = args.seed
     seed_file = args.seed_file
+    seed_file = os.path.expandvars(seed_file)
+    out_folder = os.path.expandvars(out_folder)
     Lx = args.L
     Ly = args.L
     if dim==3:
@@ -87,18 +89,18 @@ def main():
         exit()
 
     #Read seed from file
+    seednum = seed
     with open(seed_file) as f:
         lines = f.readlines()
         seed_line = lines[seed-1]
         seed = int(seed_line.strip())
     print('Using random seed: %d' % seed)
 
-
     #Create simulation state
-    if len(GPUtil.getAvailable())>0:
-        xpu = hoomd.device.GPU()
-    else:
-        xpu = hoomd.device.CPU()
+    #if len(GPUtil.getAvailable())>0:
+    #    xpu = hoomd.device.GPU()
+    #else:
+    xpu = hoomd.device.CPU()
     simulation = hoomd.Simulation(device=xpu, seed=1)
     init_file = 'initial_configurations/lattice/lattice_init_style=%s_dim=%d_phi=%f_L=%f.gsd' % (init_style, dim, phi, Lx)
     simulation.create_state_from_gsd(filename=init_file)
@@ -133,7 +135,7 @@ def main():
     print('done')
 
     #Save randomized configuration
-    hoomd.write.GSD.write(state=simulation.state, filename=out_folder + '/random_dim=%d_phi=%f_L=%f_seed=%d.gsd' % (dim, phi, Lx, seed), mode='wb')
+    hoomd.write.GSD.write(state=simulation.state, filename=(out_folder + '/random_dim=%d_phi=%f_L=%f_seed=%d.gsd' % (dim, phi, Lx, seednum)), mode='wb')
     
 
 main()
