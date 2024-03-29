@@ -101,7 +101,7 @@ def main():
     #    xpu = hoomd.device.GPU()
     #else:
     xpu = hoomd.device.CPU()
-    simulation = hoomd.Simulation(device=xpu, seed=1)
+    simulation = hoomd.Simulation(device=xpu, seed=seed)
     init_file = 'initial_configurations/lattice/lattice_init_style=%s_dim=%d_phi=%f_L=%f.gsd' % (init_style, dim, phi, Lx)
     simulation.create_state_from_gsd(filename=init_file)
 
