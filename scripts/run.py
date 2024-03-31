@@ -170,6 +170,7 @@ def main():
     epsilon = 1.0
     nsteps=int(sim_time/dt)
     freq=int(record_time_freq/dt)
+    print('freq', freq)
     stepChunkSize=int(50)
     littleChunkSize=50
     
@@ -340,7 +341,6 @@ def main():
     #Run
     print('running...')
     #Treat quenched case separately
-    print('quenched case')
     if math.isinf(tau):
         if do_output_noise==1:
             if dim==2:
@@ -369,7 +369,13 @@ def main():
     else:
         nchunks = nsteps//stepChunkSize
         if do_output_noise==1:
-            noise_writer = NoiseWriter.NoiseWriter(dims, spacing, va, Lambda, tau, dt, out_folder_noise)
+            if dim==2:
+                newdims = np.array([grid_size, grid_size])
+                newspacing = np.array([params['dx'], params['dx']])
+            else:
+                newdims = np.array([grid_size, grid_size, grid_size])
+                newspacing = np.array([params['dx'], params['dx'], params['dx']])
+            noise_writer = NoiseWriter.NoiseWriter(newdims, newspacing, va, Lambda, tau, dt, out_folder_noise)
         step = 0
         for c in range(nchunks):
             step = c*stepChunkSize
@@ -391,7 +397,7 @@ def main():
             #run simulation
             simulation.run(stepChunkSize)
             logger.remove(active_force)
-            gsd_writer.flush()
+            #gsd_writer.flush()
             integrator.forces.remove(active_force)
 
         print('done')
