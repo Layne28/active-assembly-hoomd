@@ -170,7 +170,6 @@ def main():
     epsilon = 1.0
     nsteps=int(sim_time/dt)
     freq=int(record_time_freq/dt)
-    print('freq', freq)
     stepChunkSize=int(50)
     littleChunkSize=50
     
@@ -308,7 +307,7 @@ def main():
     params['D'] = va**2
     params['cov_type'] = cov_type
     params['verbose'] = False
-    if xpu.device=='GPU':
+    if xp==cp:
         params['xpu'] = 'gpu'
     else:
         params['xpu'] = 'cpu'
