@@ -3,8 +3,9 @@
 
 #SBATCH -A m4494
 #SBATCH --qos=regular
-#SBATCH --nodes=5
+#SBATCH --nodes=1
 #SBATCH --constraint=gpu
+#SBATCH --gpus-per-node=4
 #SBATCH --time=12:00:00
 
 module load parallel
@@ -23,4 +24,4 @@ Lambdas=(1.0 3.0 10.0 30.0)
 vas=(1.0)
 seeds=($(seq 1 $nseed))
 
-srun parallel -k --jobs 20 python $HOME/active-assembly-hoomd/scripts/run.py --phi ::: ${phis[@]} ::: -L ::: ${Ls[@]} ::: --seed ::: ${seeds[@]} ::: --tau ::: ${taus[@]} ::: --lambda ::: ${Lambdas[@]} ::: --va ::: ${vas[@]}
+srun --no-kill --wait=0 parallel -k --jobs 4 python $HOME/active-assembly-hoomd/scripts/run.py --phi ::: ${phis[@]} ::: -L ::: ${Ls[@]} ::: --seed ::: ${seeds[@]} ::: --tau ::: ${taus[@]} ::: --lambda ::: ${Lambdas[@]} ::: --va ::: ${vas[@]}

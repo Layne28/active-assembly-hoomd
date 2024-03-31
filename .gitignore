@@ -2,3 +2,4 @@
 /random.gsd
 /trajectory.gsd
 *.gsd
+slurm*.out

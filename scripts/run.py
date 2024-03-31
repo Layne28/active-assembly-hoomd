@@ -6,7 +6,7 @@ import numpy as np
 import math
 import argparse
 import os
-import GPUtil
+#import GPUtil
 
 from ActiveNoise import noise as ActiveNoiseGen
 import ActiveNoiseForce as ActiveForce
@@ -170,8 +170,8 @@ def main():
     epsilon = 1.0
     nsteps=int(sim_time/dt)
     freq=int(record_time_freq/dt)
-    stepChunkSize=int(50)
-    littleChunkSize=50
+    stepChunkSize=int(200)
+    littleChunkSize=200
     
     #Check that parameters have acceptable values
     if phi<0.0 or phi>1.0:
@@ -250,7 +250,7 @@ def main():
         os.makedirs(out_folder_noise)
 
     #check for GPU vs CPU and create simulation state
-    if len(GPUtil.getAvailable())>0:
+    if CUPY_IMPORTED:
         print('Using GPU')
         xp = cp
         xpu = hoomd.device.GPU()
@@ -258,7 +258,7 @@ def main():
         print('Using CPU')
         xp = np
         xpu = hoomd.device.CPU()
-    simulation = hoomd.Simulation(device=xpu, seed=1)
+    simulation = hoomd.Simulation(device=xpu, seed=seed)
 
     #Load initial configuration
     input_file = in_folder
@@ -341,6 +341,7 @@ def main():
     print('running...')
     #Treat quenched case separately
     if math.isinf(tau):
+        print('quenched')
         if do_output_noise==1:
             if dim==2:
                 newdims = np.array([grid_size, grid_size])
