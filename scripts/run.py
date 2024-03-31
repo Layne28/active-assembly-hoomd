@@ -3,12 +3,14 @@
 import hoomd
 import gsd.hoomd
 import numpy as np
+import math
 import argparse
 import os
 import GPUtil
 
 from ActiveNoise import noise as ActiveNoiseGen
 import ActiveNoiseForce as ActiveForce
+import NoiseWriter
 
 try:
     import cupy as cp
@@ -99,13 +101,13 @@ def main():
                         default="wca")
 
     parser.add_argument("-f", "--record_time_freq",
-                        help="time interval (in units t_WCA) at which to output configurations",
+                        help="time interval (in units t_LJ) at which to output configurations",
                         type=float,
                         dest="record_time_freq",
                         default=0.25)
     
     parser.add_argument("-t", "--sim_time",
-                        help="total simulation time (in units t_WCA)",
+                        help="total simulation time (in units t_LJ)",
                         type=float,
                         dest="sim_time",
                         default=1000)
@@ -180,6 +182,12 @@ def main():
         print('Error: can only work in dimensions 2 or 3.')
         exit()
 
+    #Check for (arbitrary) parameter set for which we'll output active noise
+    if va==1.0 and phi==0.1 and kT==0.0 and potential=='wca':
+        do_output_noise = 1
+    else:
+        do_output_noise = 0
+
     #Read seed from file
     seednum = seed
     with open(seed_file) as f:
@@ -193,12 +201,30 @@ def main():
         os.makedirs(out_folder)
 
     #Make subfolder for output
+    out_folder_noise = out_folder + '/noise'
+    out_folder_noise += '/%dd' % dim
+    if math.isinf(tau):
+        out_folder_noise += '/quenched'
+    else:
+        out_folder_noise += '/tau=%f' % tau
+    out_folder_noise += '/lambda=%f' % Lambda
+    if dim==2:
+        out_folder_noise += '/nx=%d_ny=%d' % (grid_size, grid_size)
+    else:
+        out_folder_noise += '/nx=%d_ny=%d_nz=%d' % (grid_size, grid_size, grid_size)
+    out_folder_noise += '/%s' % compressibility
+    out_folder_noise += '/%s' % cov_type
+    out_folder_noise += '/seed=%d' % seednum
+
     out_folder += '/%s' % potential
     out_folder += '/%dd' % dim
     out_folder += '/kT=%f' % kT
     out_folder += '/phi=%f' % phi
     out_folder += '/va=%f' % va
-    out_folder += '/tau=%f' % tau
+    if math.isinf(tau):
+        out_folder += '/quenched'
+    else:
+        out_folder += '/tau=%f' % tau
     out_folder += '/lambda=%f' % Lambda
     if dim==2:
         out_folder += '/Lx=%f_Ly=%f' % (Lx, Ly)
@@ -208,6 +234,7 @@ def main():
         out_folder += '/nx=%d_ny=%d_nz=%d' % (grid_size, grid_size, grid_size)
     out_folder += '/interpolation=%s' % interpolation
     out_folder += '/%s' % compressibility
+    out_folder += '/%s' % cov_type
     out_folder += '/seed=%d' % seednum
 
     if not os.path.exists(out_folder):
@@ -218,6 +245,9 @@ def main():
     out_folder += '/prod'
     if not os.path.exists(out_folder):
         os.makedirs(out_folder)
+
+    if do_output_noise==1 and not os.path.exists(out_folder_noise):
+        os.makedirs(out_folder_noise)
 
     #check for GPU vs CPU and create simulation state
     if len(GPUtil.getAvailable())>0:
@@ -236,7 +266,9 @@ def main():
         input_file += '/equil/random_dim=%d_phi=%f_L=%f_seed=%d.gsd' % (dim, phi, Lx, seednum)
     else:
         input_file += '/lattice/lattice_init_style=%s_dim=%d_phi=%f_L=%f.gsd'
+    simulation.timestep = 0
     simulation.create_state_from_gsd(filename=input_file)
+    print('timestep', simulation.timestep)
 
     ###############
     #Production run
@@ -247,9 +279,12 @@ def main():
 
     #Set up interaction potential
     cell = hoomd.md.nlist.Cell(buffer=0.4)
-    wca = hoomd.md.pair.LJ(nlist=cell, default_r_cut=sigma*2.0**(1.0/6.0))
-    wca.params[('A', 'A')] = dict(epsilon=epsilon, sigma=sigma)
-    integrator.forces.append(wca)
+    if potential=="wca":
+        pot = hoomd.md.pair.LJ(nlist=cell, default_r_cut=sigma*2.0**(1.0/6.0))
+    else:
+        pot = hoomd.md.pair.LJ(nlist=cell, default_r_cut=sigma*2.5)
+    pot.params[('A', 'A')] = dict(epsilon=epsilon, sigma=sigma)
+    integrator.forces.append(pot)
 
     #Use Brownian dynamics
     brownian = hoomd.md.methods.Brownian(filter=hoomd.filter.All(), kT=kT)
@@ -295,7 +330,7 @@ def main():
     progress_logger = hoomd.logging.Logger(categories=['scalar', 'string'])
     logger = hoomd.logging.Logger()
     progress_logger.add(simulation, quantities=['timestep', 'tps'])
-    logger.add(wca, quantities=['energies', 'forces', 'virials'])
+    logger.add(pot, quantities=['energies', 'forces', 'virials'])
     table = hoomd.write.Table(trigger=hoomd.trigger.Periodic(period=freq),
                               logger=progress_logger)
     simulation.operations.writers.append(table)
@@ -304,17 +339,61 @@ def main():
 
     #Run
     print('running...')
-    nchunks = nsteps//stepChunkSize
-    for c in range(nchunks):
-        #print('Running chunk %d (%d timesteps)' % (c,stepChunkSize))
-        if c==0: #will need to change this if we want restart files to be read in
-            init_arr = xp.array([])
+    #Treat quenched case separately
+    print('quenched case')
+    if math.isinf(tau):
+        if do_output_noise==1:
+            if dim==2:
+                newdims = np.array([grid_size, grid_size])
+                newspacing = np.array([params['dx'], params['dx']])
+            else:
+                newdims = np.array([grid_size, grid_size, grid_size])
+                newspacing = np.array([params['dx'], params['dx'], params['dx']])
+            noise_writer = NoiseWriter.NoiseWriter(newdims, newspacing, va, Lambda, tau, dt, out_folder_noise)
+        params['nsteps'] = 1
+        params['chunksize'] = 1
+        init_arr = xp.array([]) #will need to change this if we want restart files to be read in
         noisetraj, init_arr = ActiveNoiseGen.run(init_arr, **params)
-        active_force = ActiveForce.ActiveNoiseForce(xp.array(noisetraj), params['chunksize'], edges, spacing, interpolation, simulation.device)
+        if do_output_noise==1:
+            noise_writer.write(np.array(noisetraj[...,0]), simulation.timestep)  
+        active_force = ActiveForce.ActiveNoiseForce(xp.array(noisetraj), params['chunksize'], edges, spacing, interpolation, simulation.device, is_quenched=1)
         integrator.forces.append(active_force)
-        simulation.run(stepChunkSize)
-        gsd_writer.flush()
-        integrator.forces.remove(active_force)
-    print('done')
+
+        #add active force to logger
+        logger.add(active_force, quantities=['forces'])
+        gsd_writer.logger = logger
+
+        #run simulation
+        simulation.run(nsteps)
+        print('done')
+    else:
+        nchunks = nsteps//stepChunkSize
+        if do_output_noise==1:
+            noise_writer = NoiseWriter.NoiseWriter(dims, spacing, va, Lambda, tau, dt, out_folder_noise)
+        step = 0
+        for c in range(nchunks):
+            step = c*stepChunkSize
+            #print('Running chunk %d (%d timesteps)' % (c,stepChunkSize))
+            if c==0: #will need to change this if we want restart files to be read in
+                init_arr = xp.array([])
+
+            #Create and output active force
+            noisetraj, init_arr = ActiveNoiseGen.run(init_arr, **params)
+            if step % freq == 0 and do_output_noise==1: #freq will never be less than stepChunkSize
+                noise_writer.write(np.array(noisetraj[...,0]), simulation.timestep)
+            active_force = ActiveForce.ActiveNoiseForce(xp.array(noisetraj), params['chunksize'], edges, spacing, interpolation, simulation.device)
+            integrator.forces.append(active_force)
+
+            #add active force to logger
+            logger.add(active_force, quantities=['forces'])
+            gsd_writer.logger = logger
+
+            #run simulation
+            simulation.run(stepChunkSize)
+            logger.remove(active_force)
+            gsd_writer.flush()
+            integrator.forces.remove(active_force)
+
+        print('done')
 
 main()

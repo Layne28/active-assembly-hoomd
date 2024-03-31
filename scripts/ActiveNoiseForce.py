@@ -12,7 +12,7 @@ except ImportError:
 
 class ActiveNoiseForce(hoomd.md.force.Custom):
 
-    def __init__(self, myfield, chunksize, edges, spacing, interpolation, device):
+    def __init__(self, myfield, chunksize, edges, spacing, interpolation, device, is_quenched=0):
         super().__init__()
         self._field = myfield
         self._dim = myfield.shape[0]
@@ -21,6 +21,7 @@ class ActiveNoiseForce(hoomd.md.force.Custom):
         self._spacing = spacing
         self._device = device
         self._interpolation = interpolation
+        self._is_quenched = is_quenched
         device_str = device.__class__.__name__.lower()
         self._local_force_str = device_str + '_local_force_arrays'
         self._local_snapshot_str = device_str + '_local_snapshot'
@@ -47,7 +48,10 @@ class ActiveNoiseForce(hoomd.md.force.Custom):
                 pos = np.array(snap.particles.position, copy=False)
             else:
                 pos = cp.array(snap.particles.position, copy=False)
-            arrays.force[:] = self.get_force_from_noise(pos, timestep % self._chunksize)
+            if self._is_quenched==1:
+                arrays.force[:] = self.get_force_from_noise(pos, 0)
+            else:
+                arrays.force[:] = self.get_force_from_noise(pos, timestep % self._chunksize)
 
     def do_interpolation_test(self):
 
