@@ -3,11 +3,12 @@
 import hoomd
 import gsd.hoomd
 import numpy as np
-from scipy.interpolate import RegularGridInterpolator
+import scipy
+#from scipy.interpolate import RegularGridInterpolator
 
 try:
     import cupy as cp
-    #from cupyx.scipy.interpolate import RegularGridInterpolator
+    from cupyx.scipy.interpolate import interpn#RegularGridInterpolator
     CUPY_IMPORTED = True
 except ImportError:
     CUPY_IMPORTED = False
@@ -21,16 +22,26 @@ class ActiveNoiseForce(hoomd.md.force.Custom):
         self._chunksize = chunksize
         self._edges = edges
         self._spacing = spacing
+        self._nx = int(self._edges[0]/self._spacing[0])
+        self._ny = int(self._edges[0]/self._spacing[0])
         self._device = device
+        if isinstance(self._device, hoomd.device.CPU) or not CUPY_IMPORTED:
+            xp = np
+        else:
+            xp = cp
+        self._x = xp.linspace(-self._edges[0]/2.0,self._edges[0]/2.0, self._nx, endpoint=False)+self._spacing[0]/2.0
+        self._y = xp.linspace(-self._edges[1]/2.0,self._edges[1]/2.0, self._ny, endpoint=False)+self._spacing[1]/2.0
+        if self._dim==3:
+            xp.linspace(-self._edges[2]/2.0,self._edges[2]/2.0, self._nz, endpoint=False)+self._spacing[2]/2.0
         self._interpolation = interpolation
         self._is_quenched = is_quenched
         device_str = device.__class__.__name__.lower()
         self._local_force_str = device_str + '_local_force_arrays'
         self._local_snapshot_str = device_str + '_local_snapshot'
-        if interpolation=='linear':
-            print('testing interpolation...')
+        #if interpolation=='linear':
+        #    print('testing interpolation...')
             #self.do_interpolation_test()
-            print('done')
+        #    print('done')
 
     def _to_array(self, list_data):
         if isinstance(self._device, hoomd.device.CPU) or not CUPY_IMPORTED:
@@ -105,43 +116,45 @@ class ActiveNoiseForce(hoomd.md.force.Custom):
             # linear/bilinear/trilinear interpolation
 
             if self._dim==2:
-                print('pos shape', pos.shape)
-                nx = int(self._edges[0]/self._spacing[0])
-                ny = int(self._edges[0]/self._spacing[0])
-                x = xp.linspace(-self._edges[0]/2.0,self._edges[0]/2.0, nx, endpoint=False)+self._spacing[0]/2.0
-                y = xp.linspace(-self._edges[1]/2.0,self._edges[1]/2.0, ny, endpoint=False)+self._spacing[1]/2.0
-                print('interpolating...')
-                print(self._field[0,:,:,t].shape)
-                interp_x = RegularGridInterpolator((x, y), self._field[0,:,:,t])
-                interp_y = RegularGridInterpolator((x, y), self._field[1,:,:,t])
-                print('done')
-                force[:,0] = interp_x(pos)
-                force[:,1] = interp_y(pos)
-            '''
-            #only works for dim=2 right now!
-            scaled_pos = xp.divide((pos+0.5*self._edges), self._spacing)[:,:self._dim]
-            closest_index = xp.round(scaled_pos)
-            ind1 = xp.zeros(scaled_pos.shape).astype(int)
-            ind2 = xp.zeros(scaled_pos.shape).astype(int)
-            ell = xp.zeros(scaled_pos.shape)
 
-            for d in range(self._dim):
-                ind1[:,d][closest_index[:,d]-scaled_pos[:,d]>0] = scaled_pos[:,d][closest_index[:,d]-scaled_pos[:,d]>0].astype(int)
-                ind2[:,d][closest_index[:,d]-scaled_pos[:,d]>0] = xp.remainder((ind1[:,d][closest_index[:,d]-scaled_pos[:,d]>0]+1), xp.array(self._field.shape)[d+1])
-                ind2[:,d][closest_index[:,d]-scaled_pos[:,d]<=0] = scaled_pos[:,d][closest_index[:,d]-scaled_pos[:,d]<=0].astype(int)
-                ind1[:,d][closest_index[:,d]-scaled_pos[:,d]<=0] = xp.remainder((ind2[:,d][closest_index[:,d]-scaled_pos[:,d]<=0]-1 + xp.array(self._field.shape)[d+1]), xp.array(self._field.shape)[d+1])
-                ell[:,d][closest_index[:,d]-scaled_pos[:,d]>0] = scaled_pos[:,d][closest_index[:,d]-scaled_pos[:,d]>0] - xp.floor(scaled_pos[:,d][closest_index[:,d]-scaled_pos[:,d]>0]) - 0.5
-                ell[:,d][closest_index[:,d]-scaled_pos[:,d]<=0] = scaled_pos[:,d][closest_index[:,d]-scaled_pos[:,d]<=0] - xp.floor(scaled_pos[:,d][closest_index[:,d]-scaled_pos[:,d]<=0]) + 0.5
-            for d in range(self._dim):
-                f11 = self._field[d,ind1[:,0],ind1[:,1],t]
-                f12 = self._field[d,ind1[:,0],ind2[:,1],t]
-                f21 = self._field[d,ind2[:,0],ind1[:,1],t]
-                f22 = self._field[d,ind2[:,0],ind2[:,1],t]
-                fx1 = xp.multiply(ell[:,0], f21) + xp.multiply(1-ell[:,0], f11)
-                fx2 = xp.multiply(ell[:,0], f22) + xp.multiply(1-ell[:,0], f12)
-                fxy = xp.multiply(ell[:,1], fx2) + xp.multiply(1-ell[:,1], fx1) 
-                force[:,d] = fxy
-            '''
+                #print(self._field[0,:,:,t].dtype)
+                #interp_x = RegularGridInterpolator((self._x, self._y), self._field[0,:,:,t], bounds_error=False, fill_value=None)
+                #interp_y = RegularGridInterpolator((self._x, self._y), self._field[1,:,:,t], bounds_error=False, fill_value=None)
+                #print('done')
+                #print(np.max(pos))
+                #print(np.min(pos))
+                #print(interp_x(pos).shape)
+                #force[:,0] = interp_x(pos[:,:self._dim])
+                #force[:,1] = interp_y(pos[:,:self._dim])
+                #force[:,0] = interpn((self._x, self._y), self._field[0,:,:,t], pos[:,:self._dim], bounds_error=False, fill_value=None)
+                #force[:,1] = interpn((self._x, self._y), self._field[1,:,:,t], pos[:,:self._dim], bounds_error=False, fill_value=None)
+                
+                #only works for dim=2 right now!
+                scaled_pos = xp.divide((pos+0.5*self._edges), self._spacing)[:,:self._dim]
+                closest_index = xp.round(scaled_pos)
+                ind1 = xp.zeros(scaled_pos.shape).astype(int)
+                ind2 = xp.zeros(scaled_pos.shape).astype(int)
+                ell = xp.zeros(scaled_pos.shape)
+
+                for d in range(self._dim):
+                    inds_g = closest_index[:,d]-scaled_pos[:,d]>0
+                    inds_l = closest_index[:,d]-scaled_pos[:,d]<=0
+                    ind1[:,d][inds_g] = scaled_pos[:,d][inds_g].astype(int)
+                    ind2[:,d][inds_g] = xp.remainder((ind1[:,d][inds_g]+1), xp.array(self._field.shape)[d+1])
+                    ind2[:,d][inds_l] = scaled_pos[:,d][inds_l].astype(int)
+                    ind1[:,d][inds_l] = xp.remainder((ind2[:,d][inds_l]-1 + xp.array(self._field.shape)[d+1]), xp.array(self._field.shape)[d+1])
+                    ell[:,d][inds_g] = scaled_pos[:,d][inds_g] - xp.floor(scaled_pos[:,d][inds_g]) - 0.5
+                    ell[:,d][inds_l] = scaled_pos[:,d][inds_l] - xp.floor(scaled_pos[:,d][inds_l]) + 0.5
+                for d in range(self._dim):
+                    f11 = self._field[d,ind1[:,0],ind1[:,1],t]
+                    f12 = self._field[d,ind1[:,0],ind2[:,1],t]
+                    f21 = self._field[d,ind2[:,0],ind1[:,1],t]
+                    f22 = self._field[d,ind2[:,0],ind2[:,1],t]
+                    fx1 = xp.multiply(ell[:,0], f21) + xp.multiply(1-ell[:,0], f11)
+                    fx2 = xp.multiply(ell[:,0], f22) + xp.multiply(1-ell[:,0], f12)
+                    fxy = xp.multiply(ell[:,1], fx2) + xp.multiply(1-ell[:,1], fx1) 
+                    force[:,d] = fxy
+
         else:
             #Nearest-neighbor interpolation
             if isinstance(self._device, hoomd.device.CPU) or not CUPY_IMPORTED:

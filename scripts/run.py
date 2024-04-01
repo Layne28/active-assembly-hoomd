@@ -171,8 +171,8 @@ def main():
     epsilon = 1.0
     nsteps=int(sim_time/dt)
     freq=int(record_time_freq/dt)
-    stepChunkSize=int(1000)
-    littleChunkSize=200
+    stepChunkSize=int(50)
+    littleChunkSize=50
     
     #Check that parameters have acceptable values
     if phi<0.0 or phi>1.0:
