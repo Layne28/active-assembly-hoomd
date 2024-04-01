@@ -39,9 +39,9 @@ class ActiveNoiseForce(hoomd.md.force.Custom):
         self._local_force_str = device_str + '_local_force_arrays'
         self._local_snapshot_str = device_str + '_local_snapshot'
         if interpolation=='linear':
-            print('testing interpolation...')
+            #print('testing interpolation...')
             self.do_interpolation_test()
-            print('done')
+            #print('done')
 
     def _to_array(self, list_data):
         if isinstance(self._device, hoomd.device.CPU) or not CUPY_IMPORTED:
@@ -113,51 +113,15 @@ class ActiveNoiseForce(hoomd.md.force.Custom):
         force = xp.zeros(pos.shape)
         
         if self._interpolation=='linear':
-            # linear/bilinear/trilinear interpolation
-
+            # linear interpolation
+            scaled_pos = xp.divide((pos+0.5*self._edges), self._spacing)[:,:self._dim] - 0.5
             if self._dim==2:
-
-                #print(self._field[0,:,:,t].dtype)
-                #interp_x = RegularGridInterpolator((self._x, self._y), self._field[0,:,:,t], bounds_error=False, fill_value=None)
-                #interp_y = RegularGridInterpolator((self._x, self._y), self._field[1,:,:,t], bounds_error=False, fill_value=None)
-                #print('done')
-                #print(np.max(pos))
-                #print(np.min(pos))
-                #print(interp_x(pos).shape)
-                #force[:,0] = interp_x(pos[:,:self._dim])
-                #force[:,1] = interp_y(pos[:,:self._dim])
-                #force[:,0] = interpn((self._x, self._y), self._field[0,:,:,t], pos[:,:self._dim], bounds_error=False, fill_value=None)
-                #force[:,1] = interpn((self._x, self._y), self._field[1,:,:,t], pos[:,:self._dim], bounds_error=False, fill_value=None)
-                scaled_pos = xp.divide((pos+0.5*self._edges), self._spacing)[:,:self._dim] - 0.5
                 force[:,0] = map_coordinates(self._field[0,:,:,t], scaled_pos.T, order=1, mode='grid-wrap')
                 force[:,1] = map_coordinates(self._field[1,:,:,t], scaled_pos.T, order=1, mode='grid-wrap')
-                '''
-                #only works for dim=2 right now!
-                scaled_pos = xp.divide((pos+0.5*self._edges), self._spacing)[:,:self._dim]
-                closest_index = xp.round(scaled_pos)
-                ind1 = xp.zeros(scaled_pos.shape).astype(int)
-                ind2 = xp.zeros(scaled_pos.shape).astype(int)
-                ell = xp.zeros(scaled_pos.shape)
-
-                for d in range(self._dim):
-                    inds_g = closest_index[:,d]-scaled_pos[:,d]>0
-                    inds_l = closest_index[:,d]-scaled_pos[:,d]<=0
-                    ind1[:,d][inds_g] = scaled_pos[:,d][inds_g].astype(int)
-                    ind2[:,d][inds_g] = xp.remainder((ind1[:,d][inds_g]+1), xp.array(self._field.shape)[d+1])
-                    ind2[:,d][inds_l] = scaled_pos[:,d][inds_l].astype(int)
-                    ind1[:,d][inds_l] = xp.remainder((ind2[:,d][inds_l]-1 + xp.array(self._field.shape)[d+1]), xp.array(self._field.shape)[d+1])
-                    ell[:,d][inds_g] = scaled_pos[:,d][inds_g] - xp.floor(scaled_pos[:,d][inds_g]) - 0.5
-                    ell[:,d][inds_l] = scaled_pos[:,d][inds_l] - xp.floor(scaled_pos[:,d][inds_l]) + 0.5
-                for d in range(self._dim):
-                    f11 = self._field[d,ind1[:,0],ind1[:,1],t]
-                    f12 = self._field[d,ind1[:,0],ind2[:,1],t]
-                    f21 = self._field[d,ind2[:,0],ind1[:,1],t]
-                    f22 = self._field[d,ind2[:,0],ind2[:,1],t]
-                    fx1 = xp.multiply(ell[:,0], f21) + xp.multiply(1-ell[:,0], f11)
-                    fx2 = xp.multiply(ell[:,0], f22) + xp.multiply(1-ell[:,0], f12)
-                    fxy = xp.multiply(ell[:,1], fx2) + xp.multiply(1-ell[:,1], fx1) 
-                    force[:,d] = fxy
-                '''
+            else:
+                force[:,0] = map_coordinates(self._field[0,:,:,:,t], scaled_pos.T, order=1, mode='grid-wrap')
+                force[:,1] = map_coordinates(self._field[1,:,:,:,t], scaled_pos.T, order=1, mode='grid-wrap')
+                force[:,2] = map_coordinates(self._field[2,:,:,:,t], scaled_pos.T, order=1, mode='grid-wrap')
 
         else:
             #Nearest-neighbor interpolation
