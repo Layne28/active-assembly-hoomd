@@ -3,9 +3,11 @@
 import hoomd
 import gsd.hoomd
 import numpy as np
+from scipy.interpolate import RegularGridInterpolator
 
 try:
     import cupy as cp
+    #from cupyx.scipy.interpolate import RegularGridInterpolator
     CUPY_IMPORTED = True
 except ImportError:
     CUPY_IMPORTED = False
@@ -25,7 +27,10 @@ class ActiveNoiseForce(hoomd.md.force.Custom):
         device_str = device.__class__.__name__.lower()
         self._local_force_str = device_str + '_local_force_arrays'
         self._local_snapshot_str = device_str + '_local_snapshot'
-        self.do_interpolation_test()
+        if interpolation=='linear':
+            print('testing interpolation...')
+            #self.do_interpolation_test()
+            print('done')
 
     def _to_array(self, list_data):
         if isinstance(self._device, hoomd.device.CPU) or not CUPY_IMPORTED:
@@ -93,18 +98,33 @@ class ActiveNoiseForce(hoomd.md.force.Custom):
             xp = np
         else:
             xp = cp
-
+        
         force = xp.zeros(pos.shape)
         
         if self._interpolation=='linear':
             # linear/bilinear/trilinear interpolation
 
+            if self._dim==2:
+                print('pos shape', pos.shape)
+                nx = int(self._edges[0]/self._spacing[0])
+                ny = int(self._edges[0]/self._spacing[0])
+                x = xp.linspace(-self._edges[0]/2.0,self._edges[0]/2.0, nx, endpoint=False)+self._spacing[0]/2.0
+                y = xp.linspace(-self._edges[1]/2.0,self._edges[1]/2.0, ny, endpoint=False)+self._spacing[1]/2.0
+                print('interpolating...')
+                print(self._field[0,:,:,t].shape)
+                interp_x = RegularGridInterpolator((x, y), self._field[0,:,:,t])
+                interp_y = RegularGridInterpolator((x, y), self._field[1,:,:,t])
+                print('done')
+                force[:,0] = interp_x(pos)
+                force[:,1] = interp_y(pos)
+            '''
             #only works for dim=2 right now!
             scaled_pos = xp.divide((pos+0.5*self._edges), self._spacing)[:,:self._dim]
             closest_index = xp.round(scaled_pos)
             ind1 = xp.zeros(scaled_pos.shape).astype(int)
             ind2 = xp.zeros(scaled_pos.shape).astype(int)
             ell = xp.zeros(scaled_pos.shape)
+
             for d in range(self._dim):
                 ind1[:,d][closest_index[:,d]-scaled_pos[:,d]>0] = scaled_pos[:,d][closest_index[:,d]-scaled_pos[:,d]>0].astype(int)
                 ind2[:,d][closest_index[:,d]-scaled_pos[:,d]>0] = xp.remainder((ind1[:,d][closest_index[:,d]-scaled_pos[:,d]>0]+1), xp.array(self._field.shape)[d+1])
@@ -121,6 +141,7 @@ class ActiveNoiseForce(hoomd.md.force.Custom):
                 fx2 = xp.multiply(ell[:,0], f22) + xp.multiply(1-ell[:,0], f12)
                 fxy = xp.multiply(ell[:,1], fx2) + xp.multiply(1-ell[:,1], fx1) 
                 force[:,d] = fxy
+            '''
         else:
             #Nearest-neighbor interpolation
             if isinstance(self._device, hoomd.device.CPU) or not CUPY_IMPORTED:

@@ -124,7 +124,7 @@ def main():
 
     #Add logger
     logger = hoomd.logging.Logger(categories=['scalar', 'string'])
-    logger.add(simulation, quantities=['timestep'])
+    logger.add(simulation, quantities=['timestep', 'tps'])
     table = hoomd.write.Table(trigger=hoomd.trigger.Periodic(period=freq),
                               logger=logger)
     simulation.operations.writers.append(table)

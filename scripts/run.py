@@ -50,7 +50,7 @@ def main():
                         help="linear size of active noise grid",
                         type=int,
                         dest="grid_size",
-                        default=200)
+                        default=400)
 
     parser.add_argument("-c", "--cov_type",
                         help="active noise covariance type (exponential or gaussian)",
@@ -116,7 +116,7 @@ def main():
                         help="Folder to look for input configurations",
                         type=str,
                         dest="in_folder",
-                        default="$WORK/active-assembly-hoomd/initial_configurations")
+                        default="$SCRATCH/active-assembly-hoomd/initial_configurations")
 
     parser.add_argument("-o", "--out_folder",
                         help="Folder to which to save file",
@@ -159,6 +159,7 @@ def main():
     seed_file = os.path.expandvars(seed_file)
     out_folder = os.path.expandvars(out_folder)
     in_folder = os.path.expandvars(in_folder)
+    print(in_folder)
     Lx = args.L
     Ly = args.L
     if dim==3:
@@ -170,7 +171,7 @@ def main():
     epsilon = 1.0
     nsteps=int(sim_time/dt)
     freq=int(record_time_freq/dt)
-    stepChunkSize=int(200)
+    stepChunkSize=int(1000)
     littleChunkSize=200
     
     #Check that parameters have acceptable values
