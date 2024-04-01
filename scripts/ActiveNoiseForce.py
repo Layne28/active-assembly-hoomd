@@ -3,11 +3,9 @@
 import hoomd
 import gsd.hoomd
 import numpy as np
-#from scipy.interpolate import RegularGridInterpolator
 
 try:
     import cupy as cp
-    from cupyx.scipy.interpolate import interpn#RegularGridInterpolator
     from cupyx.scipy.ndimage import map_coordinates
     CUPY_IMPORTED = True
 except ImportError:
@@ -99,11 +97,6 @@ class ActiveNoiseForce(hoomd.md.force.Custom):
             print('by hand:', thenoise_x, thenoise_y)
 
     def get_force_from_noise(self, pos, t):
-
-        #if isinstance(self._device, hoomd.device.CPU) or not CUPY_IMPORTED:
-        #    force = np.zeros(pos.shape)
-        #else:
-        #    force = cp.zeros(pos.shape)
 
         if isinstance(self._device, hoomd.device.CPU) or not CUPY_IMPORTED:
             xp = np
