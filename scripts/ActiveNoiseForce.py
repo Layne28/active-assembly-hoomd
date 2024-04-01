@@ -128,9 +128,9 @@ class ActiveNoiseForce(hoomd.md.force.Custom):
                 #force[:,1] = interp_y(pos[:,:self._dim])
                 #force[:,0] = interpn((self._x, self._y), self._field[0,:,:,t], pos[:,:self._dim], bounds_error=False, fill_value=None)
                 #force[:,1] = interpn((self._x, self._y), self._field[1,:,:,t], pos[:,:self._dim], bounds_error=False, fill_value=None)
-                scaled_pos = xp.divide((pos+0.5*self._edges), self._spacing)[:,:self._dim]
-                force[:,0] = map_coordinates(self._field[0,:,:,t], scaled_pos.T, order=1, mode='wrap')
-                force[:,1] = map_coordinates(self._field[1,:,:,t], scaled_pos.T, order=1, mode='wrap')
+                scaled_pos = xp.divide((pos+0.5*self._edges), self._spacing)[:,:self._dim] - 0.5
+                force[:,0] = map_coordinates(self._field[0,:,:,t], scaled_pos.T, order=1, mode='grid-wrap')
+                force[:,1] = map_coordinates(self._field[1,:,:,t], scaled_pos.T, order=1, mode='grid-wrap')
                 '''
                 #only works for dim=2 right now!
                 scaled_pos = xp.divide((pos+0.5*self._edges), self._spacing)[:,:self._dim]
