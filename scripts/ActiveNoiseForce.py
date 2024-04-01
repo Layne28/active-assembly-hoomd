@@ -3,12 +3,12 @@
 import hoomd
 import gsd.hoomd
 import numpy as np
-import scipy
 #from scipy.interpolate import RegularGridInterpolator
 
 try:
     import cupy as cp
     from cupyx.scipy.interpolate import interpn#RegularGridInterpolator
+    from cupyx.scipy.ndimage import map_coordinates
     CUPY_IMPORTED = True
 except ImportError:
     CUPY_IMPORTED = False
@@ -38,10 +38,10 @@ class ActiveNoiseForce(hoomd.md.force.Custom):
         device_str = device.__class__.__name__.lower()
         self._local_force_str = device_str + '_local_force_arrays'
         self._local_snapshot_str = device_str + '_local_snapshot'
-        #if interpolation=='linear':
-        #    print('testing interpolation...')
-            #self.do_interpolation_test()
-        #    print('done')
+        if interpolation=='linear':
+            print('testing interpolation...')
+            self.do_interpolation_test()
+            print('done')
 
     def _to_array(self, list_data):
         if isinstance(self._device, hoomd.device.CPU) or not CUPY_IMPORTED:
@@ -128,7 +128,10 @@ class ActiveNoiseForce(hoomd.md.force.Custom):
                 #force[:,1] = interp_y(pos[:,:self._dim])
                 #force[:,0] = interpn((self._x, self._y), self._field[0,:,:,t], pos[:,:self._dim], bounds_error=False, fill_value=None)
                 #force[:,1] = interpn((self._x, self._y), self._field[1,:,:,t], pos[:,:self._dim], bounds_error=False, fill_value=None)
-                
+                scaled_pos = xp.divide((pos+0.5*self._edges), self._spacing)[:,:self._dim]
+                force[:,0] = map_coordinates(self._field[0,:,:,t], scaled_pos.T, order=1, mode='wrap')
+                force[:,1] = map_coordinates(self._field[1,:,:,t], scaled_pos.T, order=1, mode='wrap')
+                '''
                 #only works for dim=2 right now!
                 scaled_pos = xp.divide((pos+0.5*self._edges), self._spacing)[:,:self._dim]
                 closest_index = xp.round(scaled_pos)
@@ -154,6 +157,7 @@ class ActiveNoiseForce(hoomd.md.force.Custom):
                     fx2 = xp.multiply(ell[:,0], f22) + xp.multiply(1-ell[:,0], f12)
                     fxy = xp.multiply(ell[:,1], fx2) + xp.multiply(1-ell[:,1], fx1) 
                     force[:,d] = fxy
+                '''
 
         else:
             #Nearest-neighbor interpolation

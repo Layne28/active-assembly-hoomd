@@ -3,10 +3,10 @@
 
 #SBATCH -A m4494
 #SBATCH --qos=regular
-#SBATCH --nodes=1
+#SBATCH --nodes=10
 #SBATCH --constraint=gpu
 #SBATCH --gpus-per-node=4
-#SBATCH --time=12:00:00
+#SBATCH --time=24:00:00
 
 module load parallel
 module load conda/Mambaforge-23.1.0-1
@@ -24,4 +24,6 @@ Lambdas=(1.0 3.0 10.0 30.0)
 vas=(1.0)
 seeds=($(seq 1 $nseed))
 
-srun --no-kill --wait=0 parallel -k --jobs 4 python $HOME/active-assembly-hoomd/scripts/run.py --phi ::: ${phis[@]} ::: -L ::: ${Ls[@]} ::: --seed ::: ${seeds[@]} ::: --tau ::: ${taus[@]} ::: --lambda ::: ${Lambdas[@]} ::: --va ::: ${vas[@]}
+interp="none"
+
+srun --no-kill --wait=0 parallel -k --jobs 40 python $HOME/active-assembly-hoomd/scripts/run.py --phi ::: ${phis[@]} ::: -L ::: ${Ls[@]} ::: --seed ::: ${seeds[@]} ::: --tau ::: ${taus[@]} ::: --lambda ::: ${Lambdas[@]} ::: --va ::: ${vas[@]} --interpolation $interp
