@@ -6,6 +6,7 @@ import numpy as np
 import math
 import argparse
 import os
+import datetime
 #import GPUtil
 
 from ActiveNoise import noise as ActiveNoiseGen
@@ -17,6 +18,33 @@ try:
     CUPY_IMPORTED = True
 except ImportError:
     CUPY_IMPORTED = False
+
+class Time:
+    def __init__(self, simulation):
+        self.simulation = simulation
+
+    @property
+    def time(self):
+        return self.simulation.operations.integrator.dt*self.simulation.timestep
+
+class Status:
+    def __init__(self, simulation):
+        self.simulation = simulation
+
+    @property
+    def seconds_remaining(self):
+        try:
+            return (
+                self.simulation.final_timestep - self.simulation.timestep
+            ) / self.simulation.tps
+        except ZeroDivisionError:
+            return 0
+
+    @property
+    def etr(self):
+        return str(datetime.timedelta(seconds=self.seconds_remaining))
+
+
 
 def main():
 
@@ -254,7 +282,7 @@ def main():
     if CUPY_IMPORTED:
         print('Using GPU')
         xp = cp
-        xpu = hoomd.device.GPU()
+        xpu = hoomd.device.CPU()
     else:
         print('Using CPU')
         xp = np
@@ -292,36 +320,8 @@ def main():
     integrator.methods = [brownian]
     simulation.operations.integrator = integrator
 
-    #Add custom active noise force
-    params = {}
-    params['N'] = grid_size
-    params['dx'] = Lx/params['N']
-    params['print_freq'] = freq
-    params['do_output'] = 0
-    params['output_freq'] = freq
-    params['chunksize'] = int(min(littleChunkSize,stepChunkSize))
-    params['lambda'] = Lambda
-    params['tau'] = tau
-    params['dim'] = dim
-    params['nsteps'] = stepChunkSize #warning: don't make this too big
-    params['dt'] = dt
-    params['D'] = va**2
-    params['cov_type'] = cov_type
-    params['verbose'] = False
-    if xp==cp:
-        params['xpu'] = 'gpu'
-    else:
-        params['xpu'] = 'cpu'
-    print('using %s for active noise' % params['xpu'])
-
-    if dim==2:
-        edges = xp.array([Lx,Ly,0.0])
-    else:
-        edges = xp.array([Lx,Ly,Lz])
-    spacing = xp.array([params['dx'],params['dx'],params['dx']])
-
     #Write trajectory
-    gsd_writer = hoomd.write.GSD(filename=out_folder + '/traj.gsd',
+    gsd_writer = hoomd.write.GSD(filename='./test.gsd',
                                  trigger=hoomd.trigger.Periodic(freq),
                                  mode='wb',
                                  filter=hoomd.filter.All())
@@ -332,76 +332,17 @@ def main():
     logger = hoomd.logging.Logger()
     progress_logger.add(simulation, quantities=['timestep', 'tps'])
     logger.add(pot, quantities=['energies', 'forces', 'virials'])
+    mytime = Time(simulation)
+    progress_logger[('Time', 'time')] = (mytime, 'time', 'scalar')
+    #logger[('Time', 'time')] = (mytime, 'time', 'scalar')
     logger[('Time', 'time')] = (lambda: simulation.operations.integrator.dt*simulation.timestep, 'scalar')
+    #progress_logger
     table = hoomd.write.Table(trigger=hoomd.trigger.Periodic(period=freq),
                               logger=progress_logger)
     simulation.operations.writers.append(table)
 
     gsd_writer.logger = logger
 
-    #Run
-    print('running...')
-    #Treat quenched case separately
-    if math.isinf(tau):
-        print('quenched')
-        if do_output_noise==1:
-            if dim==2:
-                newdims = np.array([grid_size, grid_size])
-                newspacing = np.array([params['dx'], params['dx']])
-            else:
-                newdims = np.array([grid_size, grid_size, grid_size])
-                newspacing = np.array([params['dx'], params['dx'], params['dx']])
-            noise_writer = NoiseWriter.NoiseWriter(newdims, newspacing, va, Lambda, tau, dt, out_folder_noise)
-        params['nsteps'] = 1
-        params['chunksize'] = 1
-        init_arr = xp.array([]) #will need to change this if we want restart files to be read in
-        noisetraj, init_arr = ActiveNoiseGen.run(init_arr, **params)
-        if do_output_noise==1:
-            noise_writer.write(np.array(noisetraj[...,0]), simulation.timestep)  
-        active_force = ActiveForce.ActiveNoiseForce(xp.array(noisetraj), params['chunksize'], edges, spacing, interpolation, simulation.device, is_quenched=1)
-        integrator.forces.append(active_force)
-
-        #add active force to logger
-        logger.add(active_force, quantities=['forces'])
-        gsd_writer.logger = logger
-
-        #run simulation
-        simulation.run(nsteps)
-        print('done')
-    else:
-        nchunks = nsteps//stepChunkSize
-        if do_output_noise==1:
-            if dim==2:
-                newdims = np.array([grid_size, grid_size])
-                newspacing = np.array([params['dx'], params['dx']])
-            else:
-                newdims = np.array([grid_size, grid_size, grid_size])
-                newspacing = np.array([params['dx'], params['dx'], params['dx']])
-            noise_writer = NoiseWriter.NoiseWriter(newdims, newspacing, va, Lambda, tau, dt, out_folder_noise)
-        step = 0
-        for c in range(nchunks):
-            step = c*stepChunkSize
-            #print('Running chunk %d (%d timesteps)' % (c,stepChunkSize))
-            if c==0: #will need to change this if we want restart files to be read in
-                init_arr = xp.array([])
-
-            #Create and output active force
-            noisetraj, init_arr = ActiveNoiseGen.run(init_arr, **params)
-            if step % freq == 0 and do_output_noise==1: #freq will never be less than stepChunkSize
-                noise_writer.write(np.array(noisetraj[...,0]), simulation.timestep)
-            active_force = ActiveForce.ActiveNoiseForce(xp.array(noisetraj), params['chunksize'], edges, spacing, interpolation, simulation.device)
-            integrator.forces.append(active_force)
-
-            #add active force to logger
-            logger.add(active_force, quantities=['forces'])
-            gsd_writer.logger = logger
-
-            #run simulation
-            simulation.run(stepChunkSize)
-            logger.remove(active_force)
-            #gsd_writer.flush()
-            integrator.forces.remove(active_force)
-
-        print('done')
+    simulation.run(20)
 
 main()

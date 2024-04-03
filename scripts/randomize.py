@@ -52,7 +52,7 @@ def main():
                         help="File containing random seeds",
                         type=str,
                         dest="seed_file",
-                        default="$HOME/master_seeds.txt")
+                        default="$HOME/hoomd_seeds.txt")
 
     args = parser.parse_args()
 
@@ -71,9 +71,9 @@ def main():
 
     sigma = 1.0
     epsilon = 1.0
-    kT = 0.5
-    dt = 2e-4
-    nsteps = int(1e6)
+    kT = 1.0
+    dt = 1e-4
+    nsteps = int(3e6)
     freq = 10000
 
     if not os.path.exists(out_folder):

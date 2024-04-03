@@ -89,9 +89,12 @@ def main():
             if len(position)!=N:
                 print('Error: particles not counted properly!')
         else:
-            nx = int(np.sqrt(np.sqrt(3.0)/2.0*phi*Lx*Ly))
-            ny = int(2*nx/np.sqrt(3.0))
-            N = nx*ny
+            volume = Lx*Ly
+            particle_volume = np.pi*(sigma/2)*(sigma/2)
+            N_desired = int(np.round(phi*volume/particle_volume))
+
+            nx = int(np.round(np.sqrt((2.0*np.sqrt(3.0)/np.pi)*phi*Lx*Ly)))
+            ny = int(np.round(2*nx/np.sqrt(3.0)))
             a = Lx/nx
             for i in range(nx):
                 for j in range(ny):
@@ -99,7 +102,12 @@ def main():
                     if j%2==1:
                         x += 0.5*a
                     y = np.sqrt(3.0)/2.0*j*a-Ly/2
-                    position.append((x,y,0))
+                    if i*ny+j<N_desired:
+                        position.append((x,y,0))
+            print('Actual N:', len(position))
+            print('nx*ny:', nx*ny)
+            print('Desired N:', N_desired)
+            N = len(position)
 
     else:
         frame.configuration.box = [Lx, Ly, Lz, 0, 0, 0]
