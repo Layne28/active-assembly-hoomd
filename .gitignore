@@ -3,3 +3,5 @@
 /trajectory.gsd
 *.gsd
 slurm*.out
+images/*
+*.tga

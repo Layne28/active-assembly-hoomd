@@ -20,4 +20,4 @@ phis=(0.1 0.4 0.7)
 Ls=(200.0)
 seeds=($(seq 1 $nseed))
 
-srun parallel -k --jobs 128 python $HOME/active-assembly-hoomd/scripts/randomize.py --init_style ::: $init_style ::: --phi ::: ${phis[@]} ::: -L ::: ${Ls[@]} ::: --seed ::: ${seeds[@]}
+srun parallel -k --jobs  python $HOME/active-assembly-hoomd/scripts/randomize.py --init_style ::: $init_style ::: --phi ::: ${phis[@]} ::: -L ::: ${Ls[@]} ::: --seed ::: ${seeds[@]}

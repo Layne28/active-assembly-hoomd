@@ -34,7 +34,7 @@ done
 python ${run_dir}/trajectory_stats.py ${myfolder} "energies_and_forces" average postprocessed
 #python ${run_dir}/trajectory_stats.py ${myfolder} msd average postprocessed
 python ${run_dir}/trajectory_stats.py ${myfolder} sq average postprocessed
-#python ${run_dir}/trajectory_stats.py ${myfolder} sq_traj average postprocessed
+python ${run_dir}/trajectory_stats.py ${myfolder} sq_traj average postprocessed
 python ${run_dir}/trajectory_stats.py ${myfolder} csd csd postprocessed
 #python ${run_dir}/trajectory_stats.py ${myfolder} vel histogram particle
 #python ${run_dir}/trajectory_stats.py ${myfolder} vel average particle
