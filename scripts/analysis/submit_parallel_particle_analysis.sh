@@ -18,7 +18,8 @@ d=2
 Lx=200.000000
 nx=400
 
-phis=(0.100000 0.400000 0.700000)
+#phis=(0.100000 0.400000 0.700000)
+phis=(0.100000)
 kTs=(0.000000)
 vas=(1.000000)
 taus=("tau=0.100000" "tau=1.000000" "tau=10.000000" "quenched")
@@ -35,6 +36,7 @@ run_dir=${HOME}/AnalysisTools/AnalysisTools/
 echo ${run_dir}
 
 #Do per-trajectory analysis first
+echo "Doing energy analysis..."
 srun parallel -k --lb --jobs 32 "python $run_dir/energy.py $SCRATCH/active-assembly-hoomd/${potential}/${d}d/kT={1}/phi={2}/va={3}/{4}/lambda={5}/Lx=${Lx}_Ly=${Lx}/nx=${nx}_ny=${nx}/interpolation=${interp}/${compressibility}/${cov_type}/seed={6}/prod/traj.gsd > $SCRATCH/active-assembly-hoomd/log/energy_kT={1}_phi={2}_va={3}_{4}_lambda={5}_seed={6}.out" \
                         ::: ${kTs[@]} \
                         ::: ${phis[@]} \
@@ -45,7 +47,8 @@ srun parallel -k --lb --jobs 32 "python $run_dir/energy.py $SCRATCH/active-assem
 
 wait
 
-srun parallel -k --lb --jobs 32 "python $run_dir/structure_factor.py $SCRATCH/active-assembly-hoomd/${potential}/${d}d/kT={1}/phi={2}/va={3}/{4}/lambda={5}/Lx=${Lx}_Ly=${Lx}/nx=${nx}_ny=${nx}/interpolation=${interp}/${compressibility}/${cov_type}/seed={6}/prod/traj.gsd > $SCRATCH/active-assembly-hoomd/log/sq_kT={1}_phi={2}_va={3}_{4}_lambda={5}_seed={6}.out" 5 \
+echo "Doing structure factor analysis..."
+srun parallel -k --lb --jobs 32 "python $run_dir/structure_factor.py $SCRATCH/active-assembly-hoomd/${potential}/${d}d/kT={1}/phi={2}/va={3}/{4}/lambda={5}/Lx=${Lx}_Ly=${Lx}/nx=${nx}_ny=${nx}/interpolation=${interp}/${compressibility}/${cov_type}/seed={6}/prod/traj.gsd 5 > $SCRATCH/active-assembly-hoomd/log/sq_kT={1}_phi={2}_va={3}_{4}_lambda={5}_seed={6}.out" \
                         ::: ${kTs[@]} \
                         ::: ${phis[@]} \
                         ::: ${vas[@]} \
@@ -55,6 +58,7 @@ srun parallel -k --lb --jobs 32 "python $run_dir/structure_factor.py $SCRATCH/ac
 
 wait   
 
+echo "Doing cluster analysis..."
 srun parallel -k --lb --jobs 32 "python $run_dir/cluster.py $SCRATCH/active-assembly-hoomd/${potential}/${d}d/kT={1}/phi={2}/va={3}/{4}/lambda={5}/Lx=${Lx}_Ly=${Lx}/nx=${nx}_ny=${nx}/interpolation=${interp}/${compressibility}/${cov_type}/seed={6}/prod/traj.gsd > $SCRATCH/active-assembly-hoomd/log/cluster_kT={1}_phi={2}_va={3}_{4}_lambda={5}_seed={6}.out" \
                         ::: ${kTs[@]} \
                         ::: ${phis[@]} \
@@ -65,6 +69,7 @@ srun parallel -k --lb --jobs 32 "python $run_dir/cluster.py $SCRATCH/active-asse
 wait
 
 #Now do analysis over all trajectories
+echo "Averaging energies..."
 srun parallel -k --lb --jobs 32 "python $run_dir/trajectory_stats.py $SCRATCH/active-assembly-hoomd/${potential}/${d}d/kT={1}/phi={2}/va={3}/{4}/lambda={5}/Lx=${Lx}_Ly=${Lx}/nx=${nx}_ny=${nx}/interpolation=${interp}/${compressibility}/${cov_type}/ 'energies_and_forces' average postprocessed > $SCRATCH/active-assembly-hoomd/log/energy_kT={1}_phi={2}_va={3}_{4}_lambda={5}_avg.out" \
                         ::: ${kTs[@]} \
                         ::: ${phis[@]} \
@@ -72,6 +77,8 @@ srun parallel -k --lb --jobs 32 "python $run_dir/trajectory_stats.py $SCRATCH/ac
                         ::: ${taus[@]} \
                         ::: ${lambdas[@]}  | tr -d \''"\' &
 wait
+
+echo "Averaging structure factor..."
 srun parallel -k --lb --jobs 32 "python $run_dir/trajectory_stats.py $SCRATCH/active-assembly-hoomd/${potential}/${d}d/kT={1}/phi={2}/va={3}/{4}/lambda={5}/Lx=${Lx}_Ly=${Lx}/nx=${nx}_ny=${nx}/interpolation=${interp}/${compressibility}/${cov_type}/ sq average postprocessed > $SCRATCH/active-assembly-hoomd/log/sq_kT={1}_phi={2}_va={3}_{4}_lambda={5}_avg.out" \
                         ::: ${kTs[@]} \
                         ::: ${phis[@]} \
@@ -79,6 +86,8 @@ srun parallel -k --lb --jobs 32 "python $run_dir/trajectory_stats.py $SCRATCH/ac
                         ::: ${taus[@]} \
                         ::: ${lambdas[@]}  | tr -d \''"\' &
 wait
+
+echo "Averaging structure factor trajectories..."
 srun parallel -k --lb --jobs 32 "python $run_dir/trajectory_stats.py $SCRATCH/active-assembly-hoomd/${potential}/${d}d/kT={1}/phi={2}/va={3}/{4}/lambda={5}/Lx=${Lx}_Ly=${Lx}/nx=${nx}_ny=${nx}/interpolation=${interp}/${compressibility}/${cov_type}/ sq_traj average postprocessed > $SCRATCH/active-assembly-hoomd/log/sq_traj_kT={1}_phi={2}_va={3}_{4}_lambda={5}_avg.out" \
                         ::: ${kTs[@]} \
                         ::: ${phis[@]} \
@@ -86,6 +95,8 @@ srun parallel -k --lb --jobs 32 "python $run_dir/trajectory_stats.py $SCRATCH/ac
                         ::: ${taus[@]} \
                         ::: ${lambdas[@]}  | tr -d \''"\' &
 wait
+
+echo "Averaging cluster size distributions..."
 srun parallel -k --lb --jobs 32 "python $run_dir/trajectory_stats.py $SCRATCH/active-assembly-hoomd/${potential}/${d}d/kT={1}/phi={2}/va={3}/{4}/lambda={5}/Lx=${Lx}_Ly=${Lx}/nx=${nx}_ny=${nx}/interpolation=${interp}/${compressibility}/${cov_type}/ csd average postprocessed > $SCRATCH/active-assembly-hoomd/log/csd_kT={1}_phi={2}_va={3}_{4}_lambda={5}_avg.out" \
                         ::: ${kTs[@]} \
                         ::: ${phis[@]} \

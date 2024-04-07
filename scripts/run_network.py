@@ -30,19 +30,19 @@ def main():
     
     parser.add_argument("-Nx", "--unit_cells_x",
                         help="no. of unit cells in x direction",
-                        type=float,
+                        type=int,
                         dest="Nx",
                         default=24)
 
     parser.add_argument("-Ny", "--unit_cells_y",
                         help="no. of unit cells in y direction",
-                        type=float,
+                        type=int,
                         dest="Ny",
                         default=28)
 
     parser.add_argument("-Nz", "--unit_cells_z",
                         help="no. of unit cells in z direction",
-                        type=float,
+                        type=int,
                         dest="Nz",
                         default=0)
     
@@ -156,14 +156,10 @@ def main():
     sim_time = args.sim_time
     dim = args.dim
     out_folder = args.out_folder
-    in_folder = args.in_folder
-    init_style = args.init_style
     seed = args.seed
     seed_file = args.seed_file
     seed_file = os.path.expandvars(seed_file)
     out_folder = os.path.expandvars(out_folder)
-    in_folder = os.path.expandvars(in_folder)
-    print(in_folder)
     Nx = args.Nx
     Ny = args.Ny
     grid_size_x = args.grid_size_x
@@ -188,7 +184,7 @@ def main():
         exit()
 
     #Check for (arbitrary) parameter set for which we'll output active noise
-    if va==1.0 and phi==0.1 and kT==0.0 and potential=='wca':
+    if va==1.0 and kT==0.0:
         do_output_noise = 1
     else:
         do_output_noise = 0
@@ -214,9 +210,9 @@ def main():
         out_folder_noise += '/tau=%f' % tau
     out_folder_noise += '/lambda=%f' % Lambda
     if dim==2:
-        out_folder_noise += '/nx=%d_ny=%d' % (grid_size, grid_size)
+        out_folder_noise += '/nx=%d_ny=%d' % (grid_size_x, grid_size_y)
     else:
-        out_folder_noise += '/nx=%d_ny=%d_nz=%d' % (grid_size, grid_size, grid_size)
+        out_folder_noise += '/nx=%d_ny=%d_nz=%d' % (grid_size_x, grid_size_y, grid_size_z)
     out_folder_noise += '/%s' % compressibility
     out_folder_noise += '/%s' % cov_type
     out_folder_noise += '/seed=%d' % seednum
@@ -232,10 +228,10 @@ def main():
     out_folder += '/lambda=%f' % Lambda
     if dim==2:
         out_folder += '/Nx=%f_Ny=%f' % (Nx, Ny)
-        out_folder += '/nx=%d_ny=%d' % (grid_size, grid_size)
+        out_folder += '/nx=%d_ny=%d' % (grid_size_x, grid_size_y)
     else:
         out_folder += '/Nx=%f_Ny=%f_Nz=%f' % (Nx, Ny, Nz)
-        out_folder += '/nx=%d_ny=%d_nz=%d' % (grid_size, grid_size, grid_size)
+        out_folder += '/nx=%d_ny=%d_nz=%d' % (grid_size_x, grid_size_y, grid_size_z)
     out_folder += '/interpolation=%s' % interpolation
     out_folder += '/%s' % compressibility
     out_folder += '/%s' % cov_type
@@ -268,15 +264,51 @@ def main():
     #Lattice initialization
     ###############
     #Set particle positions
+    frame = gsd.hoomd.Frame()
     position = []
     a = 1.0 #lattice constant
     if dim==2:
         #initialize triangular lattice
-        frame.configuration.box = [Nx*a, Ny*a*np.sqrt(3.0)/2.0, 0.0, 0, 0, 0]
+        N = Nx*Ny
+        Lx = Nx*a
+        Ly = Ny*a*np.sqrt(3.0)/2.0
+        frame.configuration.box = [Lx, Ly, 0.0, 0, 0, 0]
+        for i in range(Nx):
+            for j in range(Ny):
+                x = i*a-Lx/2.0
+                if j%2==1:
+                    x += 0.5*a
+                y = (np.sqrt(3.0)/2.0)*j*a-Ly/2.0
+                position.append((x,y,0))
+    else:
+        N = 4*Nx*Ny*Nz
+        Lx = Nx*a
+        Ly = Ny*a
+        Lz = Nz*a
+        frame.configuration.box = [Lx, Ly, Lz, 0, 0, 0]
+        for i in range(Nx):
+            for j in range(Ny):
+                for k in range(Nz):
+                    x = i*a-Lx/2
+                    y = j*a-Ly/2
+                    z = k*a-Lz/2
+                    position.append((x,y,z))
+                    position.append((x+0.5*a,y+0.5*a,z))
+                    position.append((x,y+0.5*a,z+0.5*a))
+                    position.append((x+0.5*a,y,z+0.5*a))
+    frame.particles.N = N
+    frame.particles.position = position
+    frame.particles.types = ['A']
+    with gsd.hoomd.open(name=out_folder+'/init.gsd', mode='w') as f:
+        f.append(frame)
+    exit()
 
     ###############
     #Production run
     ###############
+
+    #Read in file
+    simulation.create_state_from_gsd(filename=out_folder+'/init.gsd')
 
     #Set up integrator
     integrator = hoomd.md.Integrator(dt=dt)
