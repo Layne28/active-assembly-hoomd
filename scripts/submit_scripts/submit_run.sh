@@ -26,7 +26,7 @@ Ls=(200.0)
 taus=(0.1 1.0 10.0 inf)
 Lambdas=(1.0 3.0 10.0 30.0)
 vas=(1.0)
-seeds=($(seq 1 $nseed))
+seeds=($(seq 11 $nseed))
 
 interp="none"
 

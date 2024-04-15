@@ -5,7 +5,7 @@
 #SBATCH --qos=regular
 #SBATCH --nodes=1
 #SBATCH --constraint=cpu
-#SBATCH --time=12:00:00
+#SBATCH --time=24:00:00
 
 tmax=100.000000
 nseed=10
@@ -21,7 +21,8 @@ nx=400
 #phis=(0.100000 0.400000 0.700000)
 phis=(0.100000)
 kTs=(0.000000)
-vas=(1.000000)
+#vas=(0.100000)
+vas=($1)
 taus=("tau=0.100000" "tau=1.000000" "tau=10.000000" "quenched")
 lambdas=(1.000000 3.000000 10.000000 30.000000)
 seeds=($(seq 1 $nseed))
@@ -45,7 +46,7 @@ srun parallel -k --lb --jobs 32 "python $run_dir/energy.py $SCRATCH/active-assem
                         ::: ${lambdas[@]} \
                         ::: ${seeds[@]} | tr -d \''"\' &
 
-wait
+#wait
 
 echo "Doing structure factor analysis..."
 srun parallel -k --lb --jobs 32 "python $run_dir/structure_factor.py $SCRATCH/active-assembly-hoomd/${potential}/${d}d/kT={1}/phi={2}/va={3}/{4}/lambda={5}/Lx=${Lx}_Ly=${Lx}/nx=${nx}_ny=${nx}/interpolation=${interp}/${compressibility}/${cov_type}/seed={6}/prod/traj.gsd 5 > $SCRATCH/active-assembly-hoomd/log/sq_kT={1}_phi={2}_va={3}_{4}_lambda={5}_seed={6}.out" \

@@ -3,6 +3,8 @@
 import hoomd
 import gsd.hoomd
 import numpy as np
+import numpy.linalg as la
+import numba
 import math
 import argparse
 import os
@@ -44,25 +46,25 @@ def main():
                         help="no. of unit cells in z direction",
                         type=int,
                         dest="Nz",
-                        default=0)
+                        default=1)
     
     parser.add_argument("-gx", "--grid_size_x",
                         help="size of active noise grid in x",
                         type=int,
                         dest="grid_size_x",
-                        default=400)
+                        default=100)
 
     parser.add_argument("-gy", "--grid_size_y",
                         help="size of active noise grid in y",
                         type=int,
                         dest="grid_size_y",
-                        default=400)
+                        default=100)
 
     parser.add_argument("-gz", "--grid_size_z",
                         help="size of active noise grid in z",
                         type=int,
                         dest="grid_size_z",
-                        default=0)
+                        default=1)
 
     parser.add_argument("-c", "--cov_type",
                         help="active noise covariance type (exponential or gaussian)",
@@ -164,9 +166,8 @@ def main():
     Ny = args.Ny
     grid_size_x = args.grid_size_x
     grid_size_y = args.grid_size_y
-    if dim==3:
-        Nz = args.Nz
-        grid_size_z = args.grid_size_z
+    Nz = args.Nz
+    grid_size_z = args.grid_size_z
 
     #Set default parameter values
     kT = 0.0
@@ -227,10 +228,10 @@ def main():
         out_folder += '/tau=%f' % tau
     out_folder += '/lambda=%f' % Lambda
     if dim==2:
-        out_folder += '/Nx=%f_Ny=%f' % (Nx, Ny)
+        out_folder += '/Nx=%d_Ny=%d' % (Nx, Ny)
         out_folder += '/nx=%d_ny=%d' % (grid_size_x, grid_size_y)
     else:
-        out_folder += '/Nx=%f_Ny=%f_Nz=%f' % (Nx, Ny, Nz)
+        out_folder += '/Nx=%d_Ny=%d_Nz=%d' % (Nx, Ny, Nz)
         out_folder += '/nx=%d_ny=%d_nz=%d' % (grid_size_x, grid_size_y, grid_size_z)
     out_folder += '/interpolation=%s' % interpolation
     out_folder += '/%s' % compressibility
@@ -263,6 +264,7 @@ def main():
     ###############
     #Lattice initialization
     ###############
+    print('initializing lattice...')
     #Set particle positions
     frame = gsd.hoomd.Frame()
     position = []
@@ -272,6 +274,7 @@ def main():
         N = Nx*Ny
         Lx = Nx*a
         Ly = Ny*a*np.sqrt(3.0)/2.0
+        Lz = 0.0
         frame.configuration.box = [Lx, Ly, 0.0, 0, 0, 0]
         for i in range(Nx):
             for j in range(Ny):
@@ -282,6 +285,7 @@ def main():
                 position.append((x,y,0))
     else:
         N = 4*Nx*Ny*Nz
+        a = np.sqrt(2.0)
         Lx = Nx*a
         Ly = Ny*a
         Lz = Nz*a
@@ -299,9 +303,22 @@ def main():
     frame.particles.N = N
     frame.particles.position = position
     frame.particles.types = ['A']
+
+    #create bonds
+    print('creating bonds...')
+    if dim==2:
+        edges = np.array([Lx,Ly,0.0])
+    else:
+        edges = np.array([Lx,Ly,Lz])
+    frame.bonds.types = ['A-A']
+    frame.bonds.group = get_neighbors(frame.particles.position, edges)
+    frame.bonds.N = len(frame.bonds.group)
+    print(frame.bonds.N, "should equal", N*3)
+    frame.bonds.typeid = [0] * frame.bonds.N
+
     with gsd.hoomd.open(name=out_folder+'/init.gsd', mode='w') as f:
         f.append(frame)
-    exit()
+    print('done with initialization')
 
     ###############
     #Production run
@@ -314,13 +331,18 @@ def main():
     integrator = hoomd.md.Integrator(dt=dt)
 
     #Set up interaction potential
+    #TODO: change this to bond potential
     cell = hoomd.md.nlist.Cell(buffer=0.4)
-    if potential=="wca":
-        pot = hoomd.md.pair.LJ(nlist=cell, default_r_cut=sigma*2.0**(1.0/6.0))
+    
+    if potential=="harmonic":
+        bond_pot = hoomd.md.bond.Harmonic()
+        bond_pot.params['A-A'] = dict(k=1.0, r0=1.0)
+        #pot = hoomd.md.pair.LJ(nlist=cell, default_r_cut=sigma*2.0**(1.0/6.0))
     else:
-        pot = hoomd.md.pair.LJ(nlist=cell, default_r_cut=sigma*2.5)
-    pot.params[('A', 'A')] = dict(epsilon=epsilon, sigma=sigma)
-    integrator.forces.append(pot)
+        bond_pot = hoomd.md.bond.FENEWCA()
+        bond_pot.params['A-A'] = dict(k=1.0, r0=1.0, epsilon=1.0, sigma=1.0, delta=0.7)
+        #pot = hoomd.md.pair.LJ(nlist=cell, default_r_cut=sigma*2.5)
+    integrator.forces.append(bond_pot)
 
     #Use Brownian dynamics
     brownian = hoomd.md.methods.Brownian(filter=hoomd.filter.All(), kT=kT)
@@ -329,8 +351,12 @@ def main():
 
     #Add custom active noise force
     params = {}
-    params['N'] = grid_size
-    params['dx'] = Lx/params['N']
+    params['Nx'] = grid_size_x
+    params['Ny'] = grid_size_y
+    params['Nz'] = grid_size_z
+    params['dx'] = Lx/params['Nx']
+    params['dy'] = Ly/params['Ny']
+    params['dz'] = Lz/params['Nz']
     params['print_freq'] = freq
     params['do_output'] = 0
     params['output_freq'] = freq
@@ -353,7 +379,7 @@ def main():
         edges = xp.array([Lx,Ly,0.0])
     else:
         edges = xp.array([Lx,Ly,Lz])
-    spacing = xp.array([params['dx'],params['dx'],params['dx']])
+    spacing = xp.array([params['dx'],params['dy'],params['dz']])
 
     #Write trajectory
     gsd_writer = hoomd.write.GSD(filename=out_folder + '/traj.gsd',
@@ -366,7 +392,7 @@ def main():
     progress_logger = hoomd.logging.Logger(categories=['scalar', 'string'])
     logger = hoomd.logging.Logger()
     progress_logger.add(simulation, quantities=['timestep', 'tps'])
-    logger.add(pot, quantities=['energies', 'forces', 'virials'])
+    logger.add(bond_pot, quantities=['energies', 'forces', 'virials'])
     logger[('Time', 'time')] = (lambda: simulation.operations.integrator.dt*simulation.timestep, 'scalar')
     table = hoomd.write.Table(trigger=hoomd.trigger.Periodic(period=freq),
                               logger=progress_logger)
@@ -381,11 +407,11 @@ def main():
         print('quenched')
         if do_output_noise==1:
             if dim==2:
-                newdims = np.array([grid_size, grid_size])
-                newspacing = np.array([params['dx'], params['dx']])
+                newdims = np.array([grid_size_x, grid_size_y])
+                newspacing = np.array([params['dx'], params['dy']])
             else:
-                newdims = np.array([grid_size, grid_size, grid_size])
-                newspacing = np.array([params['dx'], params['dx'], params['dx']])
+                newdims = np.array([grid_size_x, grid_size_y, grid_size_z])
+                newspacing = np.array([params['dx'], params['dy'], params['dz']])
             noise_writer = NoiseWriter.NoiseWriter(newdims, newspacing, va, Lambda, tau, dt, out_folder_noise)
         params['nsteps'] = 1
         params['chunksize'] = 1
@@ -407,11 +433,11 @@ def main():
         nchunks = nsteps//stepChunkSize
         if do_output_noise==1:
             if dim==2:
-                newdims = np.array([grid_size, grid_size])
-                newspacing = np.array([params['dx'], params['dx']])
+                newdims = np.array([grid_size_x, grid_size_y])
+                newspacing = np.array([params['dx'], params['dy']])
             else:
-                newdims = np.array([grid_size, grid_size, grid_size])
-                newspacing = np.array([params['dx'], params['dx'], params['dx']])
+                newdims = np.array([grid_size_x, grid_size_y, grid_size_z])
+                newspacing = np.array([params['dx'], params['dy'], params['dz']])
             noise_writer = NoiseWriter.NoiseWriter(newdims, newspacing, va, Lambda, tau, dt, out_folder_noise)
         step = 0
         for c in range(nchunks):
@@ -438,5 +464,29 @@ def main():
             integrator.forces.remove(active_force)
 
         print('done')
+
+@numba.jit(nopython=True)
+def get_neighbors(position, edges):
+    hasstarted=0
+    for i in range(len(position)):
+        for j in range(i+1,len(position)):
+            pos1 = np.array(position[i])
+            pos2 = np.array(position[j])
+            if get_min_dist(pos1, pos2, edges)<1.001:
+                if hasstarted==0:
+                    hasstarted = 1
+                    bonds = [[i,j]]
+                else:
+                    bonds.append([i,j])
+    return bonds
+
+@numba.jit(nopython=True)
+def get_min_dist(r1, r2, edges):
+    arr1 = edges/2.0
+    arr2 = -edges/2.0
+    rdiff = r1-r2
+    rdiff = np.where(rdiff>arr1, rdiff-edges, rdiff)
+    rdiff = np.where(rdiff<arr2, rdiff+edges, rdiff)
+    return la.norm(rdiff)
 
 main()

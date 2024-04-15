@@ -1,7 +1,7 @@
 #!/bin/bash
 #Do production runs
 
-nseed=20
+nseed=100
 
 #phis=(0.1 0.4 0.7)
 phis=(0.1 0.4)
@@ -17,8 +17,10 @@ for phi in "${phis[@]}"; do
     for L in "${Ls[@]}"; do
         for tau in "${taus[@]}"; do
             for va in "${vas[@]}"; do
-                echo $phi $L $tau $va
-                sbatch $HOME/active-assembly-hoomd/scripts/submit_scripts/submit_run.sh $nseed $phi $L $tau $va
+                for Lambda in "${Lambdas[@]}"; do
+                    echo $phi $L $tau $va $Lambda
+                    sbatch $HOME/active-assembly-hoomd/scripts/submit_scripts/submit_manyseed_run.sh $nseed $phi $L $tau $va $Lambda
+                done
             done
         done
     done

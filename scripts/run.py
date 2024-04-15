@@ -281,9 +281,9 @@ def main():
     #Set up interaction potential
     cell = hoomd.md.nlist.Cell(buffer=0.4)
     if potential=="wca":
-        pot = hoomd.md.pair.LJ(nlist=cell, default_r_cut=sigma*2.0**(1.0/6.0))
+        pot = hoomd.md.pair.LJ(nlist=cell, default_r_cut=sigma*2.0**(1.0/6.0), mode='shift')
     else:
-        pot = hoomd.md.pair.LJ(nlist=cell, default_r_cut=sigma*2.5)
+        pot = hoomd.md.pair.LJ(nlist=cell, default_r_cut=sigma*2.5, mode='shift')
     pot.params[('A', 'A')] = dict(epsilon=epsilon, sigma=sigma)
     integrator.forces.append(pot)
 
