@@ -20,17 +20,41 @@ tau=$4
 va=$5
 Lambda=$6
 
-#phis=(0.1 0.4 0.7)
-phis=(0.1 0.4)
-#Ls=(50.0 100.0 200.0 400.0)
-Ls=(200.0)
-taus=(0.1 1.0 10.0 inf)
-Lambdas=(1.0 3.0 10.0 30.0)
-vas=(1.0)
 seeds=($(seq 1 $nseed))
 
 seedbyfour="$(($nseed / 4))"
 seedints=($(seq 0 "$(($seedbyfour-1))"))
+
+grid_size=400
+if (( $(echo "$L==100.0" |bc -l) )); then
+    grid_size=200
+fi
+
+#default time parameters for va=1
+dt=0.0001
+trun=250
+tfreq=1.0
+
+if (( $(echo "$va==2.0" |bc -l) )); then
+    dt=0.00005
+    trun=125
+    tfreq=0.5
+fi
+if (( $(echo "$va==0.5" |bc -l) )); then
+    dt=0.0002
+    trun=500
+    tfreq=2.0
+fi
+if (( $(echo "$va==0.2" |bc -l) )); then
+    dt=0.0005
+    trun=1250
+    tfreq=5.0
+fi
+if (( $(echo "$va==0.1" |bc -l) )); then
+    dt=0.001
+    trun=2500
+    tfreq=10.0
+fi
 
 outfolder=$SCRATCH/active-assembly-hoomd/manyseed
 
@@ -40,10 +64,7 @@ for seedint in "${seedints[@]}"; do
     for num in "${nums[@]}"; do
         seed="$(($(($seedint * 4)) + $num))"
         echo "seed $seed"
-        srun --exact -u -n 1 --gpus-per-task 1 -c 32 --mem-per-gpu=55G python $HOME/active-assembly-hoomd/scripts/run.py -f 1.0 -o $outfolder -dt 0.0002 --phi $phi -L $L --seed $seed --tau $tau --va $va --lambda $Lambda > $SCRATCH/active-assembly-hoomd/log/run_manyseed_phi=${phi}_L=${L}_va=${va}_tau=${tau}_lambda=${Lambda}_seed=${seed}.out &
-    #wait
-    #sleep 10s
+        srun --exact -u -n 1 --gpus-per-task 1 -c 32 --mem-per-gpu=55G python $HOME/active-assembly-hoomd/scripts/run.py -f $tfreq -t $trun -o $outfolder -dt $dt --phi $phi -L $L -g $grid_size --seed $seed --tau $tau --va $va --lambda $Lambda > $SCRATCH/active-assembly-hoomd/log/run_manyseed_phi=${phi}_L=${L}_va=${va}_tau=${tau}_lambda=${Lambda}_seed=${seed}.out &
     done
-    #echo "wait"
     wait
 done

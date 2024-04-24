@@ -340,7 +340,7 @@ def main():
         #pot = hoomd.md.pair.LJ(nlist=cell, default_r_cut=sigma*2.0**(1.0/6.0))
     else:
         bond_pot = hoomd.md.bond.FENEWCA()
-        bond_pot.params['A-A'] = dict(k=1.0, r0=1.0, epsilon=1.0, sigma=1.0, delta=0.7)
+        bond_pot.params['A-A'] = dict(k=1.0, r0=1.2, epsilon=1.0, sigma=0.9213, delta=0.0)
         #pot = hoomd.md.pair.LJ(nlist=cell, default_r_cut=sigma*2.5)
     integrator.forces.append(bond_pot)
 

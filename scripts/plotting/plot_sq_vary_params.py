@@ -9,8 +9,10 @@ import AnalysisTools.trajectory_stats as stats
 kT=0.0
 phi=0.4
 va=1.0
-taus = [0.1, 1.0, 10.0, float('inf')]
-lambdas = [1.0, 3.0, 10.0, 30.0]
+#taus = [0.1, 1.0, 10.0, float('inf')]
+#lambdas = [1.0, 3.0, 10.0, 30.0]
+taus = [0.1, 1.0, 10.0, 100.0, float('inf')]
+lambdas = [1.0, 3.0, 5.0, 10.0]
 Lx=200.000000
 Ly=200.000000
 nx=400
@@ -19,15 +21,14 @@ interpolation='linear'
 compressibility='compressible'
 cov_type='exponential'
 
-#num_bins = 1000
-num_bins = int(2.0/(2*np.pi/Lx))#1000
+num_bins = 1000
+#num_bins = int(2.0/(2*np.pi/Lx))#1000
 print('num bins:', num_bins)
 
 #colors_va = mpl.cm.plasma(np.linspace(0,1,len(vas)))
 colors_tau = mpl.cm.plasma(np.linspace(0,1,len(taus)))
 
-basedir = os.environ['SCRATCH'] + '/active-assembly-hoomd/wca/2d/kT=%f/phi=%f/va=%f' % (kT, phi, va)
-
+basedir = os.environ['SCRATCH'] + '/active-assembly-hoomd/manyseed/wca/2d/kT=%f/phi=%f/va=%f' % (kT, phi, va)
 
 for Lambda in lambdas:
     fig = plt.figure()
@@ -38,10 +39,10 @@ for Lambda in lambdas:
         else:
             thedir = basedir + '/tau=%f/lambda=%f/Lx=%f_Ly=%f/nx=%d_ny=%d/interpolation=%s/%s/%s/' % (tau, Lambda, Lx, Ly, nx, ny, interpolation, compressibility, cov_type)
         print('tau:', tau)
-        data = sq.rebin_sq(thedir)
+        data = sq.rebin_sq(thedir, nbins=num_bins)
         sq_data = stats.get_postprocessed_stats(data)
-        sqavg = (sq_data['sq_vals_1d_4_avg']+sq_data['sq_vals_1d_3_avg']+sq_data['sq_vals_1d_2_avg']+sq_data['sq_vals_1d_1_avg'])/4.0
-        sqerr = sq_data['sq_vals_1d_4_stderr']
+        sqavg = sq_data['sq_vals_1d_nlast_avg']
+        sqerr = sq_data['sq_vals_1d_nlast_stderr']
         q1d = sq_data['qvals_1d_avg']
         themax = np.max(sqavg)
         theargmax = np.argmax(sqavg)
@@ -68,7 +69,7 @@ for phi in phis:
     for i in range(len(lambdas)):
         Lambda = lambdas[i]
         thedir = basedir + '/quenched/lambda=%f/Lx=%f_Ly=%f/nx=%d_ny=%d/interpolation=%s/%s/%s/' % (Lambda, Lx, Ly, nx, ny, interpolation, compressibility, cov_type)
-        data = sq.rebin_sq(thedir)
+        data = sq.rebin_sq(thedir, nbins=num_bins)
         sq_data = stats.get_postprocessed_stats(data)
         sqavg = sq_data['sq_vals_1d_4_avg']
         sqerr = sq_data['sq_vals_1d_4_stderr']
@@ -81,15 +82,16 @@ for phi in phis:
         axs.set_xlabel(r'$q\sigma$')
         axs.set_ylabel(r'$S(q)$')
 
-        axs.legend()
+        axs.legend(loc='upper right')
 
         cnt+=1
         
-        axs.set_xlim([-0.01,1.0])
+        plt.xlim([0.0,1.0])
         #axs.set_ylim([-0.01,200])
-plt.yscale('log')
-plt.tight_layout()
+#plt.yscale('log')
+#plt.tight_layout()
 plt.savefig('plots/2d/sq_quenched_vary_lambda_phi=%.01f_va=%.01f_Lx=%.01f_Ly=%.01f.png' % (phi, va, Lx, Ly), dpi=300, bbox_inches='tight')
+
 
 '''
 fig, axs = plt.subplots(2,1, figsize=(3.75,3.3),sharex=True, sharey=True)
@@ -154,7 +156,7 @@ Lambda=3.0
 va = 1.0
 
 thedir = basedir + '/quenched/lambda=%f/Lx=%f_Ly=%f/nx=%d_ny=%d/interpolation=%s/%s/%s/' % (Lambda, Lx, Ly, nx, ny, interpolation, compressibility, cov_type)
-data2 = sq.rebin_sq(thedir)
+data2 = sq.rebin_sq(thedir, nbins=num_bins)
 for d in data2:
     print('test2qmax:', np.max(d['qvals_1d']))
 sq_post = stats.get_postprocessed_stats(data2)
@@ -165,7 +167,7 @@ for d in data2:
     sq_data= d['sq_vals_1d_4']
     #sq = (sq_data['sq_vals_1d_4_avg'] + sq_data['sq_vals_1d_3_avg'] + sq_data['sq_vals_1d_2_avg'])/3.0
     q = d['qvals_1d']
-    print(np.max(q))
+    #print(np.max(q))
     plt.plot(q,sq_data, linewidth=0.5)
 plt.plot(q, sqavg, color='black')
 
