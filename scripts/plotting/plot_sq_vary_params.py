@@ -94,5 +94,5 @@ for phi in phis:
             #axs.set_ylim([-0.01,200])
     #plt.yscale('log')
     #plt.tight_layout()
-    plt.savefig('plots/2d/sq_quenched_vary_lambda_phi=%.01f_va=%.01f_Lx=%.01f_Ly=%.01f.png' % (phi, va, Lx, Ly), dpi=300, bbox_inches='tight')
+    plt.savefig('plots/2d/sq_1d_quenched_vary_lambda_phi=%.01f_va=%.01f_Lx=%.01f_Ly=%.01f.png' % (phi, va, Lx, Ly), dpi=300, bbox_inches='tight')
     plt.close()
