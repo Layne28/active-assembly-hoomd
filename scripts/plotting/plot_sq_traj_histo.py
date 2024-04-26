@@ -6,8 +6,8 @@ import os
 kT=0.0
 phi=0.1
 va=1.0
-taus = [0.1, 1.0, 10.0, 100.0, float('inf')]
-lambdas = [1.0, 3.0, 5.0, 10.0]
+taus = [0.1, 1.0, 10.0, float('inf')]
+lambdas = [1.0, 3.0, 10.0, 30.0]
 Lx=200.000000
 Ly=200.000000
 nx=400
@@ -16,11 +16,11 @@ interpolation='linear'
 compressibility='compressible'
 cov_type='exponential'
 
-Lambda = lambdas[1]
-tau = taus[-2]
+num_bins = int(2.0/(2*np.pi/Lx))#1000
+print('num bins:', num_bins)
 
-print('lambda', Lambda)
-print('tau', tau)
+Lambda = lambdas[2]
+tau = taus[2]
 
 basedir = os.environ['SCRATCH'] + '/active-assembly-hoomd/manyseed/wca/2d/kT=%f/phi=%f/va=%f' % (kT, phi, va)
 
@@ -31,32 +31,22 @@ else:
 
 #if os.path.isfile(myfile):
 fig = plt.figure()
-data = dict(np.load(basedir+'seed=3/prod/sq_traj.npz'))
+data = dict(np.load(basedir+'seed=1/prod/sq_traj.npz'))
 print(data.keys())
 #sq = sq_data['sq_vals_1d_4_avg']
 #sqerr = sq_data['sq_vals_1d_4_stderr']
+qstar = data['qvals_1d'][1]
 times = data['times']
 sq=data['sq_vals']
-qmag = data['qmag']
-
-#sort by qmag
-inds = qmag.argsort()
-print(qmag[inds])
-qmag = qmag[inds]
-sq = sq[:,inds]
-qs = data['qvals'][inds,:]
-
-maxnummode=10
-qs = qs[:(maxnummode+1),:]
-print(qs)
+print(sq)
+print('q*', qstar)
 colors=plt.get_cmap('viridis')
-for i in range(0,maxnummode):
-    print(qs[i,:])
-    print((np.linalg.norm(qs[i,:])-np.linalg.norm(qs[0,:]))/((np.linalg.norm(qs[-1,:])-np.linalg.norm(qs[0,:]))))
-    #print(np.linalg.norm(qs[i,:]))#/(np.linalg.norm(qs[-1,:])))
-    #plt.plot(times,sq[:,i],c=colors(np.linalg.norm(qs[i,:])/(np.linalg.norm(qs[-1,:]))),zorder=i)
-    plt.plot(times,sq[:,i],c=colors((np.linalg.norm(qs[i,:])-np.linalg.norm(qs[0,:]))/((np.linalg.norm(qs[-1,:])-np.linalg.norm(qs[0,:])))),zorder=maxnummode-i)
-    #plt.plot(times,sq[:,i],c=colors(i/maxnummode),zorder=maxnummode-i)
+maxnummode=10
+print(data['qvals'].shape)
+qs = data['qvals'][:(maxnummode+1),:]
+print(qs)
+for i in range(1,maxnummode+1):
+    plt.plot(times,sq[:,i],c=colors(np.linalg.norm(qs[i,:])/(np.linalg.norm(qs[-1,:]))))
 #plt.fill_between(q,sq-2*sqerr, sq+2*sqerr,alpha=0.5)
 plt.xlabel(r'$t$')
 plt.ylabel(r'$S(q*)(t)$')
