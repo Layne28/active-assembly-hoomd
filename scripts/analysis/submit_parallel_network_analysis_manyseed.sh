@@ -10,7 +10,7 @@
 njob=64
 
 tmax=100.000000
-nseed=100
+nseed=50
 
 potential="fene"
 interp="linear"

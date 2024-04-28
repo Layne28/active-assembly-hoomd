@@ -10,15 +10,15 @@
 njob=64
 
 tmax=100.000000
-nseed=100
+nseed=50
 
 potential="wca"
 interp="linear"
 compressibility="compressible"
 cov_type="exponential"
 d=2
-Lx=100.000000
-nx=200
+Lx=200.000000
+nx=400
 
 #phis=(0.100000 0.400000 0.700000)
 phis=(0.100000 0.400000)

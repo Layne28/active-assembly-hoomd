@@ -65,6 +65,10 @@ while read line; do
            tau="${elem#*=}"
            #echo $tau
        fi 
+       if [[ $elem == quenched ]]; then
+           tau="inf"
+           #echo $tau
+       fi 
        if [[ $elem == va* ]]; then
            va="${elem#*=}"
            #echo $va
@@ -79,3 +83,4 @@ while read line; do
     srun --exact -u -n 1 --gpus-per-task 1 -c 32 --mem-per-gpu=55G python $HOME/active-assembly-hoomd/scripts/run.py -f $tfreq -t $trun -o $outfolder --dt $dt --phi $phi -L $L -g $grid_size --seed $seed --tau $tau --va $va --lambda $Lambda > $SCRATCH/active-assembly-hoomd/log/rerun_phi=${phi}_L=${L}_va=${va}_tau=${tau}_lambda=${Lambda}_seed=${seed}.out &
 
 done <$myfile
+wait

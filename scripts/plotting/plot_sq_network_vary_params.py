@@ -48,8 +48,8 @@ for j in range(len(lambdas)):
         axs[j].scatter(q1d[theargmax], themax, c='black', marker='*', s=35.0,zorder=10)
         axs[j].scatter(q1d[theargmax], themax, c=colors_tau[i], marker='*', s=15.0, zorder=11)
     axs[j].set_ylabel(r'$S(q)$')
-    #axs[j].set_xlim([0,0.5])
-    axs[j].set_yscale('log')
+    axs[j].set_xlim([0,0.5])
+    #axs[j].set_yscale('log')
 axs[-1].legend(fontsize=8, loc='upper right')
 axs[-1].set_xlabel(r'$q$')
 plt.savefig('plots/2d/sq_network_1d_multipanel_vary_tau_va=%f_Nx=%d_Ny=%d.png' % (va, Nx, Ny), dpi=300, bbox_inches='tight')
@@ -77,7 +77,7 @@ for i in range(len(lambdas)):
     #axs.scatter(q1d[1:-1],sqavg[1:], label=r'$\lambda_a=%.01f$' % Lambda)
     #axs.plot(q1d[1:-1],sqavg[1:], label=r'$\lambda_a=%.01f$' % Lambda)
 
-    axs.set_yscale('log')
+    #axs.set_yscale('log')
     axs.set_xlabel(r'$q\sigma$')
     axs.set_ylabel(r'$S(q)$')
 
@@ -85,7 +85,7 @@ for i in range(len(lambdas)):
 
     cnt+=1
     
-    #plt.xlim([0,0.5])
+    plt.xlim([0,0.5])
     #axs.set_ylim([-0.01,200])
 #plt.yscale('log')
 #plt.tight_layout()
