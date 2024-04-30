@@ -12,7 +12,7 @@ import AnalysisTools.structure_factor as sq
 import AnalysisTools.trajectory_stats as stats
 import AnalysisTools.particle_io as io
 
-rc = 1.1
+rc = 1.5
 
 kT=0.0
 phi=0.1
@@ -33,7 +33,7 @@ colors_tau = mpl.cm.plasma(np.linspace(0,1,len(taus)))
 
 basedir = os.environ['SCRATCH'] + '/active-assembly-hoomd/manyseed/wca/2d/kT=%f/phi=%f/va=%f' % (kT, phi, va)
 
-Lambda = lambdas[-1]
+Lambda = lambdas[-2]
 tau = taus[-1]
 print('lambda:', Lambda, 'tau:', tau)
 fig, ax = plt.subplots(1,1)

@@ -20,10 +20,11 @@ tau=$4
 va=$5
 Lambda=$6
 
+minseed=49
 seeds=($(seq 1 $nseed))
 
 seedbyfour="$(($nseed / 4))"
-seedints=($(seq 0 "$(($seedbyfour-1))"))
+seedints=($(seq 0 "$(($seedbyfour))"))
 
 grid_size=400
 if (( $(echo "$L==100.0" |bc -l) )); then
@@ -63,8 +64,13 @@ for seedint in "${seedints[@]}"; do
     nums=($(seq 1 4))
     for num in "${nums[@]}"; do
         seed="$(($(($seedint * 4)) + $num))"
-        echo "seed $seed"
-        srun --exact -u -n 1 --gpus-per-task 1 -c 32 --mem-per-gpu=55G python $HOME/active-assembly-hoomd/scripts/run.py -f $tfreq -t $trun -o $outfolder -dt $dt --phi $phi -L $L -g $grid_size --seed $seed --tau $tau --va $va --lambda $Lambda > $SCRATCH/active-assembly-hoomd/log/run_manyseed_phi=${phi}_L=${L}_va=${va}_tau=${tau}_lambda=${Lambda}_seed=${seed}.out &
+        if [ $seed -le $nseed ]; then
+            if [ $seed -ge $minseed ]; then
+                echo "seed $seed"
+                srun --exact -u -n 1 --gpus-per-task 1 -c 32 --mem-per-gpu=55G python $HOME/active-assembly-hoomd/scripts/run.py -f $tfreq -t $trun -o $outfolder -dt $dt --phi $phi -L $L -g $grid_size --seed $seed --tau $tau --va $va --lambda $Lambda > $SCRATCH/active-assembly-hoomd/log/run_manyseed_phi=${phi}_L=${L}_va=${va}_tau=${tau}_lambda=${Lambda}_seed=${seed}.out &
+            fi
+        fi
     done
     wait
 done
+wait

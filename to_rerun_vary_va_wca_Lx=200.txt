@@ -1,0 +1,1177 @@
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.100000/tau=1.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.100000/tau=1.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.100000/tau=1.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.100000/tau=1.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.100000/tau=1.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.100000/tau=1.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.100000/tau=1.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.100000/tau=1.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.100000/tau=10.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.100000/tau=10.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.100000/tau=10.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.100000/tau=10.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.100000/tau=10.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.100000/tau=10.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.100000/tau=10.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.100000/tau=10.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.100000/tau=100.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.100000/tau=100.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.100000/tau=100.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.100000/tau=100.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.100000/tau=100.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.100000/tau=100.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.100000/tau=100.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.100000/tau=100.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.100000/quenched/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.100000/quenched/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.100000/quenched/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.100000/quenched/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.100000/quenched/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.100000/quenched/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.100000/quenched/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.100000/quenched/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.300000/tau=1.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=46/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.300000/tau=1.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=47/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.300000/tau=1.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.300000/tau=1.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.300000/tau=1.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.300000/tau=1.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.300000/tau=1.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.300000/tau=1.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.300000/tau=1.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.300000/tau=1.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.300000/tau=10.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.300000/tau=10.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.300000/tau=10.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.300000/tau=10.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.300000/tau=10.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.300000/tau=10.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.300000/tau=10.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.300000/tau=10.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.300000/tau=100.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.300000/tau=100.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.300000/tau=100.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.300000/tau=100.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.300000/tau=100.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.300000/tau=100.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.300000/tau=100.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.300000/tau=100.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.300000/quenched/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.300000/quenched/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.300000/quenched/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.300000/quenched/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.300000/quenched/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.300000/quenched/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.300000/quenched/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.300000/quenched/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.500000/tau=0.200000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.500000/tau=0.200000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.500000/tau=0.200000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.500000/tau=0.200000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.500000/tau=0.200000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.500000/tau=0.200000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.500000/tau=0.200000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=41/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.500000/tau=0.200000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.500000/tau=0.200000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.500000/tau=2.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.500000/tau=2.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.500000/tau=2.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.500000/tau=2.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.500000/tau=2.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.500000/tau=2.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.500000/tau=2.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.500000/tau=2.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.500000/tau=20.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.500000/tau=20.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.500000/tau=20.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.500000/tau=20.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.500000/tau=20.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.500000/tau=20.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.500000/tau=20.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.500000/tau=20.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.500000/quenched/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.500000/quenched/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.500000/quenched/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.500000/quenched/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.500000/quenched/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.500000/quenched/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.500000/quenched/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=0.500000/quenched/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Needs to be rerun!
+Only 57 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=0.050000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=45/prod/traj.gsd
+Needs to be rerun!
+Only 57 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=0.050000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=46/prod/traj.gsd
+Needs to be rerun!
+Only 58 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=0.050000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=47/prod/traj.gsd
+Needs to be rerun!
+Only 56 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=0.050000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=48/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=0.050000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=0.050000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Needs to be rerun!
+Only 89 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=0.050000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=45/prod/traj.gsd
+Needs to be rerun!
+Only 89 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=0.050000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=46/prod/traj.gsd
+Needs to be rerun!
+Only 88 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=0.050000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=47/prod/traj.gsd
+Needs to be rerun!
+Only 88 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=0.050000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=48/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=0.050000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=0.050000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Needs to be rerun!
+Only 103 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=0.050000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=45/prod/traj.gsd
+Needs to be rerun!
+Only 101 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=0.050000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=46/prod/traj.gsd
+Needs to be rerun!
+Only 102 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=0.050000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=47/prod/traj.gsd
+Needs to be rerun!
+Only 102 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=0.050000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=48/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=0.050000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=0.050000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Needs to be rerun!
+Only 100 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=0.050000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=45/prod/traj.gsd
+Needs to be rerun!
+Only 102 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=0.050000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=46/prod/traj.gsd
+Needs to be rerun!
+Only 103 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=0.050000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=47/prod/traj.gsd
+Needs to be rerun!
+Only 99 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=0.050000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=48/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=0.050000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=0.050000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Needs to be rerun!
+Only 153 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=0.500000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=45/prod/traj.gsd
+Needs to be rerun!
+Only 151 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=0.500000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=46/prod/traj.gsd
+Needs to be rerun!
+Only 153 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=0.500000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=47/prod/traj.gsd
+Needs to be rerun!
+Only 154 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=0.500000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=48/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=0.500000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=0.500000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Needs to be rerun!
+Only 150 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=0.500000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=45/prod/traj.gsd
+Needs to be rerun!
+Only 146 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=0.500000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=46/prod/traj.gsd
+Needs to be rerun!
+Only 148 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=0.500000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=47/prod/traj.gsd
+Needs to be rerun!
+Only 147 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=0.500000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=48/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=0.500000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=0.500000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Needs to be rerun!
+Only 209 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=0.500000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=45/prod/traj.gsd
+Needs to be rerun!
+Only 211 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=0.500000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=46/prod/traj.gsd
+Needs to be rerun!
+Only 210 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=0.500000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=47/prod/traj.gsd
+Needs to be rerun!
+Only 207 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=0.500000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=48/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=0.500000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=0.500000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Needs to be rerun!
+Only 211 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=0.500000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=45/prod/traj.gsd
+Needs to be rerun!
+Only 210 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=0.500000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=46/prod/traj.gsd
+Needs to be rerun!
+Only 207 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=0.500000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=47/prod/traj.gsd
+Needs to be rerun!
+Only 209 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=0.500000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=48/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=0.500000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=0.500000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=5.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=5.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Needs to be rerun!
+Only 4 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=5.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=45/prod/traj.gsd
+Needs to be rerun!
+Only 4 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=5.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=46/prod/traj.gsd
+Needs to be rerun!
+Only 5 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=5.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=47/prod/traj.gsd
+Needs to be rerun!
+Only 5 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=5.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=48/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=5.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=5.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Needs to be rerun!
+Only 51 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=5.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=45/prod/traj.gsd
+Needs to be rerun!
+Only 51 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=5.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=46/prod/traj.gsd
+Needs to be rerun!
+Only 50 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=5.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=47/prod/traj.gsd
+Needs to be rerun!
+Only 51 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=5.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=48/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=5.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=5.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Needs to be rerun!
+Only 53 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=5.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=45/prod/traj.gsd
+Needs to be rerun!
+Only 53 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=5.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=46/prod/traj.gsd
+Needs to be rerun!
+Only 51 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=5.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=47/prod/traj.gsd
+Needs to be rerun!
+Only 53 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=5.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=48/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=5.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/tau=5.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/quenched/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/quenched/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/quenched/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/quenched/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/quenched/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/quenched/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/quenched/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.100000/va=2.000000/quenched/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Needs to be rerun!
+Only 80 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=1.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=45/prod/traj.gsd
+Needs to be rerun!
+Only 80 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=1.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=46/prod/traj.gsd
+Needs to be rerun!
+Only 80 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=1.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=47/prod/traj.gsd
+Needs to be rerun!
+Only 76 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=1.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=48/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=1.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=1.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Needs to be rerun!
+Only 87 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=1.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=45/prod/traj.gsd
+Needs to be rerun!
+Only 81 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=1.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=46/prod/traj.gsd
+Needs to be rerun!
+Only 89 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=1.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=47/prod/traj.gsd
+Needs to be rerun!
+Only 87 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=1.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=48/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=1.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=1.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Needs to be rerun!
+Only 192 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=1.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=45/prod/traj.gsd
+Needs to be rerun!
+Only 192 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=1.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=46/prod/traj.gsd
+Needs to be rerun!
+Only 190 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=1.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=47/prod/traj.gsd
+Needs to be rerun!
+Only 192 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=1.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=48/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=1.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=1.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Needs to be rerun!
+Only 187 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=1.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=45/prod/traj.gsd
+Needs to be rerun!
+Only 204 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=1.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=46/prod/traj.gsd
+Needs to be rerun!
+Only 201 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=1.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=47/prod/traj.gsd
+Needs to be rerun!
+Only 204 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=1.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=48/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=1.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=1.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Needs to be rerun!
+Only 18 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=10.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=45/prod/traj.gsd
+Needs to be rerun!
+Only 16 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=10.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=46/prod/traj.gsd
+Needs to be rerun!
+Only 17 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=10.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=47/prod/traj.gsd
+Needs to be rerun!
+Only 17 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=10.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=48/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=10.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=10.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=10.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=42/prod/traj.gsd
+Needs to be rerun!
+Only 28 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=10.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=45/prod/traj.gsd
+Needs to be rerun!
+Only 28 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=10.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=46/prod/traj.gsd
+Needs to be rerun!
+Only 27 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=10.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=47/prod/traj.gsd
+Needs to be rerun!
+Only 28 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=10.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=48/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=10.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=10.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Needs to be rerun!
+Only 81 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=10.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=45/prod/traj.gsd
+Needs to be rerun!
+Only 82 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=10.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=46/prod/traj.gsd
+Needs to be rerun!
+Only 84 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=10.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=47/prod/traj.gsd
+Needs to be rerun!
+Only 85 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=10.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=48/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=10.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=10.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Needs to be rerun!
+Only 76 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=10.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=45/prod/traj.gsd
+Needs to be rerun!
+Only 75 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=10.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=46/prod/traj.gsd
+Needs to be rerun!
+Only 76 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=10.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=47/prod/traj.gsd
+Needs to be rerun!
+Only 77 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=10.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=48/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=10.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=10.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Needs to be rerun!
+Only 157 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=100.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=45/prod/traj.gsd
+Needs to be rerun!
+Only 156 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=100.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=46/prod/traj.gsd
+Needs to be rerun!
+Only 150 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=100.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=47/prod/traj.gsd
+Needs to be rerun!
+Only 156 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=100.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=48/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=100.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=100.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=100.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=37/prod/traj.gsd
+Needs to be rerun!
+Only 145 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=100.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=45/prod/traj.gsd
+Needs to be rerun!
+Only 144 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=100.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=46/prod/traj.gsd
+Needs to be rerun!
+Only 144 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=100.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=47/prod/traj.gsd
+Needs to be rerun!
+Only 144 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=100.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=48/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=100.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=100.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Needs to be rerun!
+Only 193 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=100.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=41/prod/traj.gsd
+Needs to be rerun!
+Only 191 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=100.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=42/prod/traj.gsd
+Needs to be rerun!
+Only 187 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=100.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=43/prod/traj.gsd
+Needs to be rerun!
+Only 191 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=100.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=44/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=100.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=45/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=100.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=46/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=100.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=47/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=100.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=48/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=100.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=100.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Needs to be rerun!
+Only 219 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=100.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=41/prod/traj.gsd
+Needs to be rerun!
+Only 221 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=100.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=42/prod/traj.gsd
+Needs to be rerun!
+Only 218 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=100.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=43/prod/traj.gsd
+Needs to be rerun!
+Only 218 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=100.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=44/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=100.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=45/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=100.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=46/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=100.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=47/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=100.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=48/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=100.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=100.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/quenched/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/quenched/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/quenched/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/quenched/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/quenched/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/quenched/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/quenched/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/quenched/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Needs to be rerun!
+Only 53 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=1.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=45/prod/traj.gsd
+Needs to be rerun!
+Only 55 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=1.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=46/prod/traj.gsd
+Needs to be rerun!
+Only 54 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=1.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=47/prod/traj.gsd
+Needs to be rerun!
+Only 55 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=1.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=48/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=1.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=1.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Needs to be rerun!
+Only 29 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=1.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=45/prod/traj.gsd
+Needs to be rerun!
+Only 29 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=1.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=46/prod/traj.gsd
+Needs to be rerun!
+Only 28 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=1.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=47/prod/traj.gsd
+Needs to be rerun!
+Only 27 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=1.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=48/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=1.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=1.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=1.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=28/prod/traj.gsd
+Needs to be rerun!
+Only 83 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=1.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=45/prod/traj.gsd
+Needs to be rerun!
+Only 84 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=1.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=46/prod/traj.gsd
+Needs to be rerun!
+Only 82 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=1.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=47/prod/traj.gsd
+Needs to be rerun!
+Only 82 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=1.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=48/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=1.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=1.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Needs to be rerun!
+Only 86 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=1.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=45/prod/traj.gsd
+Needs to be rerun!
+Only 86 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=1.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=46/prod/traj.gsd
+Needs to be rerun!
+Only 88 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=1.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=47/prod/traj.gsd
+Needs to be rerun!
+Only 87 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=1.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=48/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=1.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=1.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Needs to be rerun!
+Only 200 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=10.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=45/prod/traj.gsd
+Needs to be rerun!
+Only 200 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=10.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=46/prod/traj.gsd
+Needs to be rerun!
+Only 201 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=10.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=47/prod/traj.gsd
+Needs to be rerun!
+Only 203 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=10.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=48/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=10.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=10.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Needs to be rerun!
+Only 226 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=10.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=41/prod/traj.gsd
+Needs to be rerun!
+Only 222 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=10.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=42/prod/traj.gsd
+Needs to be rerun!
+Only 225 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=10.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=43/prod/traj.gsd
+Needs to be rerun!
+Only 227 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=10.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=44/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=10.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=45/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=10.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=46/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=10.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=47/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=10.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=48/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=10.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=10.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=10.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=10.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=10.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=10.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Needs to be rerun!
+Only 65 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=100.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=45/prod/traj.gsd
+Needs to be rerun!
+Only 63 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=100.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=46/prod/traj.gsd
+Needs to be rerun!
+Only 62 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=100.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=47/prod/traj.gsd
+Needs to be rerun!
+Only 63 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=100.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=48/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=100.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=100.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Needs to be rerun!
+Only 62 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=100.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=45/prod/traj.gsd
+Needs to be rerun!
+Only 63 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=100.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=46/prod/traj.gsd
+Needs to be rerun!
+Only 63 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=100.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=47/prod/traj.gsd
+Needs to be rerun!
+Only 64 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=100.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=48/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=100.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=100.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Needs to be rerun!
+Only 53 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=100.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=45/prod/traj.gsd
+Needs to be rerun!
+Only 50 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=100.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=46/prod/traj.gsd
+Needs to be rerun!
+Only 53 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=100.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=47/prod/traj.gsd
+Needs to be rerun!
+Only 54 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=100.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=48/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=100.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=100.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Needs to be rerun!
+Only 55 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=100.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=45/prod/traj.gsd
+Needs to be rerun!
+Only 53 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=100.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=46/prod/traj.gsd
+Needs to be rerun!
+Only 54 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=100.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=47/prod/traj.gsd
+Needs to be rerun!
+Only 53 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=100.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=48/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=100.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/tau=100.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/quenched/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/quenched/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/quenched/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/quenched/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/quenched/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/quenched/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/quenched/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.300000/quenched/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Needs to be rerun!
+Only 205 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/tau=0.200000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=45/prod/traj.gsd
+Needs to be rerun!
+Only 206 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/tau=0.200000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=46/prod/traj.gsd
+Needs to be rerun!
+Only 201 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/tau=0.200000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=47/prod/traj.gsd
+Needs to be rerun!
+Only 205 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/tau=0.200000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=48/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/tau=0.200000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/tau=0.200000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/tau=0.200000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/tau=0.200000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/tau=0.200000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/tau=0.200000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/tau=0.200000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/tau=0.200000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/tau=2.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/tau=2.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/tau=2.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/tau=2.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Needs to be rerun!
+Only 210 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/tau=2.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=41/prod/traj.gsd
+Needs to be rerun!
+Only 205 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/tau=2.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=42/prod/traj.gsd
+Needs to be rerun!
+Only 206 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/tau=2.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=43/prod/traj.gsd
+Needs to be rerun!
+Only 205 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/tau=2.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=44/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/tau=2.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=45/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/tau=2.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=46/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/tau=2.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=47/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/tau=2.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=48/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/tau=2.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/tau=2.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Needs to be rerun!
+Only 244 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/tau=2.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=45/prod/traj.gsd
+Needs to be rerun!
+Only 233 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/tau=2.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=46/prod/traj.gsd
+Needs to be rerun!
+Only 242 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/tau=2.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=47/prod/traj.gsd
+Needs to be rerun!
+Only 244 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/tau=2.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=48/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/tau=2.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/tau=2.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Needs to be rerun!
+Only 23 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/tau=20.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=45/prod/traj.gsd
+Needs to be rerun!
+Only 19 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/tau=20.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=46/prod/traj.gsd
+Needs to be rerun!
+Only 21 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/tau=20.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=47/prod/traj.gsd
+Needs to be rerun!
+Only 23 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/tau=20.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=48/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/tau=20.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/tau=20.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/tau=20.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=30/prod/traj.gsd
+Needs to be rerun!
+Only 94 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/tau=20.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=45/prod/traj.gsd
+Needs to be rerun!
+Only 95 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/tau=20.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=46/prod/traj.gsd
+Needs to be rerun!
+Only 93 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/tau=20.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=47/prod/traj.gsd
+Needs to be rerun!
+Only 94 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/tau=20.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=48/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/tau=20.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/tau=20.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Needs to be rerun!
+Only 112 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/tau=20.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=45/prod/traj.gsd
+Needs to be rerun!
+Only 109 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/tau=20.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=46/prod/traj.gsd
+Needs to be rerun!
+Only 110 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/tau=20.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=47/prod/traj.gsd
+Needs to be rerun!
+Only 110 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/tau=20.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=48/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/tau=20.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/tau=20.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Needs to be rerun!
+Only 232 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/tau=20.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=41/prod/traj.gsd
+Needs to be rerun!
+Only 248 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/tau=20.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=43/prod/traj.gsd
+Needs to be rerun!
+Only 249 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/tau=20.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=44/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/tau=20.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=45/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/tau=20.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=46/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/tau=20.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=47/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/tau=20.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=48/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/tau=20.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/tau=20.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/quenched/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/quenched/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/quenched/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/quenched/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/quenched/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/quenched/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/quenched/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/quenched/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=0.050000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=0.050000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Needs to be rerun!
+Only 16 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=0.050000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=45/prod/traj.gsd
+Needs to be rerun!
+Only 15 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=0.050000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=46/prod/traj.gsd
+Needs to be rerun!
+Only 16 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=0.050000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=47/prod/traj.gsd
+Needs to be rerun!
+Only 16 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=0.050000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=48/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=0.050000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=0.050000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Needs to be rerun!
+Only 77 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=0.050000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=45/prod/traj.gsd
+Needs to be rerun!
+Only 80 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=0.050000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=46/prod/traj.gsd
+Needs to be rerun!
+Only 79 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=0.050000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=47/prod/traj.gsd
+Needs to be rerun!
+Only 78 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=0.050000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=48/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=0.050000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=0.050000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Needs to be rerun!
+Only 92 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=0.050000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=45/prod/traj.gsd
+Needs to be rerun!
+Only 92 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=0.050000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=46/prod/traj.gsd
+Needs to be rerun!
+Only 92 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=0.050000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=47/prod/traj.gsd
+Needs to be rerun!
+Only 91 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=0.050000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=48/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=0.050000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=0.050000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Needs to be rerun!
+Only 108 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=0.500000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=45/prod/traj.gsd
+Needs to be rerun!
+Only 111 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=0.500000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=46/prod/traj.gsd
+Needs to be rerun!
+Only 110 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=0.500000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=47/prod/traj.gsd
+Needs to be rerun!
+Only 105 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=0.500000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=48/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=0.500000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=0.500000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Needs to be rerun!
+Only 131 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=0.500000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=45/prod/traj.gsd
+Needs to be rerun!
+Only 131 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=0.500000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=46/prod/traj.gsd
+Needs to be rerun!
+Only 126 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=0.500000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=47/prod/traj.gsd
+Needs to be rerun!
+Only 130 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=0.500000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=48/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=0.500000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=0.500000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Needs to be rerun!
+Only 131 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=0.500000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=45/prod/traj.gsd
+Needs to be rerun!
+Only 132 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=0.500000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=46/prod/traj.gsd
+Needs to be rerun!
+Only 131 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=0.500000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=47/prod/traj.gsd
+Needs to be rerun!
+Only 126 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=0.500000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=48/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=0.500000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=0.500000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Needs to be rerun!
+Only 168 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=0.500000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=45/prod/traj.gsd
+Needs to be rerun!
+Only 167 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=0.500000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=46/prod/traj.gsd
+Needs to be rerun!
+Only 170 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=0.500000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=47/prod/traj.gsd
+Needs to be rerun!
+Only 165 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=0.500000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=48/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=0.500000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=0.500000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Needs to be rerun!
+Only 160 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=5.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=45/prod/traj.gsd
+Needs to be rerun!
+Only 156 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=5.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=46/prod/traj.gsd
+Needs to be rerun!
+Only 160 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=5.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=47/prod/traj.gsd
+Needs to be rerun!
+Only 161 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=5.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=48/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=5.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=5.000000/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Needs to be rerun!
+Only 130 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=5.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=45/prod/traj.gsd
+Needs to be rerun!
+Only 123 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=5.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=46/prod/traj.gsd
+Needs to be rerun!
+Only 129 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=5.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=47/prod/traj.gsd
+Needs to be rerun!
+Only 129 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=5.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=48/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=5.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=5.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Needs to be rerun!
+Only 193 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=5.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=45/prod/traj.gsd
+Needs to be rerun!
+Only 193 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=5.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=46/prod/traj.gsd
+Needs to be rerun!
+Only 192 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=5.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=47/prod/traj.gsd
+Needs to be rerun!
+Only 194 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=5.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=48/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=5.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=5.000000/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=5.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=12/prod/traj.gsd
+Needs to be rerun!
+Only 196 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=5.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=45/prod/traj.gsd
+Needs to be rerun!
+Only 191 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=5.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=46/prod/traj.gsd
+Needs to be rerun!
+Only 193 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=5.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=47/prod/traj.gsd
+Needs to be rerun!
+Only 199 frames, should be 250
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=5.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=48/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=5.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=5.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/quenched/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/quenched/lambda=1.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/quenched/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/quenched/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/quenched/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/quenched/lambda=5.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/quenched/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=49/prod/traj.gsd
+Trajectory file does not exist!
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/quenched/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=50/prod/traj.gsd
