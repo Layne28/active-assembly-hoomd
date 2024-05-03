@@ -26,9 +26,6 @@ compressibility='compressible'
 cov_type='exponential'
 nseed=10
 
-#colors_va = mpl.cm.plasma(np.linspace(0,1,len(vas)))
-colors_tau = mpl.cm.plasma(np.linspace(0,1,len(taus)))
-
 basedir = os.environ['SCRATCH'] + '/active-assembly-hoomd/manyseed/%s/2d/kT=%f/va=%f' % (potential, kT, va)
 
 Lambda = lambdas[1]

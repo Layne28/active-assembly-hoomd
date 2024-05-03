@@ -14,6 +14,7 @@ va=1.0
 phis = [0.1,0.4]
 taus = [0.1, 1.0, 10.0, 100.0, float('inf')]
 lambdas = [1.0, 3.0, 5.0, 10.0]
+#lambdas = [1.0, 3.0, 10.0]
 Lx=200.000000
 Ly=200.000000
 nx=400
@@ -28,6 +29,7 @@ colors = mpl.cm.viridis(np.linspace(0,1,len(lambdas)))
 
 for phi in phis:
 
+    #print(phi)
     basedir = os.environ['SCRATCH'] + '/active-assembly-hoomd/manyseed/wca/2d/kT=%f/phi=%f/va=%f' % (kT, phi, va)
 
     #fig, axs = plt.subplots(len(lambdas),1,figsize=(3.0,7.0), sharex=True)
@@ -37,14 +39,19 @@ for phi in phis:
         ls = []
         for i in range(len(taus)-1):
             tau = taus[i]
+            #print(Lambda, tau)
             thedir = basedir + '/tau=%f/lambda=%f/Lx=%f_Ly=%f/nx=%d_ny=%d/interpolation=%s/%s/%s/' % (tau, Lambda, Lx, Ly, nx, ny, interpolation, compressibility, cov_type)
-            data = np.load(thedir + '/csd_avg.npz')
-            histavg = data['hist_4_avg']
-            histerr = data['hist_4_stderr']
-            bins = data['bins_4_avg']
+            data = np.load(thedir + '/csd_rc=1.500000.npz')
+            #print(list(data))
+            #print('loaded data')
+            histavg = data['hist_nlast']
+            #histerr = data['hist_nlast_stderr']
+            bins = data['bins']
             ls.append(cluster.get_avg_size(bins, histavg))
+            #print('appended')
         taulabel = r'$\tau_a=%.01f$' % taus[i]
         axs.plot(taus[:-1], ls, marker='o', markersize=5, color=colors[j], label=r'$\lambda_a=%.01f$' % lambdas[j])
+        #print('plotted')
     axs.set_xscale('log')
     #axs[j].set_xlabel(r'$\tau_a$')
     axs.set_ylabel(r'$\langle n \rangle$')
@@ -60,10 +67,11 @@ for phi in phis:
         for i in range(len(taus)-1):
             tau = taus[i]
             thedir = basedir + '/tau=%f/lambda=%f/Lx=%f_Ly=%f/nx=%d_ny=%d/interpolation=%s/%s/%s/' % (tau, Lambda, Lx, Ly, nx, ny, interpolation, compressibility, cov_type)
-            data = np.load(thedir + '/csd_avg.npz')
-            histavg = data['hist_4_avg']
-            histerr = data['hist_4_stderr']
-            bins = data['bins_4_avg']
+            data = np.load(thedir + '/csd_rc=1.500000.npz')
+            #print(list(data))
+            histavg = data['hist_nlast']
+            #histerr = data['hist_nlast_stderr']
+            bins = data['bins']
             ls.append(cluster.get_avg_mass_weighted_size(bins, histavg))
         taulabel = r'$\tau_a=%.01f$' % taus[i]
         axs.plot(taus[:-1], ls, marker='o', markersize=5, color=colors[j], label=r'$\lambda_a=%.01f$' % lambdas[j])
@@ -81,10 +89,10 @@ for phi in phis:
     for i in range(len(lambdas)):
         Lambda = lambdas[i]
         thedir = basedir + '/quenched/lambda=%f/Lx=%f_Ly=%f/nx=%d_ny=%d/interpolation=%s/%s/%s/' % (Lambda, Lx, Ly, nx, ny, interpolation, compressibility, cov_type)
-        data = np.load(thedir + '/csd_avg.npz')
-        histavg = data['hist_4_avg']
-        histerr = data['hist_4_stderr']
-        bins = data['bins_4_avg']
+        data = np.load(thedir + '/csd_rc=1.500000.npz')
+        histavg = data['hist_nlast']
+        #histerr = data['hist_nlast_stderr']
+        bins = data['bins']
         ls.append(cluster.get_avg_size(bins, histavg))
 
     axs.plot(lambdas, ls, marker='o', markersize=10)
@@ -99,10 +107,10 @@ for phi in phis:
     for i in range(len(lambdas)):
         Lambda = lambdas[i]
         thedir = basedir + '/quenched/lambda=%f/Lx=%f_Ly=%f/nx=%d_ny=%d/interpolation=%s/%s/%s/' % (Lambda, Lx, Ly, nx, ny, interpolation, compressibility, cov_type)
-        data = np.load(thedir + '/csd_avg.npz')
-        histavg = data['hist_4_avg']
-        histerr = data['hist_4_stderr']
-        bins = data['bins_4_avg']
+        data = np.load(thedir + '/csd_rc=1.500000.npz')
+        histavg = data['hist_nlast']
+        #histerr = data['hist_nlast_stderr']
+        bins = data['bins']
         ls.append(cluster.get_avg_mass_weighted_size(bins, histavg))
 
     axs.plot(lambdas, ls, marker='o', markersize=10)
