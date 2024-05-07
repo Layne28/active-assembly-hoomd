@@ -24,6 +24,7 @@ cov_type='exponential'
 
 #colors_va = mpl.cm.plasma(np.linspace(0,1,len(vas)))
 colors_tau = mpl.cm.plasma(np.linspace(0,1,len(taus)))
+colors_lambda = mpl.cm.plasma(np.linspace(0,1,len(lambdas)))
 
 for phi in phis:
 
@@ -59,6 +60,48 @@ for phi in phis:
     plt.savefig('plots/2d/sq_1d_multipanel_vary_tau_phi=%f_va=%f_Lx=%.01f_Ly=%.01f.png' % (phi, va, Lx, Ly), dpi=300, bbox_inches='tight')
     plt.close()
 
+    #plot the other way
+    fig, axs = plt.subplots(1,len(taus),figsize=(10.0,2.5), sharex=True, sharey=True)
+    for j in range(len(lambdas)):
+        Lambda = lambdas[j]
+        for i in range(len(taus)):
+            tau = taus[i]
+            if tau==float('inf'):
+                thedir = basedir + '/quenched/lambda=%f/Lx=%f_Ly=%f/nx=%d_ny=%d/interpolation=%s/%s/%s/' % (Lambda, Lx, Ly, nx, ny, interpolation, compressibility, cov_type)
+            else:
+                thedir = basedir + '/tau=%f/lambda=%f/Lx=%f_Ly=%f/nx=%d_ny=%d/interpolation=%s/%s/%s/' % (tau, Lambda, Lx, Ly, nx, ny, interpolation, compressibility, cov_type)
+            sq_data = np.load(thedir + '/sq_avg.npz')
+            sqavg = sq_data['sq_vals_1d_nlast_avg']
+            sqerr = sq_data['sq_vals_1d_nlast_stderr']
+            q1d = sq_data['qvals_1d_avg']
+            themax = np.max(sqavg)
+            theargmax = np.argmax(sqavg)
+
+            sqavgnorm = sqavg/themax#sqavg[0]
+            sqerrnorm = sqerr/themax#sqavg[0]
+            themaxnorm = np.max(sqavgnorm)
+            lambdalabel = r'$\lambda_a=%.01f$' % lambdas[j]
+
+            axs[i].plot(q1d,sqavg,color=colors_lambda[j], label=lambdalabel)
+            axs[i].fill_between(q1d, sqavg-2*sqerr, sqavg+2*sqerr, color=colors_lambda[j], alpha=0.4)
+            axs[i].scatter(q1d[theargmax], themax, c='black', marker='*', s=35.0,zorder=10)
+            axs[i].scatter(q1d[theargmax], themax, c=colors_lambda[j], marker='*', s=15.0, zorder=11)
+
+            #axs[i].plot(q1d,sqavgnorm,color=colors_lambda[j], label=lambdalabel)
+            #axs[i].fill_between(q1d, sqavgnorm-2*sqerrnorm, sqavgnorm+2*sqerrnorm, color=colors_lambda[j], alpha=0.4)
+            #axs[i].scatter(q1d[theargmax], themaxnorm, c='black', marker='*', s=35.0,zorder=10)
+            #axs[i].scatter(q1d[theargmax], themaxnorm, c=colors_lambda[j], marker='*', s=15.0, zorder=11)
+
+            #axs[].set_title(r'$\lambda_{\text{a}}=%.01f$' % tau)
+            axs[i].set_xlim([0,0.5])
+        axs[0].set_ylabel(r'$S(q)$')
+        
+    axs[-1].legend(fontsize=8, loc='upper right')
+    axs[-1].set_xlabel(r'$q$')
+    #plt.tight_layout()
+    plt.savefig('plots/2d/sq_1d_multipanel_vary_Lambda_phi=%f_va=%f_Lx=%.01f_Ly=%.01f.png' % (phi, va, Lx, Ly), dpi=300, bbox_inches='tight')
+    plt.close()
+
     #Quenched case
     fig, axs = plt.subplots(1,1)
     colors = mpl.cm.viridis(np.linspace(0,1,len(lambdas)))
@@ -77,6 +120,7 @@ for phi in phis:
             q1d = sq_data['qvals_1d_avg']
             themax = np.max(sqavg)
             theargmax = np.argmax(sqavg)
+            
             axs.plot(q1d,sqavg, label=r'$\lambda_a=%.01f$' % Lambda, color=colors[i])
             axs.fill_between(q1d, sqavg+2*sqerr, sqavg-2*sqerr, alpha=0.4, color=colors[i])
             axs.scatter(q1d[theargmax], themax, c='black', marker='*', s=35.0,zorder=10)

@@ -49,9 +49,10 @@ for phi in phis:
         axs.plot(taus[:-1], ls, marker='o', markersize=5, color=colors[j], label=r'$\lambda_a=%.01f$' % lambdas[j])
     axs.set_xscale('log')
     #axs[j].set_xlabel(r'$\tau_a$')
-    axs.set_ylabel(r'$l_{\rho}$')
+    axs.set_ylabel(r'$\ell_{c}$')
     axs.legend(fontsize=8, loc='upper left')
     axs.set_xlabel(r'$\tau_a$')
+    axs.set_ylim([0,80])
     plt.savefig('plots/2d/sq_peak_vary_tau_phi=%f_va=%f_Lx=%.01f_Ly=%.01f.png' % (phi, va, Lx, Ly), dpi=300, bbox_inches='tight')
     plt.close()
 
@@ -72,6 +73,7 @@ for phi in phis:
     axs.plot(lambdas, ls, marker='o', markersize=10)
     axs.set_xlabel(r'$\lambda_a$')
     axs.set_ylabel(r'$l_{\rho}$')
+    axs.set_ylim([0,80])
 
     plt.savefig('plots/2d/sq_peak_quenched_vary_lambda_phi=%.01f_va=%.01f_Lx=%.01f_Ly=%.01f.png' % (phi, va, Lx, Ly), dpi=300, bbox_inches='tight')
     plt.close()

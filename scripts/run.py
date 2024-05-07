@@ -307,6 +307,7 @@ def main():
     params['dt'] = dt
     params['D'] = va**2
     params['cov_type'] = cov_type
+    params['compressibility'] = compressibility
     params['verbose'] = False
     if xp==cp:
         params['xpu'] = 'gpu'

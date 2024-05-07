@@ -6,7 +6,7 @@
 #SBATCH --nodes=1
 #SBATCH --constraint=gpu
 #SBATCH --ntasks-per-node=4
-#SBATCH --time=24:00:00
+#SBATCH --time=6:00:00
 
 module load parallel
 module load conda/Mambaforge-23.1.0-1
@@ -46,11 +46,11 @@ if (( $(echo "$va==0.5" |bc -l) )); then
     trun=500
     tfreq=2.0
 fi
-if (( $(echo "$va==0.2" |bc -l) )); then
-    dt=0.0005
-    trun=1250
-    tfreq=5.0
-fi
+#if (( $(echo "$va==0.2" |bc -l) )); then
+#    dt=0.0005
+#    trun=1250
+#    tfreq=5.0
+#fi
 if (( $(echo "$va==0.1" |bc -l) )); then
     dt=0.001
     trun=2500

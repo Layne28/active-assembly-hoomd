@@ -9,7 +9,7 @@ phis=(0.1 0.4)
 Ls=(200.0)
 taus=(0.1 1.0 10.0 inf)
 Lambdas=(1.0 3.0 5.0 10.0)
-vas=(0.1 0.3 0.5 2.0)
+vas=(0.1 0.5 2.0)
 seeds=($(seq 1 $nseed))
 
 for phi in "${phis[@]}"; do
@@ -21,9 +21,9 @@ for phi in "${phis[@]}"; do
             if (( $(echo "$va==0.5" |bc -l) )); then
                 taus=(0.2 2.0 20.0 inf)
             fi
-            if (( $(echo "$va==0.2" |bc -l) )); then
-                taus=(0.5 5.0 50.0 inf)
-            fi
+            #if (( $(echo "$va==0.3" |bc -l) )); then
+            #    taus=(0.5 5.0 50.0 inf)
+            #fi
             if (( $(echo "$va==0.1" |bc -l) )); then
                 taus=(1.0 10.0 100.0 inf)
             fi
