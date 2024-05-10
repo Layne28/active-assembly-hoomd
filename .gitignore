@@ -7,3 +7,5 @@ images/*
 *.tga
 *.png
 log/*
+cross_corr*.o*
+cross_corr*.e*

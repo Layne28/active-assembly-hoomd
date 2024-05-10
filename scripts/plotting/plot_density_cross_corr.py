@@ -175,16 +175,18 @@ for p in range(len(phis)):
         taulabel = r'$\tau_{\text{a}}=%.01f$' % taus[j]
         axs[0][p].errorbar(lambdas, corr_arr[:,j], yerr=2*corr_err[:,j], color=colors_tau[j], label=taulabel, marker='o',zorder=j, alpha=0.5)
         #axs[0][p].errorbar(lambdas, corr_arr[:,j]/np.max(np.abs(corr_arr[:,j])), yerr=2*corr_err[:,j]/np.max(np.abs(corr_arr[:,j])), color=colors_tau[j], label=taulabel, marker='o',zorder=j, alpha=0.5)
-    axs[1][p].errorbar(lambdas, corr_arr[:,-1], yerr=2*corr_err[:,j], color='blue', label=r'$\tau_a=\infty$', marker='o')
+    axs[1][p].errorbar(lambdas, corr_arr[:,-1], yerr=2*corr_err[:,-1], color='blue', label=r'$\tau_a=\infty$', marker='o')
     axs[0][p].axhline(y=0.0, color='black', linestyle='--')
     axs[1][p].axhline(y=0.0, color='black', linestyle='--')
     axs[0][p].set_title(r'$\phi=%.01f$' % phi)
-    axs[0][0].legend(ncol=2, fontsize=8)#, loc='lower center')
+    axs[0][0].set_ylim([-0.005,0.0005])
+    axs[0][1].legend(ncol=2, fontsize=8)#, loc='lower center')
     #axs[0][0].set_ylim([-0.0005,0.0005])
-    axs[-1][0].legend()
+    axs[-1][1].legend()
     axs[-1][p].set_xlabel(r'$\lambda_{\text{a}}$')
-    axs[1][0].set_ylabel(r'$\langle \delta |\xi| \delta \rho \rangle$')
-    axs[0][0].set_ylabel(r'$\langle \delta |\xi| \delta \rho \rangle$')
+    axs[1][0].set_ylabel(r'$\langle \delta |\xi| \delta \rho \rangle/\sigma_{|\xi|}\sigma_{\rho}$')
+    axs[0][0].set_ylabel(r'$\langle \delta |\xi| \delta \rho \rangle/\sigma_{|\xi|}\sigma_{\rho}$')
+plt.suptitle('Density-noise magnitude cross correlation')
 plt.savefig('plots/2d/density_sparse_cross_corr_norm_multipanel.png')
 
 

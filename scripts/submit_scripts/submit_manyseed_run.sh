@@ -6,7 +6,7 @@
 #SBATCH --nodes=1
 #SBATCH --constraint=gpu
 #SBATCH --ntasks-per-node=4
-#SBATCH --time=6:00:00
+#SBATCH --time=24:00:00
 
 module load parallel
 module load conda/Mambaforge-23.1.0-1
@@ -20,7 +20,7 @@ tau=$4
 va=$5
 Lambda=$6
 
-minseed=49
+minseed=40
 seeds=($(seq 1 $nseed))
 
 seedbyfour="$(($nseed / 4))"
