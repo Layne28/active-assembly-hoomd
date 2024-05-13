@@ -10,7 +10,7 @@
 njob=64
 nseed=50
 
-potential="fene"
+potential="harmonic"
 interp="linear"
 compressibility="compressible"
 cov_type="exponential"
@@ -23,7 +23,7 @@ tau=$1
 lambda=$2
 
 kT=0.000000
-va=1.000000
+va=0.010000
 seeds=($(seq 1 $nseed))
 
 mydir=$SCRATCH

@@ -41,7 +41,7 @@ echo ${run_dir}
 
 #Do per-trajectory analysis first
 echo "Doing cross-correlation analysis..."
-srun parallel -k --lb --jobs $njob "python $run_dir/field_particle_correlation.py $SCRATCH/active-assembly-hoomd/manyseed/${potential}/${d}d/kT={1}/phi={2}/va={3}/{4}/lambda={5}/Lx=${Lx}_Ly=${Lx}/nx=${nx}_ny=${nx}/interpolation=${interp}/${compressibility}/${cov_type}/seed={6}/prod/traj.gsd $SCRATCH/active-assembly-hoomd/manyseed/noise/${d}d/{4}/lambda={5}/nx=${nx}_ny=${nx}/${compressibility}/${cov_type}/seed={6}/noise_traj.h5 density > $SCRATCH/active-assembly-hoomd/log/density_cross_corr_kT={1}_phi={2}_va={3}_{4}_lambda={5}_seed={6}.out" \
+srun parallel -k --lb --jobs $njob "python $run_dir/field_particle_correlation.py $SCRATCH/active-assembly-hoomd/manyseed/${potential}/${d}d/kT={1}/phi={2}/va={3}/{4}/lambda={5}/Lx=${Lx}_Ly=${Lx}/nx=${nx}_ny=${nx}/interpolation=${interp}/${compressibility}/${cov_type}/seed={6}/prod/traj.gsd density --noise_file $SCRATCH/active-assembly-hoomd/manyseed/noise/${d}d/{4}/lambda={5}/nx=${nx}_ny=${nx}/${compressibility}/${cov_type}/seed={6}/noise_traj.h5 > $SCRATCH/active-assembly-hoomd/log/density_cross_corr_kT={1}_phi={2}_va={3}_{4}_lambda={5}_seed={6}.out" \
                         ::: ${kTs[@]} \
                         ::: ${phis[@]} \
                         ::: ${vas[@]} \

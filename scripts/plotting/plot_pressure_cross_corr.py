@@ -4,7 +4,7 @@ import matplotlib as mpl
 import os
 
 kT=0.0
-va=1.0
+va=0.01
 taus = [0.1, 1.0, 10.0, 100.0, float('inf')]
 lambdas = [1.0, 3.0, 5.0, 10.0]
 Nx=96
@@ -14,8 +14,9 @@ ny=200
 interpolation='linear'
 compressibility='compressible'
 cov_type='exponential'
+potential='harmonic'
 
-basedir = os.environ['SCRATCH'] + '/active-assembly-hoomd/manyseed/fene/2d/kT=%f/va=%f' % (kT, va)
+basedir = os.environ['SCRATCH'] + '/active-assembly-hoomd/manyseed/%s/2d/kT=%f/va=%f' % (potential, kT, va)
 
 #Collect correlation measurements
 corr_arr = np.zeros((len(lambdas),len(taus)))
@@ -46,7 +47,7 @@ plt.xlabel(r'$\lambda_{\text{a}}$')
 plt.ylabel(r'$\tau_{\text{a}}$')
 plt.yscale('log')
 #plt.gca().set_aspect('equal')
-plt.savefig('plots/2d/pressure_cross_corr_2d.png')
+plt.savefig('plots/2d/pressure_cross_corr_2d_%s.png' % potential)
 
 colors_tau = mpl.cm.plasma(np.linspace(0,1,len(taus)))
 fig = plt.figure()
@@ -64,10 +65,10 @@ plt.ylabel(r'$\langle \delta |\mathbf{\xi}| \delta |p| \rangle$')
 plt.legend(loc='lower left', fontsize=9)
 #plt.yscale('log')
 #plt.gca().set_aspect('equal')
-plt.savefig('plots/2d/pressure_cross_corr.png')
+plt.savefig('plots/2d/pressure_cross_corr_%s.png' % potential)
 
 fig, axs = plt.subplots(2,1,figsize=(3,4.5), sharex=True, sharey='row')
-basedir = os.environ['SCRATCH'] + '/active-assembly-hoomd/manyseed/fene/2d/kT=%f/va=%f' % (kT, va)
+basedir = os.environ['SCRATCH'] + '/active-assembly-hoomd/manyseed/%s/2d/kT=%f/va=%f' % (potential, kT, va)
 for i in range(len(lambdas)):
     for j in range(len(taus)):
         tau = taus[j]
@@ -94,14 +95,14 @@ axs[-1].legend()
 axs[-1].set_xlabel(r'$\lambda_{\text{a}}$')
 axs[1].set_ylabel(r'$\langle \delta |\xi| \delta p \rangle/\sigma_{|\xi|}\sigma_{p}$')
 axs[0].set_ylabel(r'$\langle \delta |\xi| \delta p \rangle/\sigma_{|\xi|}\sigma_{p}$')
-axs[0].set_ylim([-0.06,0.005])
+#axs[0].set_ylim([-0.06,0.005])
 plt.suptitle('Pressure-noise magnitude cross correlation')
-plt.savefig('plots/2d/pressure_cross_corr_norm_multipanel.png')
+plt.savefig('plots/2d/pressure_cross_corr_norm_multipanel_%s.png' % potential)
 
 
 #Alternative multipanel
 fig, axs = plt.subplots(len(taus),1,figsize=(3,9), sharex=True, sharey='row')
-basedir = os.environ['SCRATCH'] + '/active-assembly-hoomd/manyseed/fene/2d/kT=%f/va=%f' % (kT, va)
+basedir = os.environ['SCRATCH'] + '/active-assembly-hoomd/manyseed/%s/2d/kT=%f/va=%f' % (potential, kT, va)
 for i in range(len(lambdas)):
     for j in range(len(taus)):
         tau = taus[j]
@@ -133,12 +134,12 @@ ax2.set_ylabel(r'$\tau_a=\infty$')
 #axs[0][0].set_ylim([-0.0005,0.0005])
 axs[-1].set_xlabel(r'$\lambda_{\text{a}}$')
 
-plt.savefig('plots/2d/pressure_cross_corr_norm_multipanel_alt.png')
+plt.savefig('plots/2d/pressure_cross_corr_norm_multipanel_alt_%s.png' % potential)
 
 #Using absolute value of pressure
 
 fig, axs = plt.subplots(2,1,figsize=(3,4.5), sharex=True, sharey='row')
-basedir = os.environ['SCRATCH'] + '/active-assembly-hoomd/manyseed/fene/2d/kT=%f/va=%f' % (kT, va)
+basedir = os.environ['SCRATCH'] + '/active-assembly-hoomd/manyseed/%s/2d/kT=%f/va=%f' % (potential, kT, va)
 for i in range(len(lambdas)):
     for j in range(len(taus)):
         tau = taus[j]
@@ -168,12 +169,12 @@ axs[-1].set_xlabel(r'$\lambda_{\text{a}}$')
 axs[1].set_ylabel(r'$\langle \delta |\xi| \delta |p| \rangle/\sigma_{|\xi|}\sigma_{|p|}$')
 axs[0].set_ylabel(r'$\langle \delta |\xi| \delta |p| \rangle/\sigma_{|\xi|}\sigma_{|p|}$')
 plt.suptitle('Pressure magnitude-noise magnitude cross correlation')
-plt.savefig('plots/2d/pressure_abs_cross_corr_norm_multipanel.png')
+plt.savefig('plots/2d/pressure_abs_cross_corr_norm_multipanel_%s.png' % potential)
 
 
 #Alternative multipanel
 fig, axs = plt.subplots(len(taus),1,figsize=(3,9), sharex=True, sharey='row')
-basedir = os.environ['SCRATCH'] + '/active-assembly-hoomd/manyseed/fene/2d/kT=%f/va=%f' % (kT, va)
+basedir = os.environ['SCRATCH'] + '/active-assembly-hoomd/manyseed/%s/2d/kT=%f/va=%f' % (potential, kT, va)
 for i in range(len(lambdas)):
     for j in range(len(taus)):
         tau = taus[j]
@@ -205,4 +206,4 @@ ax2.set_ylabel(r'$\tau_a=\infty$')
 #axs[0][0].set_ylim([-0.0005,0.0005])
 axs[-1].set_xlabel(r'$\lambda_{\text{a}}$')
 
-plt.savefig('plots/2d/pressure_abs_cross_corr_norm_multipanel_alt.png')
+plt.savefig('plots/2d/pressure_abs_cross_corr_norm_multipanel_alt_%s.png' % potential)

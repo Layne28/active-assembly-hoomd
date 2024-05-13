@@ -46,11 +46,6 @@ if (( $(echo "$va==0.5" |bc -l) )); then
     trun=500
     tfreq=2.0
 fi
-#if (( $(echo "$va==0.2" |bc -l) )); then
-#    dt=0.0005
-#    trun=1250
-#    tfreq=5.0
-#fi
 if (( $(echo "$va==0.1" |bc -l) )); then
     dt=0.001
     trun=2500

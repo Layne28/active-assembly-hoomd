@@ -6,7 +6,7 @@
 #SBATCH --nodes=1
 #SBATCH --constraint=gpu
 #SBATCH --ntasks-per-node=4
-#SBATCH --time=24:00:00
+#SBATCH --time=6:00:00
 
 module load parallel
 module load conda/Mambaforge-23.1.0-1
@@ -78,6 +78,22 @@ while read line; do
            #echo $Lambda
        fi 
     done
+
+    if (( $(echo "$va==2.000000" |bc -l) )); then
+        dt=0.00005
+        trun=125
+        tfreq=0.5
+    fi
+    if (( $(echo "$va==0.500000" |bc -l) )); then
+        dt=0.0002
+        trun=500
+        tfreq=2.0
+    fi
+    if (( $(echo "$va==0.100000" |bc -l) )); then
+        dt=0.001
+        trun=2500
+        tfreq=10.0
+    fi
     
     #Run trajectory
     srun --exact -u -n 1 --gpus-per-task 1 -c 32 --mem-per-gpu=55G python $HOME/active-assembly-hoomd/scripts/run.py -f $tfreq -t $trun -o $outfolder --dt $dt --phi $phi -L $L -g $grid_size --seed $seed --tau $tau --va $va --lambda $Lambda > $SCRATCH/active-assembly-hoomd/log/rerun_phi=${phi}_L=${L}_va=${va}_tau=${tau}_lambda=${Lambda}_seed=${seed}.out &

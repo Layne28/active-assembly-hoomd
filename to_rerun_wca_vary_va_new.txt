@@ -1,0 +1,3 @@
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.100000/tau=100.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=37/prod/traj.gsd
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=0.500000/tau=20.000000/lambda=3.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=30/prod/traj.gsd
+/pscratch/sd/l/lfrechet/active-assembly-hoomd/manyseed/wca/2d/kT=0.000000/phi=0.400000/va=2.000000/tau=5.000000/lambda=10.000000/Lx=200.000000_Ly=200.000000/nx=400_ny=400/interpolation=linear/compressible/exponential/seed=12/prod/traj.gsd
