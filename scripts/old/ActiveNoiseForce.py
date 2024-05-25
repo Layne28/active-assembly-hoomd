@@ -21,7 +21,7 @@ class ActiveNoiseForce(hoomd.md.force.Custom):
         self._edges = edges
         self._spacing = spacing
         self._nx = int(self._edges[0]/self._spacing[0])
-        self._ny = int(self._edges[0]/self._spacing[0])
+        self._ny = int(self._edges[1]/self._spacing[1])
         self._device = device
         if isinstance(self._device, hoomd.device.CPU) or not CUPY_IMPORTED:
             xp = np
@@ -30,7 +30,8 @@ class ActiveNoiseForce(hoomd.md.force.Custom):
         self._x = xp.linspace(-self._edges[0]/2.0,self._edges[0]/2.0, self._nx, endpoint=False)+self._spacing[0]/2.0
         self._y = xp.linspace(-self._edges[1]/2.0,self._edges[1]/2.0, self._ny, endpoint=False)+self._spacing[1]/2.0
         if self._dim==3:
-            xp.linspace(-self._edges[2]/2.0,self._edges[2]/2.0, self._nz, endpoint=False)+self._spacing[2]/2.0
+            self._nz = int(self._edges[2]/self._spacing[2])
+            self._z = xp.linspace(-self._edges[2]/2.0,self._edges[2]/2.0, self._nz, endpoint=False)+self._spacing[2]/2.0
         self._interpolation = interpolation
         self._is_quenched = is_quenched
         device_str = device.__class__.__name__.lower()
@@ -73,13 +74,20 @@ class ActiveNoiseForce(hoomd.md.force.Custom):
             xp = np
             Lx = self._edges[0]
             Ly = self._edges[1]
+            if self._dim==3:
+                Lz = self._edges[2]
         else:
             xp = cp
             Lx = self._edges[0].get()
             Ly = self._edges[1].get()
+            if self._dim==3:
+                Lz = self._edges[2].get()
 
         pos = xp.array([-Lx/2.0,-Ly/2.0,0.0])
         pos = pos[xp.newaxis,:]
+        if self._dim==3:
+            pos = xp.array([-Lx/2.0,-Ly/2.0,-Lz/2.0])
+            pos = pos[xp.newaxis,:]
         noise_force = self.get_force_from_noise(pos, 0)
 
         #Do interpolation by hand to test

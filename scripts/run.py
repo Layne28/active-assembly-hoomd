@@ -9,8 +9,10 @@ import os
 #import GPUtil
 
 from ActiveNoise import noise as ActiveNoiseGen
-import ActiveNoiseForce as ActiveForce
-import NoiseWriter
+from ActiveNoiseHoomd import ActiveNoiseForce as ActiveForce
+from ActiveNoiseHoomd import NoiseWriter
+#import ActiveNoiseForce as ActiveForce
+#import NoiseWriter
 
 try:
     import cupy as cp
@@ -95,7 +97,7 @@ def main():
                         default=2.5e-4)
 
     parser.add_argument("-p", "--potential",
-                        help="potential energy (wca or lj)",
+                        help="potential energy (wca or lj or none)",
                         type=str,
                         dest="potential",
                         default="wca")
@@ -282,10 +284,15 @@ def main():
     cell = hoomd.md.nlist.Cell(buffer=0.4)
     if potential=="wca":
         pot = hoomd.md.pair.LJ(nlist=cell, default_r_cut=sigma*2.0**(1.0/6.0), mode='shift')
-    else:
+        pot.params[('A', 'A')] = dict(epsilon=epsilon, sigma=sigma)
+        integrator.forces.append(pot)
+    elif potential=="lj":
         pot = hoomd.md.pair.LJ(nlist=cell, default_r_cut=sigma*2.5, mode='shift')
-    pot.params[('A', 'A')] = dict(epsilon=epsilon, sigma=sigma)
-    integrator.forces.append(pot)
+        pot.params[('A', 'A')] = dict(epsilon=epsilon, sigma=sigma)
+        integrator.forces.append(pot)
+    else:
+        print('Potential "none" selected. Simulating non-interacting particles.')
+    
 
     #Use Brownian dynamics
     brownian = hoomd.md.methods.Brownian(filter=hoomd.filter.All(), kT=kT)
@@ -332,7 +339,8 @@ def main():
     progress_logger = hoomd.logging.Logger(categories=['scalar', 'string'])
     logger = hoomd.logging.Logger()
     progress_logger.add(simulation, quantities=['timestep', 'tps'])
-    logger.add(pot, quantities=['energies', 'forces', 'virials'])
+    if potential!="none":
+        logger.add(pot, quantities=['energies', 'forces', 'virials'])
     logger[('Time', 'time')] = (lambda: simulation.operations.integrator.dt*simulation.timestep, 'scalar')
     table = hoomd.write.Table(trigger=hoomd.trigger.Periodic(period=freq),
                               logger=progress_logger)
