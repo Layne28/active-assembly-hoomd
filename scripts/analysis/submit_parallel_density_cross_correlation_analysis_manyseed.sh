@@ -10,7 +10,7 @@
 njob=32
 nseed=50
 
-potential="wca"
+potential="none"
 interp="linear"
 compressibility="compressible"
 cov_type="exponential"
@@ -27,7 +27,7 @@ vas=(1.000000)
 #vas=($1)
 taus=("tau=0.100000" "tau=1.000000" "tau=10.000000" "tau=100.000000" "quenched")
 #lambdas=(1.000000 3.000000 10.000000 30.000000)
-lambdas=(1.000000 3.000000 5.000000 10.000000)
+lambdas=(0.000000 1.000000 3.000000 5.000000 10.000000 20.000000)
 seeds=($(seq 1 $nseed))
 
 mydir=$SCRATCH

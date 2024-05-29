@@ -26,12 +26,13 @@ ny=400
 interpolation='linear'
 compressibility='compressible'
 cov_type='exponential'
+potential='none'
 nseed=10
 
 #colors_va = mpl.cm.plasma(np.linspace(0,1,len(vas)))
 colors_tau = mpl.cm.plasma(np.linspace(0,1,len(taus)))
 
-basedir = os.environ['SCRATCH'] + '/active-assembly-hoomd/manyseed/wca/2d/kT=%f/phi=%f/va=%f' % (kT, phi, va)
+basedir = os.environ['SCRATCH'] + '/active-assembly-hoomd/manyseed/%s/2d/kT=%f/phi=%f/va=%f' % (potential, kT, phi, va)
 
 Lambda = lambdas[-2]
 tau = taus[-1]
@@ -66,4 +67,4 @@ ax.xaxis.set_tick_params(labelbottom=False)
 ax.yaxis.set_tick_params(labelleft=False)
 
 plt.tight_layout()
-plt.savefig('plots/2d/clusters_phi=%.01f_va=%.01f_lambda=%.01f_tau=%.01f_Lx=%.01f_Ly=%.01f.png' % (phi, va, Lambda, tau, Lx, Ly), dpi=300, bbox_inches='tight')
+plt.savefig('plots/2d/clusters_%s_phi=%.01f_va=%.01f_lambda=%.01f_tau=%.01f_Lx=%.01f_Ly=%.01f.png' % (potential, phi, va, Lambda, tau, Lx, Ly), dpi=300, bbox_inches='tight')

@@ -22,6 +22,7 @@ ny=400
 interpolation='linear'
 compressibility='compressible'
 cov_type='exponential'
+potential='none'
 
 #colors_va = mpl.cm.plasma(np.linspace(0,1,len(vas)))
 colors_tau = mpl.cm.plasma(np.linspace(0,1,len(taus)))
@@ -30,7 +31,7 @@ colors = mpl.cm.viridis(np.linspace(0,1,len(lambdas)))
 for phi in phis:
 
     #print(phi)
-    basedir = os.environ['SCRATCH'] + '/active-assembly-hoomd/manyseed/wca/2d/kT=%f/phi=%f/va=%f' % (kT, phi, va)
+    basedir = os.environ['SCRATCH'] + '/active-assembly-hoomd/manyseed/%s/2d/kT=%f/phi=%f/va=%f' % (potential, kT, phi, va)
 
     #fig, axs = plt.subplots(len(lambdas),1,figsize=(3.0,7.0), sharex=True)
     fig, axs = plt.subplots(1,1)
@@ -57,7 +58,7 @@ for phi in phis:
     axs.set_ylabel(r'$\langle n \rangle$')
     axs.legend(fontsize=8, loc='upper left')
     axs.set_xlabel(r'$\tau_a$')
-    plt.savefig('plots/2d/cluster_avg_vary_tau_phi=%f_va=%f_Lx=%.01f_Ly=%.01f.png' % (phi, va, Lx, Ly), dpi=300, bbox_inches='tight')
+    plt.savefig('plots/2d/cluster_avg_%s_vary_tau_phi=%f_va=%f_Lx=%.01f_Ly=%.01f.png' % (potential, phi, va, Lx, Ly), dpi=300, bbox_inches='tight')
     plt.close()
 
     fig, axs = plt.subplots(1,1)
@@ -80,7 +81,7 @@ for phi in phis:
     axs.set_ylabel(r'$\langle n^2 \rangle/\langle n \rangle$')
     axs.legend(fontsize=8, loc='upper left')
     axs.set_xlabel(r'$\tau_a$')
-    plt.savefig('plots/2d/cluster_mw_avg_vary_tau_phi=%f_va=%f_Lx=%.01f_Ly=%.01f.png' % (phi, va, Lx, Ly), dpi=300, bbox_inches='tight')
+    plt.savefig('plots/2d/cluster_mw_avg_%s_vary_tau_phi=%f_va=%f_Lx=%.01f_Ly=%.01f.png' % (potential, phi, va, Lx, Ly), dpi=300, bbox_inches='tight')
     plt.close()
 
     #Quenched case
@@ -99,7 +100,7 @@ for phi in phis:
     axs.set_xlabel(r'$\lambda_a$')
     axs.set_ylabel(r'$\langle n \rangle$')
 
-    plt.savefig('plots/2d/cluster_avg_quenched_vary_lambda_phi=%.01f_va=%.01f_Lx=%.01f_Ly=%.01f.png' % (phi, va, Lx, Ly), dpi=300, bbox_inches='tight')
+    plt.savefig('plots/2d/cluster_avg_%s_quenched_vary_lambda_phi=%.01f_va=%.01f_Lx=%.01f_Ly=%.01f.png' % (potential, phi, va, Lx, Ly), dpi=300, bbox_inches='tight')
     plt.close()
 
     fig, axs = plt.subplots(1,1)
@@ -117,5 +118,5 @@ for phi in phis:
     axs.set_xlabel(r'$\lambda_a$')
     axs.set_ylabel(r'$\langle n^2 \rangle/\langle n \rangle$')
 
-    plt.savefig('plots/2d/cluster_mw_avg_quenched_vary_lambda_phi=%.01f_va=%.01f_Lx=%.01f_Ly=%.01f.png' % (phi, va, Lx, Ly), dpi=300, bbox_inches='tight')
+    plt.savefig('plots/2d/cluster_mw_avg_%s_quenched_vary_lambda_phi=%.01f_va=%.01f_Lx=%.01f_Ly=%.01f.png' % (potential, phi, va, Lx, Ly), dpi=300, bbox_inches='tight')
     plt.close()

@@ -11,8 +11,8 @@ import os
 #import GPUtil
 
 from ActiveNoise import noise as ActiveNoiseGen
-import ActiveNoiseForce as ActiveForce
-import NoiseWriter
+from ActiveNoiseHoomd import ActiveNoiseForce as ActiveForce
+from ActiveNoiseHoomd import NoiseWriter
 
 try:
     import cupy as cp
@@ -114,6 +114,12 @@ def main():
                         dest="potential",
                         default="harmonic")
 
+    parser.add_argument("-it", "--integrator_type",
+                        help="integrator type (langevin or brownian)",
+                        type=str,
+                        dest="integrator_type",
+                        default="brownian")
+
     parser.add_argument("-f", "--record_time_freq",
                         help="time interval (in units t_LJ) at which to output configurations",
                         type=float,
@@ -147,6 +153,7 @@ def main():
     args = parser.parse_args()
 
     potential = args.potential
+    integrator_type = args.integrator_type
     cov_type = args.cov_type
     va = args.va
     tau = args.tau
@@ -168,6 +175,8 @@ def main():
     grid_size_y = args.grid_size_y
     Nz = args.Nz
     grid_size_z = args.grid_size_z
+
+    print('Using timestep %f' % dt)
 
     #Set default parameter values
     kT = 0.0
@@ -219,6 +228,8 @@ def main():
     out_folder_noise += '/seed=%d' % seednum
 
     out_folder += '/%s' % potential
+    if integrator_type=='langevin':
+        out_folder += '/langevin'
     out_folder += '/%dd' % dim
     out_folder += '/kT=%f' % kT
     out_folder += '/va=%f' % va
@@ -345,8 +356,16 @@ def main():
     integrator.forces.append(bond_pot)
 
     #Use Brownian dynamics
-    brownian = hoomd.md.methods.Brownian(filter=hoomd.filter.All(), kT=kT)
-    integrator.methods = [brownian]
+    if integrator_type=='brownian':
+        brownian = hoomd.md.methods.Brownian(filter=hoomd.filter.All(), kT=kT)
+        integrator.methods = [brownian]
+    elif integrator_type=='langevin':
+        #for now use default gamma=m=1
+        langevin = hoomd.md.methods.Langevin(filter=hoomd.filter.All(), kT=kT)
+        integrator.methods = [langevin]
+    else:
+        print('Error: invalid integrator ("%s")' % integrator_type)
+        exit()
     simulation.operations.integrator = integrator
 
     #Add custom active noise force

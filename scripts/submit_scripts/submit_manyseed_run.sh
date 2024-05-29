@@ -21,7 +21,7 @@ va=$5
 Lambda=$6
 potential=$7
 
-minseed=40
+minseed=1
 seeds=($(seq 1 $nseed))
 
 seedbyfour="$(($nseed / 4))"
@@ -37,7 +37,8 @@ dt=0.0001
 trun=250
 tfreq=1.0
 
-if (($(echo "$potential==none" | bc -l) )); then
+if (($(echo "$potential" = "none" | bc -l) )); then
+    echo "setting timestep to 0.01"
     dt=0.01
 fi
 

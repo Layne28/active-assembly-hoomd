@@ -7,7 +7,7 @@ import AnalysisTools.structure_factor as sq
 import AnalysisTools.trajectory_stats as stats
 
 kT=0.0
-phi=0.1
+phi=0.4
 va=1.0
 #taus = [0.1, 1.0, 10.0, float('inf')]
 #lambdas = [1.0, 3.0, 10.0, 30.0]
@@ -21,6 +21,7 @@ ny=400
 interpolation='linear'
 compressibility='compressible'
 cov_type='exponential'
+potential='none'
 
 #colors_va = mpl.cm.plasma(np.linspace(0,1,len(vas)))
 colors_tau = mpl.cm.plasma(np.linspace(0,1,len(taus)))
@@ -28,7 +29,7 @@ colors = mpl.cm.viridis(np.linspace(0,1,len(lambdas)))
 
 for phi in phis:
 
-    basedir = os.environ['SCRATCH'] + '/active-assembly-hoomd/manyseed/wca/2d/kT=%f/phi=%f/va=%f' % (kT, phi, va)
+    basedir = os.environ['SCRATCH'] + '/active-assembly-hoomd/manyseed/%s/2d/kT=%f/phi=%f/va=%f' % (potential, kT, phi, va)
 
     #fig, axs = plt.subplots(len(lambdas),1,figsize=(3.0,7.0), sharex=True)
     fig, axs = plt.subplots(1,1)
@@ -52,8 +53,8 @@ for phi in phis:
     axs.set_ylabel(r'$\ell_{c}$')
     axs.legend(fontsize=8, loc='upper left')
     axs.set_xlabel(r'$\tau_a$')
-    axs.set_ylim([0,80])
-    plt.savefig('plots/2d/sq_peak_vary_tau_phi=%f_va=%f_Lx=%.01f_Ly=%.01f.png' % (phi, va, Lx, Ly), dpi=300, bbox_inches='tight')
+    axs.set_ylim([0,30])
+    plt.savefig('plots/2d/sq_peak_%s_vary_tau_phi=%f_va=%f_Lx=%.01f_Ly=%.01f.png' % (potential, phi, va, Lx, Ly), dpi=300, bbox_inches='tight')
     plt.close()
 
     #Quenched case
@@ -73,7 +74,7 @@ for phi in phis:
     axs.plot(lambdas, ls, marker='o', markersize=10)
     axs.set_xlabel(r'$\lambda_a$')
     axs.set_ylabel(r'$l_{\rho}$')
-    axs.set_ylim([0,80])
+    axs.set_ylim([0,30])
 
-    plt.savefig('plots/2d/sq_peak_quenched_vary_lambda_phi=%.01f_va=%.01f_Lx=%.01f_Ly=%.01f.png' % (phi, va, Lx, Ly), dpi=300, bbox_inches='tight')
+    plt.savefig('plots/2d/sq_peak_%s_quenched_vary_lambda_phi=%.01f_va=%.01f_Lx=%.01f_Ly=%.01f.png' % (potential, phi, va, Lx, Ly), dpi=300, bbox_inches='tight')
     plt.close()

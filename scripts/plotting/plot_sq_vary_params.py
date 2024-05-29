@@ -21,14 +21,17 @@ ny=400
 interpolation='linear'
 compressibility='compressible'
 cov_type='exponential'
+potential='none'
 
 #colors_va = mpl.cm.plasma(np.linspace(0,1,len(vas)))
 colors_tau = mpl.cm.plasma(np.linspace(0,1,len(taus)))
 colors_lambda = mpl.cm.plasma(np.linspace(0,1,len(lambdas)))
 
+myxmax = np.pi
+
 for phi in phis:
 
-    basedir = os.environ['SCRATCH'] + '/active-assembly-hoomd/manyseed/wca/2d/kT=%f/phi=%f/va=%f' % (kT, phi, va)
+    basedir = os.environ['SCRATCH'] + '/active-assembly-hoomd/manyseed/%s/2d/kT=%f/phi=%f/va=%f' % (potential, kT, phi, va)
 
     fig, axs = plt.subplots(len(lambdas),1,figsize=(3.0,7.0), sharex=True)
     for j in range(len(lambdas)):
@@ -53,11 +56,11 @@ for phi in phis:
             axs[j].scatter(q1d[theargmax], themax, c='black', marker='*', s=35.0,zorder=10)
             axs[j].scatter(q1d[theargmax], themax, c=colors_tau[i], marker='*', s=15.0, zorder=11)
         axs[j].set_ylabel(r'$S(q)$')
-        axs[j].set_xlim([0,0.5])
+        axs[j].set_xlim([0,myxmax])
         axs[j].set_title(r'$\lambda_{\text{a}}=%.01f$' % Lambda)
     axs[-1].legend(fontsize=8, loc='upper right')
     axs[-1].set_xlabel(r'$q$')
-    plt.savefig('plots/2d/sq_1d_multipanel_vary_tau_phi=%f_va=%f_Lx=%.01f_Ly=%.01f.png' % (phi, va, Lx, Ly), dpi=300, bbox_inches='tight')
+    plt.savefig('plots/2d/sq_%s_1d_multipanel_vary_tau_phi=%f_va=%f_Lx=%.01f_Ly=%.01f.png' % (potential, phi, va, Lx, Ly), dpi=300, bbox_inches='tight')
     plt.close()
 
     #plot the other way
@@ -93,13 +96,13 @@ for phi in phis:
             #axs[i].scatter(q1d[theargmax], themaxnorm, c=colors_lambda[j], marker='*', s=15.0, zorder=11)
 
             #axs[].set_title(r'$\lambda_{\text{a}}=%.01f$' % tau)
-            axs[i].set_xlim([0,0.5])
+            axs[i].set_xlim([0,myxmax])
         axs[0].set_ylabel(r'$S(q)$')
         
     axs[-1].legend(fontsize=8, loc='upper right')
     axs[-1].set_xlabel(r'$q$')
     #plt.tight_layout()
-    plt.savefig('plots/2d/sq_1d_multipanel_vary_Lambda_phi=%f_va=%f_Lx=%.01f_Ly=%.01f.png' % (phi, va, Lx, Ly), dpi=300, bbox_inches='tight')
+    plt.savefig('plots/2d/sq_%s_1d_multipanel_vary_Lambda_phi=%f_va=%f_Lx=%.01f_Ly=%.01f.png' % (potential, phi, va, Lx, Ly), dpi=300, bbox_inches='tight')
     plt.close()
 
     #Quenched case
@@ -135,9 +138,9 @@ for phi in phis:
 
             cnt+=1
             
-            plt.xlim([0,0.5])
+            plt.xlim([0,myxmax])
             #axs.set_ylim([-0.01,200])
     #plt.yscale('log')
     #plt.tight_layout()
-    plt.savefig('plots/2d/sq_1d_quenched_vary_lambda_phi=%.01f_va=%.01f_Lx=%.01f_Ly=%.01f.png' % (phi, va, Lx, Ly), dpi=300, bbox_inches='tight')
+    plt.savefig('plots/2d/sq_%s_1d_quenched_vary_lambda_phi=%.01f_va=%.01f_Lx=%.01f_Ly=%.01f.png' % (potential, phi, va, Lx, Ly), dpi=300, bbox_inches='tight')
     plt.close()

@@ -8,7 +8,7 @@ phi=0.4
 phis=[0.1,0.4]
 va=1.0
 taus = [0.1, 1.0, 10.0, 100.0, float('inf')]
-lambdas = [1.0, 3.0, 5.0, 10.0]
+lambdas = [0.0, 1.0, 3.0, 5.0, 10.0, 20.0]
 Lx=200.000000
 Ly=200.000000
 nx=400
@@ -16,8 +16,9 @@ ny=400
 interpolation='linear'
 compressibility='compressible'
 cov_type='exponential'
+potential='none'
 
-basedir = os.environ['SCRATCH'] + '/active-assembly-hoomd/manyseed/wca/2d/kT=%f/phi=%f/va=%f' % (kT, phi, va)
+basedir = os.environ['SCRATCH'] + '/active-assembly-hoomd/manyseed/%s/2d/kT=%f/phi=%f/va=%f' % (potential, kT, phi, va)
 
 colors_tau = mpl.cm.plasma(np.linspace(0,1,len(taus)+1))
 
@@ -28,7 +29,7 @@ diff_err = np.zeros((len(lambdas),len(taus)))
 fig, axs = plt.subplots(1,2,figsize=(6,2.75), sharex=True, sharey=True)
 for p in range(len(phis)):
     phi = phis[p]
-    basedir = os.environ['SCRATCH'] + '/active-assembly-hoomd/manyseed/wca/2d/kT=%f/phi=%f/va=%f' % (kT, phi, va)
+    basedir = os.environ['SCRATCH'] + '/active-assembly-hoomd/manyseed/%s/2d/kT=%f/phi=%f/va=%f' % (potential, kT, phi, va)
     for i in range(len(lambdas)):
         for j in range(len(taus)):
             tau = taus[j]
@@ -54,4 +55,4 @@ for p in range(len(phis)):
     axs[p].set_xlabel(r'$\lambda_{\text{a}}$')
     axs[0].set_ylabel(r'$\langle|\xi|(\mathbf{r}) \mid \rho(\mathbf{r})=1 \rangle - \langle|\xi|\rangle$')
 #plt.suptitle('Density-noise magnitude cross correlation')
-plt.savefig('plots/2d/wca_conditional_noise.png')
+plt.savefig('plots/2d/%s_conditional_noise.png' % potential)

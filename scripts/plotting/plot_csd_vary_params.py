@@ -22,6 +22,7 @@ lambdas = [1.0, 3.0, 5.0, 10.0]
 interpolation='linear'
 compressibility='compressible'
 cov_type='exponential'
+potential='none'
 
 msize=1.0
 
@@ -30,7 +31,7 @@ colors_tau = mpl.cm.plasma(np.linspace(0,1,len(taus)))
 
 for phi in phis:
 
-    basedir = os.environ['SCRATCH'] + '/active-assembly-hoomd/manyseed/wca/2d/kT=%f/phi=%f/va=%f' % (kT, phi, va)
+    basedir = os.environ['SCRATCH'] + '/active-assembly-hoomd/manyseed/%s/2d/kT=%f/phi=%f/va=%f' % (potential, kT, phi, va)
 
     fig, axs = plt.subplots(len(lambdas),1,figsize=(3.0,7.0), sharex=True)
     for j in range(len(lambdas)):
@@ -56,13 +57,13 @@ for phi in phis:
             #axs[j].scatter(bins[theargmax], themax, c='black', marker='*', s=35.0,zorder=10)
             #axs[j].scatter(bins[theargmax], themax, c=colors_tau[i], marker='*', s=15.0, zorder=11)
         axs[j].set_ylabel(r'$P(n)$')
-        #axs[j].set_xlim([0,0.5])
+        axs[j].set_xlim([0,500])
         axs[j].set_yscale('log')
         #axs[j].set_xscale('log')
         axs[j].set_title(r'$\lambda_{\text{a}}=%.01f$' % Lambda)
     axs[-1].legend(fontsize=8, loc='upper right')
     axs[-1].set_xlabel(r'$n$')
-    plt.savefig('plots/2d/csd_multipanel_vary_tau_phi=%f_va=%f_Lx=%.01f_Ly=%.01f.png' % (phi, va, Lx, Ly), dpi=300, bbox_inches='tight')
+    plt.savefig('plots/2d/csd_%s_multipanel_vary_tau_phi=%f_va=%f_Lx=%.01f_Ly=%.01f.png' % (potential, phi, va, Lx, Ly), dpi=300, bbox_inches='tight')
     plt.close()
 
     #Quenched case
@@ -96,10 +97,10 @@ for phi in phis:
 
             cnt+=1
             
-            #plt.xlim([0,0.5])
+            plt.xlim([0,500])
             #axs.set_ylim([-0.01,200])
     plt.yscale('log')
     #plt.xscale('log')
     #plt.tight_layout()
-    plt.savefig('plots/2d/csd_quenched_vary_lambda_phi=%.01f_va=%.01f_Lx=%.01f_Ly=%.01f.png' % (phi, va, Lx, Ly), dpi=300, bbox_inches='tight')
+    plt.savefig('plots/2d/csd_%s_quenched_vary_lambda_phi=%.01f_va=%.01f_Lx=%.01f_Ly=%.01f.png' % (potential, phi, va, Lx, Ly), dpi=300, bbox_inches='tight')
     plt.close()
