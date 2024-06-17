@@ -126,6 +126,27 @@ def main():
                         z = k-Lz/2
                         if i*int(Ly)*int(Lz)+j*int(Ly)+k<N:
                             position.append((x,y,z))
+        else:
+            volume = Lx*Ly*Lz
+            particle_volume = (4.0/3.0)*np.pi*(sigma/2)**3
+            N_desired = int(np.round(phi*volume/particle_volume))
+
+            nx = int(np.round((phi*volume/particle_volume)**(1.0/3.0)))
+            ny = nx
+            nz = nx
+            a = Lx/nx
+            for i in range(nx):
+                for j in range(ny):
+                    for k in range(nz):
+                        x = i*a-Lx/2
+                        y = j*a-Ly/2
+                        z = k*a-Lz/2
+                        if i*ny*nz+j*nz+k<N_desired:
+                            position.append((x,y,z))
+            print('Actual N:', len(position))
+            print('nx*ny*nz:', nx*ny*nz)
+            print('Desired N:', N_desired)
+            N = len(position)
                     
 
     frame.particles.N = N

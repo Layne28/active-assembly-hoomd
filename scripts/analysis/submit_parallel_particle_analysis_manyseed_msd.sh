@@ -1,16 +1,28 @@
 #!/bin/bash
-#Submit analysis of density and noise cross-correlation
+#Submit analysis of active noise simulation
 
 #SBATCH -A m4494
 #SBATCH --qos=regular
 #SBATCH --nodes=1
 #SBATCH --constraint=cpu
-#SBATCH --time=2:00:00
+#SBATCH --time=1:00:00
 
-njob=32
-nseed=50
+njob=64
 
-potential="wca"
+nseed=100
+
+potential=$1
+phi=$2
+nchunks=$3
+use_one_only=$4
+tmax=$5
+
+numstring='all'
+if [ "${use_one_only}" = "1" ]; then
+    numstring='one'
+fi 
+echo $numstring
+
 interp="linear"
 compressibility="compressible"
 cov_type="exponential"
@@ -18,7 +30,6 @@ d=2
 Lx=200.000000
 nx=400
 
-phi=$1
 #phis=(0.100000 0.400000 0.700000)
 #phis=(0.100000 0.400000)
 phis=($phi)
@@ -28,6 +39,7 @@ vas=(1.000000)
 taus=("tau=0.100000" "tau=1.000000" "tau=10.000000" "tau=100.000000" "quenched")
 #lambdas=(1.000000 3.000000 10.000000 30.000000)
 lambdas=(0.000000 1.000000 3.000000 5.000000 10.000000 20.000000)
+#lambdas=(0.000000 20.000000)
 seeds=($(seq 1 $nseed))
 
 mydir=$SCRATCH
@@ -40,20 +52,19 @@ run_dir=${HOME}/AnalysisTools/AnalysisTools/
 echo ${run_dir}
 
 #Do per-trajectory analysis first
-echo "Doing cross-correlation analysis..."
-srun parallel -k --lb --jobs $njob "python $run_dir/field_particle_correlation.py $SCRATCH/active-assembly-hoomd/manyseed/${potential}/${d}d/kT={1}/phi={2}/va={3}/{4}/lambda={5}/Lx=${Lx}_Ly=${Lx}/nx=${nx}_ny=${nx}/interpolation=${interp}/${compressibility}/${cov_type}/seed={6}/prod/traj.gsd density --noise_file $SCRATCH/active-assembly-hoomd/manyseed/noise/${d}d/{4}/lambda={5}/nx=${nx}_ny=${nx}/${compressibility}/${cov_type}/seed={6}/noise_traj.h5 > $SCRATCH/active-assembly-hoomd/log/density_cross_corr_kT={1}_phi={2}_va={3}_{4}_lambda={5}_seed={6}.out" \
+echo "Getting per-trajectory MSDs..."
+srun parallel -k --lb --jobs $njob "python $run_dir/msd.py $SCRATCH/active-assembly-hoomd/manyseed/${potential}/${d}d/kT={1}/phi={2}/va={3}/{4}/lambda={5}/Lx=${Lx}_Ly=${Lx}/nx=${nx}_ny=${nx}/interpolation=${interp}/${compressibility}/${cov_type}/seed={6}/prod/traj.gsd --nchunks ${nchunks} --tmax ${tmax} --use_one_only ${use_one_only} > $SCRATCH/active-assembly-hoomd/log/msd_kT={1}_phi={2}_va={3}_{4}_lambda={5}_seed={6}.out" \
                         ::: ${kTs[@]} \
                         ::: ${phis[@]} \
                         ::: ${vas[@]} \
                         ::: ${taus[@]} \
                         ::: ${lambdas[@]} \
                         ::: ${seeds[@]} | tr -d \''"\' &
-
-wait   
+wait
 
 #Now do analysis over all trajectories
-echo "Averaging density cross-correlation..."
-srun parallel -k --lb --jobs $njob "python $run_dir/trajectory_stats.py $SCRATCH/active-assembly-hoomd/manyseed/${potential}/${d}d/kT={1}/phi={2}/va={3}/{4}/lambda={5}/Lx=${Lx}_Ly=${Lx}/nx=${nx}_ny=${nx}/interpolation=${interp}/${compressibility}/${cov_type}/ 'density_noise_correlation' average postprocessed > $SCRATCH/active-assembly-hoomd/log/density_noise_corr_avg_kT={1}_phi={2}_va={3}_{4}_lambda={5}_avg.out" \
+echo "Averaging MSDs..."
+srun parallel -k --lb --jobs $njob "python $run_dir/trajectory_stats.py $SCRATCH/active-assembly-hoomd/manyseed/${potential}/${d}d/kT={1}/phi={2}/va={3}/{4}/lambda={5}/Lx=${Lx}_Ly=${Lx}/nx=${nx}_ny=${nx}/interpolation=${interp}/${compressibility}/${cov_type}/ msd_tmax=${tmax}_nchunks=${nchunks}_${numstring} average postprocessed > $SCRATCH/active-assembly-hoomd/log/msd_kT={1}_phi={2}_va={3}_{4}_lambda={5}_avg.out" \
                         ::: ${kTs[@]} \
                         ::: ${phis[@]} \
                         ::: ${vas[@]} \

@@ -24,18 +24,6 @@ def main():
 
     parser = argparse.ArgumentParser()
 
-    parser.add_argument("-phi", "--phi",
-                        help="Packing fraction",
-                        type=float,
-                        dest="phi",
-                        default=0.4)
-    
-    parser.add_argument("-init", "--init_style",
-                        help="'uniform' or 'close_packed'",
-                        type=str,
-                        dest="init_style",
-                        default='uniform')
-    
     parser.add_argument("-d", "--dim",
                         help="2 or 3",
                         type=int,
@@ -59,12 +47,6 @@ def main():
                         type=str,
                         dest="cov_type",
                         default="exponential")
-
-    parser.add_argument("-kT", "--kT",
-                        help="Temperature",
-                        type=float,
-                        dest="kT",
-                        default=0.0)
 
     parser.add_argument("-v", "--va",
                         help="active velocity",
@@ -100,13 +82,7 @@ def main():
                         help="timestep",
                         type=float,
                         dest="dt",
-                        default=2.5e-4)
-
-    parser.add_argument("-p", "--potential",
-                        help="potential energy (wca or lj or none)",
-                        type=str,
-                        dest="potential",
-                        default="wca")
+                        default=1e-2)
 
     parser.add_argument("-f", "--record_time_freq",
                         help="time interval (in units t_LJ) at which to output configurations",
@@ -118,13 +94,7 @@ def main():
                         help="total simulation time (in units t_LJ)",
                         type=float,
                         dest="sim_time",
-                        default=1000)
-    
-    parser.add_argument("-n", "--in_folder",
-                        help="Folder to look for input configurations",
-                        type=str,
-                        dest="in_folder",
-                        default="$SCRATCH/active-assembly-hoomd/initial_configurations")
+                        default=2000)
 
     parser.add_argument("-o", "--out_folder",
                         help="Folder to which to save file",
@@ -146,11 +116,10 @@ def main():
 
     args = parser.parse_args()
 
-    phi = args.phi
-    potential = args.potential
+    phi = 0.0
+    potential = 'none'
     grid_size = args.grid_size
     cov_type = args.cov_type
-    kT = args.kT
     va = args.va
     tau = args.tau
     Lambda = args.Lambda
@@ -161,20 +130,18 @@ def main():
     sim_time = args.sim_time
     dim = args.dim
     out_folder = args.out_folder
-    in_folder = args.in_folder
-    init_style = args.init_style
     seed = args.seed
     seed_file = args.seed_file
     seed_file = os.path.expandvars(seed_file)
     out_folder = os.path.expandvars(out_folder)
-    in_folder = os.path.expandvars(in_folder)
-    print(in_folder)
+
     Lx = args.L
     Ly = args.L
     if dim==3:
         Lz = args.L
 
     #Set default parameter values
+    kT = 0.0
     sigma = 1.0
     epsilon = 1.0
     nsteps=int(sim_time/dt)
@@ -182,20 +149,12 @@ def main():
     stepChunkSize=int(50)
     littleChunkSize=50
     
-    #Check that parameters have acceptable values
-    if phi<0.0 or phi>1.0:
-        print('Error: phi must be between 0 and 1!')
-        exit()
-
     if not (dim==2 or dim==3):
         print('Error: can only work in dimensions 2 or 3.')
         exit()
 
-    #Check for (arbitrary) parameter set for which we'll output active noise
-    if va==1.0 and phi==0.1 and kT==0.0 and potential=='wca':
-        do_output_noise = 1
-    else:
-        do_output_noise = 0
+    #Set this to zero for now
+    do_output_noise = 0
 
     #Read seed from file
     seednum = seed
@@ -269,12 +228,10 @@ def main():
         xpu = hoomd.device.CPU()
     simulation = hoomd.Simulation(device=xpu, seed=seed)
 
-    #Load initial configuration
-    input_file = in_folder
-    if init_style=='uniform':
-        input_file += '/equil/random_dim=%d_phi=%f_L=%f_seed=%d.gsd' % (dim, phi, Lx, seednum)
-    else:
-        input_file += '/lattice/lattice_init_style=%s_dim=%d_phi=%f_L=%f.gsd'
+    #Create initial configuration
+    in_folder = '$HOME/active-assembly-hoomd/initial_configurations/'
+    in_folder = os.path.expandvars(in_folder)
+    input_file = in_folder + 'single_particle/dim=%d_L=%f.gsd' % (dim, Lx)
     simulation.timestep = 0
     simulation.create_state_from_gsd(filename=input_file)
     print('timestep', simulation.timestep)
@@ -288,16 +245,7 @@ def main():
 
     #Set up interaction potential
     cell = hoomd.md.nlist.Cell(buffer=0.4)
-    if potential=="wca":
-        pot = hoomd.md.pair.LJ(nlist=cell, default_r_cut=sigma*2.0**(1.0/6.0), mode='shift')
-        pot.params[('A', 'A')] = dict(epsilon=epsilon, sigma=sigma)
-        integrator.forces.append(pot)
-    elif potential=="lj":
-        pot = hoomd.md.pair.LJ(nlist=cell, default_r_cut=sigma*2.5, mode='shift')
-        pot.params[('A', 'A')] = dict(epsilon=epsilon, sigma=sigma)
-        integrator.forces.append(pot)
-    else:
-        print('Potential "none" selected. Simulating non-interacting particles.')
+    print('Potential "none" selected. Simulating non-interacting particles.')
     
 
     #Use Brownian dynamics
@@ -338,7 +286,8 @@ def main():
     gsd_writer = hoomd.write.GSD(filename=out_folder + '/traj.gsd',
                                  trigger=hoomd.trigger.Periodic(freq),
                                  mode='wb',
-                                 filter=hoomd.filter.All())
+                                 filter=hoomd.filter.All(),
+                                 dynamic=['property', 'particles/image'])
     simulation.operations.writers.append(gsd_writer)
 
     #Add logger
@@ -349,7 +298,7 @@ def main():
         logger.add(pot, quantities=['energies', 'forces', 'virials'])
     logger[('Time', 'time')] = (lambda: simulation.operations.integrator.dt*simulation.timestep, 'scalar')
     progress_logger[('Time', 'time')] = (lambda: simulation.operations.integrator.dt*simulation.timestep, 'scalar')
-    
+
     table = hoomd.write.Table(trigger=hoomd.trigger.Periodic(period=freq),
                               logger=progress_logger)
     simulation.operations.writers.append(table)
