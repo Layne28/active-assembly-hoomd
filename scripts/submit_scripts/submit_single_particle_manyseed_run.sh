@@ -33,7 +33,7 @@ fi
 #default time parameters for va=1
 dt=0.01
 trun=2000
-tfreq=0.25
+tfreq=0.02
 
 if (($(echo "$potential" = "none" | bc -l) )); then
     echo "setting timestep to 0.01"
@@ -43,17 +43,17 @@ fi
 if (( $(echo "$va==2.0" |bc -l) )); then
     dt=0.005
     trun=1000
-    tfreq=0.125
+    tfreq=0.01
 fi
 if (( $(echo "$va==0.5" |bc -l) )); then
     dt=0.02
     trun=4000
-    tfreq=0.5
+    tfreq=0.1
 fi
 if (( $(echo "$va==0.1" |bc -l) )); then
     dt=0.1
     trun=20000
-    tfreq=2.5
+    tfreq=0.2
 fi
 
 outfolder=$SCRATCH/active-assembly-hoomd/manyseed

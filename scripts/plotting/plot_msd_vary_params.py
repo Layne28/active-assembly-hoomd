@@ -13,7 +13,7 @@ va=1.0
 #phis = [0.1,0.4]
 phis=[0.0]
 taus = [0.1, 1.0, 10.0, 100.0]#, float('inf')]
-lambdas = [0.0, 1.0, 3.0, 5.0, 10.0, 20.0]
+lambdas = [1.0, 3.0, 5.0, 10.0, 20.0]
 Lx=200.000000
 Ly=200.000000
 nx=400
@@ -24,7 +24,7 @@ cov_type='exponential'
 potential='none'
 
 numstring='all'
-tmax=100.0
+tmax=200.0
 nchunks=1
 
 #colors_va = mpl.cm.plasma(np.linspace(0,1,len(vas)))
@@ -57,7 +57,7 @@ for phi in phis:
                 taulabel = r'$\tau_a=\infty$'
             axs[j].plot(times,msdavg/msdavg[1],color=colors_tau[i], label=taulabel)#, marker='o')
             #axs[j].fill_between(times, msdavg-2*msderr, msdavg+2*msderr, color=colors_tau[i], alpha=0.4)
-        axs[j].set_ylabel(r'$MSD$')
+        axs[j].set_ylabel(r'MSD')
         #axs[j].set_xlim([0,myxmax])
         axs[j].set_title(r'$\lambda_{\text{a}}=%.01f$' % Lambda)
         axs[j].set_xscale('log')
@@ -100,7 +100,7 @@ for phi in phis:
             axs[i].set_xlabel(r'$t$')
             axs[i].set_xscale('log')
             axs[i].set_yscale('log')
-        axs[0].set_ylabel(r'$MSD$')
+        axs[0].set_ylabel(r'MSD')
         
     axs[-1].legend(fontsize=8, loc='upper right')
     
@@ -132,9 +132,9 @@ for phi in phis:
             #axs.plot(times[1:-1],sqavg[1:], label=r'$\lambda_a=%.01f$' % Lambda)
 
             axs.set_xlabel(r'$t$')
-            axs.set_ylabel(r'$MSD$')
+            axs.set_ylabel(r'MSD')
 
-            axs.legend(loc='upper right')
+            axs.legend()
 
             cnt+=1
             
