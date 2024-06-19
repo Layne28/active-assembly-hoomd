@@ -9,12 +9,12 @@ import AnalysisTools.trajectory_stats as stats
 kT=0.0
 phi=0.0
 va=1.0
-tau=0.1
+tau=100.0
 Lambda=10.0
 
 numstring='all'
 tmax=200.0
-nchunks=1
+nchunks=2
 
 #taus = [0.1, 1.0, 10.0, float('inf')]
 #lambdas = [1.0, 3.0, 10.0, 30.0]
@@ -46,7 +46,14 @@ for i in range(nchunks):
     msderr = msd_data['msd_%d_stderr' % i]
     times = msd_data['times_avg']
 
-axs.plot(times,msdavg/msdavg[1], label=r'chunk %d' % (i+1), color=colors[i], marker='o', linewidth=1.0, markersize=2)
+    print(i)
+    print(msdavg)
+    print(times)
+
+    if msdavg.shape[0] != times.shape[0]:
+        msdavg = msdavg[:-1]
+
+    axs.plot(times,msdavg/msdavg[1], label=r'chunk %d' % (i+1), color=colors[i], marker='o', linewidth=1.0, markersize=2)
 #axs.fill_between(times, msdavg+2*msderr, msdavg-2*msderr, alpha=0.4, color=colors[i])
 #axs.scatter(times[1:-1],sqavg[1:], label=r'$\lambda_a=%.01f$' % Lambda)
 #axs.plot(times[1:-1],sqavg[1:], label=r'$\lambda_a=%.01f$' % Lambda)
