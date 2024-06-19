@@ -19,7 +19,7 @@ def main():
     phi=0.0
     va=1.0
     tau=0.1
-    Lambda=5.0
+    Lambda=1.0
 
     numstring='all'
     tmax=200.0
@@ -66,7 +66,9 @@ def main():
     result = scipy.optimize.least_squares(error_loglog, [1.0, 1.0], ftol=1e-15, xtol=1e-15, gtol=1e-15, method='trf')
     aoup_fit_params_loglog = result.x
 
-    print(msderr)
+    aoup_fit_params_log_alt = msd.fit_aoup(times, msdavg, 2)
+
+    #print(msderr)
     aoup_fit_params, pcov = scipy.optimize.curve_fit(aoup_msd_2d, times[1:], msdavg[1:], sigma=msderr[1:], maxfev=1000)
 
     #result = scipy.optimize.least_squares(error, [1.0, 1.0], ftol=1e-15, xtol=1e-15, gtol=1e-15, method='lm')
@@ -74,6 +76,7 @@ def main():
 
     print('normal:', aoup_fit_params)
     print('log:', aoup_fit_params_loglog)
+    print('new log:', aoup_fit_params_log_alt)
     D_log = aoup_fit_params_loglog[0]
     tau_p_log = aoup_fit_params_loglog[1]#[1]
     D = aoup_fit_params[0]
