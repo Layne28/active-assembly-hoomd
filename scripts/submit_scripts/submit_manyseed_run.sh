@@ -20,6 +20,8 @@ tau=$4
 va=$5
 Lambda=$6
 potential=$7
+compressibility=$8
+kT=$9
 
 minseed=1
 seeds=($(seq 1 $nseed))
@@ -34,7 +36,7 @@ fi
 
 #default time parameters for va=1
 dt=0.0001
-trun=250
+trun=1000 #250
 tfreq=1.0
 
 if (($(echo "$potential" = "none" | bc -l) )); then
@@ -68,7 +70,7 @@ for seedint in "${seedints[@]}"; do
         if [ $seed -le $nseed ]; then
             if [ $seed -ge $minseed ]; then
                 echo "seed $seed"
-                srun --exact -u -n 1 --gpus-per-task 1 -c 32 --mem-per-gpu=55G python $HOME/active-assembly-hoomd/scripts/run.py -f $tfreq -t $trun -o $outfolder -dt $dt --phi $phi -L $L -g $grid_size --seed $seed --tau $tau --va $va --lambda $Lambda --potential $potential > $SCRATCH/active-assembly-hoomd/log/run_manyseed_phi=${phi}_L=${L}_va=${va}_tau=${tau}_lambda=${Lambda}_seed=${seed}.out &
+                srun --exact -u -n 1 --gpus-per-task 1 -c 32 --mem-per-gpu=55G python $HOME/active-assembly-hoomd/scripts/run.py -f $tfreq -t $trun -o $outfolder -dt $dt --phi $phi -L $L -g $grid_size --seed $seed --tau $tau --va $va --lambda $Lambda --kT $kT --potential $potential --compressibility $compressibility > $SCRATCH/active-assembly-hoomd/log/run_manyseed_${compressibility}_phi=${phi}_L=${L}_va=${va}_tau=${tau}_lambda=${Lambda}_seed=${seed}.out &
             fi
         fi
     done

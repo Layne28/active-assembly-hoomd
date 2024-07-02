@@ -13,9 +13,10 @@ nseed=100
 
 potential=$1
 phi=$2
-nchunks=$3
-use_one_only=$4
-tmax=$5
+compressibility=$3
+nchunks=$4
+use_one_only=$5
+tmax=$6
 
 numstring='all'
 if [ "${use_one_only}" = "1" ]; then
@@ -24,7 +25,6 @@ fi
 echo $numstring
 
 interp="linear"
-compressibility="compressible"
 cov_type="exponential"
 d=2
 Lx=200.000000

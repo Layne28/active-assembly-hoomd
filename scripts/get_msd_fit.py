@@ -122,7 +122,7 @@ def main():
 
     axs[0][0].legend(fontsize=8)#loc='upper right') 
 
-    plt.savefig('plots/2d/msd_fit_%s_phi=%.01f_va=%.01f_Lx=%.01f_Ly=%.01f.png' % (potential, phi, va, Lx, Ly), dpi=600, bbox_inches='tight')
+    plt.savefig('plots/2d/msd_fit_%s_%s_phi=%.01f_va=%.01f_Lx=%.01f_Ly=%.01f.png' % (potential, compressibility, phi, va, Lx, Ly), dpi=600, bbox_inches='tight')
     plt.close()
 
 main()

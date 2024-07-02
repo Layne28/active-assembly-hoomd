@@ -18,6 +18,7 @@ L=$2
 tau=$3
 va=$4
 Lambda=$5
+compressibility=$6
 
 minseed=1
 seeds=($(seq 1 $nseed))
@@ -66,7 +67,7 @@ for seedint in "${seedints[@]}"; do
         if [ $seed -le $nseed ]; then
             if [ $seed -ge $minseed ]; then
                 echo "seed $seed"
-                srun --exact -u -n 1 --gpus-per-task 1 -c 32 --mem-per-gpu=55G python $HOME/active-assembly-hoomd/scripts/run_single_particle.py -f $tfreq -t $trun -o $outfolder -dt $dt -L $L -g $grid_size --seed $seed --tau $tau --va $va --lambda $Lambda > $SCRATCH/active-assembly-hoomd/log/run_single_particle_manyseed_L=${L}_va=${va}_tau=${tau}_lambda=${Lambda}_seed=${seed}.out &
+                srun --exact -u -n 1 --gpus-per-task 1 -c 32 --mem-per-gpu=55G python $HOME/active-assembly-hoomd/scripts/run_single_particle.py -f $tfreq -t $trun -o $outfolder -dt $dt -L $L -g $grid_size --seed $seed --tau $tau --va $va --lambda $Lambda --compressibility $compressibility > $SCRATCH/active-assembly-hoomd/log/run_single_particle_manyseed_L=${L}_va=${va}_tau=${tau}_lambda=${Lambda}_seed=${seed}.out &
             fi
         fi
     done
