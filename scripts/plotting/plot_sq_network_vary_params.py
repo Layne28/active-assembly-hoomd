@@ -7,11 +7,11 @@ import AnalysisTools.structure_factor as sq
 import AnalysisTools.trajectory_stats as stats
 
 kT=0.0
-va=1.0
+va=0.3
 #taus = [0.1, 1.0, 10.0, float('inf')]
 #lambdas = [1.0, 3.0, 10.0, 30.0]
 taus = [0.1, 1.0, 10.0, 100.0, float('inf')]
-lambdas = [1.0, 3.0, 5.0, 10.0]
+lambdas = [1.0, 3.0, 5.0, 10.0, 20.0]
 Nx=96
 Ny=112
 nx=200
@@ -49,7 +49,8 @@ for j in range(len(lambdas)):
         axs[j].scatter(q1d[theargmax], themax, c=colors_tau[i], marker='*', s=15.0, zorder=11)
     axs[j].set_ylabel(r'$S(q)$')
     axs[j].set_xlim([0,0.5])
-    #axs[j].set_yscale('log')
+    axs[j].set_xscale('log')
+    axs[j].set_yscale('log')
 axs[-1].legend(fontsize=8, loc='upper right')
 axs[-1].set_xlabel(r'$q$')
 plt.savefig('plots/2d/sq_network_1d_multipanel_vary_tau_va=%f_Nx=%d_Ny=%d.png' % (va, Nx, Ny), dpi=300, bbox_inches='tight')

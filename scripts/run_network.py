@@ -77,6 +77,12 @@ def main():
                         type=float,
                         dest="va",
                         default=1.0)
+
+    parser.add_argument("-kT", "--kT",
+                        help="temperature",
+                        type=float,
+                        dest="kT",
+                        default=0.0)
     
     parser.add_argument("-tau", "--tau",
                         help="active noise correlation time",
@@ -155,6 +161,7 @@ def main():
     potential = args.potential
     integrator_type = args.integrator_type
     cov_type = args.cov_type
+    kT = args.kT
     va = args.va
     tau = args.tau
     Lambda = args.Lambda
@@ -179,7 +186,6 @@ def main():
     print('Using timestep %f' % dt)
 
     #Set default parameter values
-    kT = 0.0
     sigma = 1.0
     epsilon = 1.0
     nsteps=int(sim_time/dt)
@@ -351,7 +357,7 @@ def main():
         #pot = hoomd.md.pair.LJ(nlist=cell, default_r_cut=sigma*2.0**(1.0/6.0))
     else:
         bond_pot = hoomd.md.bond.FENEWCA()
-        bond_pot.params['A-A'] = dict(k=1.0, r0=1.2, epsilon=1.0, sigma=0.9213, delta=0.0)
+        bond_pot.params['A-A'] = dict(k=1.0, r0=0.3, epsilon=0.0, sigma=0.5, delta=1.0)
         #pot = hoomd.md.pair.LJ(nlist=cell, default_r_cut=sigma*2.5)
     integrator.forces.append(bond_pot)
 

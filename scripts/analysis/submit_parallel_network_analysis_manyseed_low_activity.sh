@@ -5,12 +5,12 @@
 #SBATCH --qos=regular
 #SBATCH --nodes=1
 #SBATCH --constraint=cpu
-#SBATCH --time=2:00:00
+#SBATCH --time=3:00:00
 
 njob=64
 
 tmax=100.000000
-nseed=10
+nseed=20
 
 potential="fene"
 interp="linear"
@@ -22,7 +22,7 @@ Ny=112
 nx=200
 
 kTs=(0.000000)
-vas=(0.010000 0.030000 0.100000 0.300000 1.000000)
+vas=(0.010000 0.030000 0.100000) # 0.300000 1.000000)
 taus=("tau=0.100000" "tau=1.000000" "tau=10.000000" "tau=100.000000" "quenched")
 lambdas=(1.000000 3.000000 5.000000 10.000000 20.000000)
 seeds=($(seq 1 $nseed))

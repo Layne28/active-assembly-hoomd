@@ -11,7 +11,8 @@ kT=0.0
 phi=0.1
 va=1.0
 taus = [0.1, 1.0, 10.0, float('inf')]
-lambdas = [1.0, 3.0, 10.0, 30.0]
+#lambdas = [1.0, 3.0, 5.0, 10.0, 20.0]
+lambdas = [20.0]
 Lx=200.000000
 Ly=200.000000
 nx=400
@@ -24,7 +25,7 @@ nseed=10
 #colors_va = mpl.cm.plasma(np.linspace(0,1,len(vas)))
 colors_tau = mpl.cm.plasma(np.linspace(0,1,len(taus)))
 
-basedir = os.environ['SCRATCH'] + '/active-assembly-hoomd/wca/2d/kT=%f/phi=%f/va=%f' % (kT, phi, va)
+basedir = os.environ['SCRATCH'] + '/active-assembly-hoomd/manyseed/wca/2d/kT=%f/phi=%f/va=%f' % (kT, phi, va)
 
 
 for j in range(len(lambdas)):
@@ -42,6 +43,8 @@ for j in range(len(lambdas)):
         traj = io.load_traj(thedir + '/seed=%d/prod/traj.gsd' % (s+1))
 
         axs[s//5][s%5].scatter(traj['pos'][-1,:,0], traj['pos'][-1,:,1], s=0.3, linewidths=0)
+        axs[s//5][s%5].set_xlim([-traj['edges'][0]/2,traj['edges'][0]/2])
+        axs[s//5][s%5].set_ylim([-traj['edges'][1]/2,traj['edges'][1]/2])
         axs[s//5][s%5].set_aspect('equal')
         axs[s//5][s%5].set_xticks([])
         axs[s//5][s%5].set_yticks([])
@@ -49,4 +52,4 @@ for j in range(len(lambdas)):
         axs[s//5][s%5].yaxis.set_tick_params(labelleft=False)
 
     plt.tight_layout()
-    plt.savefig('plots/2d/final_configs_phi=%.01f_va=%.01f_lambda=%.01f_tau=%.01f_Lx=%.01f_Ly=%.01f.png' % (phi, va, Lambda, tau, Lx, Ly), dpi=300, bbox_inches='tight')
+    plt.savefig('plots/2d/final_configs_phi=%.01f_va=%.01f_lambda=%.01f_tau=%.01f_Lx=%.01f_Ly=%.01f.png' % (phi, va, Lambda, tau, Lx, Ly), dpi=600, bbox_inches='tight')

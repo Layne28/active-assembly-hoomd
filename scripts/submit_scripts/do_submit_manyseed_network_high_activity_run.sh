@@ -1,14 +1,14 @@
 #!/bin/bash
 #Do production runs
 
-nseed=10
+nseed=20
 potential="fene"
 
 Nx=96 #192 #96
 Ny=112 #224 #112
 taus=(0.1 1.0 10.0 100.0 inf)
 Lambdas=(1.0 3.0 5.0 10.0 20.0)
-vas=(0.01 0.03 0.10 0.30 1.00)
+vas=(0.30)
 
 for tau in "${taus[@]}"; do
     for va in "${vas[@]}"; do

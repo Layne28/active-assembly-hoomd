@@ -22,8 +22,6 @@ Lambda=$6
 potential=$7
 
 seeds=($(seq 1 $nseed))
-
-
 seedbyfour="$(($nseed / 4))"
 seedints=($(seq 0 "$(($seedbyfour-1))"))
 
@@ -32,7 +30,46 @@ if (( $(echo "$Nx==96" |bc -l) )); then
     grid_size=200
 fi
 echo $grid_size
-dt=0.00005 #0.01
+dt=0.00001 #0.01
+
+if (( $(echo "$va==1.00" |bc -l) )); then
+    dt=0.000003
+    trun=250
+    tfreq=1.0
+fi
+
+if (( $(echo "$va==0.30" |bc -l) )); then
+    dt=0.000005
+    if (( $(echo "$tau==10.0" |bc -l) )); then
+        dt=0.00001
+    fi
+    if (( $(echo "$tau==1.0" |bc -l) )); then
+        dt=0.00001
+    fi
+    if (( $(echo "$tau==0.1" |bc -l) )); then
+        dt=0.00001
+    fi
+    trun=250 #833.333333
+    tfreq=1.0 #3.33333
+fi
+
+if (( $(echo "$va==0.10" |bc -l) )); then
+    dt=0.000033
+    trun=250 #2500
+    tfreq=1.0 #10.0
+fi
+
+if (( $(echo "$va==0.03" |bc -l) )); then
+    dt=0.0001
+    trun=250 #8333.333333
+    tfreq=1.0 #33.333333
+fi
+
+if (( $(echo "$va==0.01" |bc -l) )); then
+    dt=0.000333
+    trun=250 #25000
+    tfreq=1.0 #100.0
+fi
 
 outfolder=$SCRATCH/active-assembly-hoomd/manyseed
 
@@ -42,7 +79,8 @@ for seedint in "${seedints[@]}"; do
     for num in "${nums[@]}"; do
         seed="$(($(($seedint * 4)) + $num))"
         echo "seed $seed"
-        srun --exact -u -n 1 --gpus-per-task 1 -c 32 --mem-per-gpu=55G python $HOME/active-assembly-hoomd/scripts/run_network.py -f 1.0 -t 250 -o $outfolder -dt $dt -Nx $Nx -Ny $Ny -gx $grid_size -gy $grid_size --seed $seed --tau $tau --va $va --lambda $Lambda -p $potential > $SCRATCH/active-assembly-hoomd/log/run_network_manyseed_Nx=${Nx}_Ny=${Ny}_va=${va}_tau=${tau}_lambda=${Lambda}_seed=${seed}.out &
+        srun --exact -u -n 1 --gpus-per-task 1 -c 32 --mem-per-gpu=55G python $HOME/active-assembly-hoomd/scripts/run_network.py -f $tfreq -t $trun -o $outfolder -dt $dt -Nx $Nx -Ny $Ny -gx $grid_size -gy $grid_size --seed $seed --tau $tau --va $va --lambda $Lambda -p $potential > $SCRATCH/active-assembly-hoomd/log/run_network_manyseed_Nx=${Nx}_Ny=${Ny}_va=${va}_tau=${tau}_lambda=${Lambda}_seed=${seed}.out &
     done
     wait
 done
+wait
