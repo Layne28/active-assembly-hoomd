@@ -7,7 +7,7 @@ import AnalysisTools.structure_factor as sq
 import AnalysisTools.trajectory_stats as stats
 
 kT=0.0
-va=0.3
+va=0.03
 #taus = [0.1, 1.0, 10.0, float('inf')]
 #lambdas = [1.0, 3.0, 10.0, 30.0]
 taus = [0.1, 1.0, 10.0, 100.0, float('inf')]

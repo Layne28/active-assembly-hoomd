@@ -36,6 +36,12 @@ def main():
                         dest="L",
                         default=50.0)
     
+    parser.add_argument("-in", "--in_folder",
+                        help="Folder from which to read file",
+                        type=str,
+                        dest="in_folder",
+                        default="$HOME/active-assembly-hoomd/initial_configurations/lattice")
+    
     parser.add_argument("-o", "--out_folder",
                         help="Folder to which to save file",
                         type=str,
@@ -59,11 +65,13 @@ def main():
     phi = args.phi
     dim = args.dim
     out_folder = args.out_folder
+    in_folder = args.in_folder
     init_style = args.init_style
     seed = args.seed
     seed_file = args.seed_file
     seed_file = os.path.expandvars(seed_file)
     out_folder = os.path.expandvars(out_folder)
+    in_folder = os.path.expandvars(in_folder)
     Lx = args.L
     Ly = args.L
     if dim==3:
@@ -102,7 +110,7 @@ def main():
     #else:
     xpu = hoomd.device.GPU()
     simulation = hoomd.Simulation(device=xpu, seed=seed)
-    init_file = 'initial_configurations/lattice/lattice_init_style=%s_dim=%d_phi=%f_L=%f.gsd' % (init_style, dim, phi, Lx)
+    init_file = in_folder + '/lattice_init_style=%s_dim=%d_phi=%f_L=%f.gsd' % (init_style, dim, phi, Lx)
     simulation.create_state_from_gsd(filename=init_file)
 
     #Set up integrator

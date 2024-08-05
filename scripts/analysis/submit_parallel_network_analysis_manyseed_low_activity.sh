@@ -72,13 +72,13 @@ echo ${run_dir}
 #                        ::: ${seeds[@]} | tr -d \''"\' &
 #wait  
 
-srun parallel -k --lb --jobs $njob "python $run_dir/correlation.py $SCRATCH/active-assembly-hoomd/manyseed/${potential}/${d}d/kT={1}/va={2}/{3}/lambda={4}/Nx=${Nx}_Ny=${Ny}/nx=${nx}_ny=${nx}/interpolation=${interp}/${compressibility}/${cov_type}/seed={5}/prod/traj.gsd --nchunks 5 --nlast 3 --quantity stress --corrtype time > $SCRATCH/active-assembly-hoomd/log/stress_time_corr_network_kT={1}_va={2}_{3}_lambda={4}_seed={5}.out" \
-                        ::: ${kTs[@]} \
-                        ::: ${vas[@]} \
-                        ::: ${taus[@]} \
-                        ::: ${lambdas[@]} \
-                        ::: ${seeds[@]} | tr -d \''"\' &
-wait  
+#srun parallel -k --lb --jobs $njob "python $run_dir/correlation.py $SCRATCH/active-assembly-hoomd/manyseed/${potential}/${d}d/kT={1}/va={2}/{3}/lambda={4}/Nx=${Nx}_Ny=${Ny}/nx=${nx}_ny=${nx}/interpolation=${interp}/${compressibility}/${cov_type}/seed={5}/prod/traj.gsd --nchunks 5 --nlast 3 --quantity stress --corrtype time > $SCRATCH/active-assembly-hoomd/log/stress_time_corr_network_kT={1}_va={2}_{3}_lambda={4}_seed={5}.out" \
+#                        ::: ${kTs[@]} \
+#                        ::: ${vas[@]} \
+#                        ::: ${taus[@]} \
+#                        ::: ${lambdas[@]} \
+#                        ::: ${seeds[@]} | tr -d \''"\' &
+#wait  
 
 #srun parallel -k --lb --jobs $njob "python $run_dir/correlation.py $SCRATCH/active-assembly-hoomd/manyseed/${potential}/${d}d/kT={1}/va={2}/{3}/lambda={4}/Nx=${Nx}_Ny=${Ny}/nx=${nx}_ny=${nx}/interpolation=${interp}/${compressibility}/${cov_type}/seed={5}/prod/traj.gsd --nchunks 5 --nlast 3 --quantity stress --corrtype space --rmax 15.0 > $SCRATCH/active-assembly-hoomd/log/stress_spatial_corr_network_kT={1}_va={2}_{3}_lambda={4}_seed={5}.out" \
 #                        ::: ${kTs[@]} \

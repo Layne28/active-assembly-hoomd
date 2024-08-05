@@ -5,14 +5,14 @@
 #SBATCH --qos=regular
 #SBATCH --nodes=1
 #SBATCH --constraint=cpu
-#SBATCH --time=24:00:00
+#SBATCH --time=12:00:00
 
-njob=64
+njob=16
 
 tmax=100.000000
 nseed=50
 
-potential="none"
+potential="wca"
 interp="linear"
 compressibility="compressible"
 cov_type="exponential"
@@ -29,8 +29,8 @@ vas=(1.000000)
 #vas=($1)
 taus=("tau=0.100000" "tau=1.000000" "tau=10.000000" "tau=100.000000" "quenched")
 #lambdas=(1.000000 3.000000 10.000000 30.000000)
-#lambdas=(1.000000 3.000000 5.000000 10.000000)
-lambdas=(0.000000 20.000000)
+lambdas=(1.000000 3.000000 5.000000 10.000000 20.000000)
+#lambdas=(0.000000 20.000000)
 seeds=($(seq 1 $nseed))
 rcs=(1.100000 1.200000 1.300000 1.400000)
 
@@ -40,7 +40,7 @@ module load parallel
 module load conda/Mambaforge-23.1.0-1
 mamba activate hoomd
 
-run_dir=${HOME}/AnalysisTools/AnalysisTools/
+run_dir=${HOME}/AnalysisTools/AnalysisTools
 echo ${run_dir}
 
 #Do per-trajectory analysis first
