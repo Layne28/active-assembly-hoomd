@@ -6,7 +6,7 @@
 #SBATCH --nodes=1
 #SBATCH --constraint=gpu
 #SBATCH --ntasks-per-node=4
-#SBATCH --time=24:00:00
+#SBATCH --time=48:00:00
 
 module load parallel
 module load conda/Mambaforge-23.1.0-1
@@ -20,10 +20,12 @@ tau=$4
 va=$5
 Lambda=$6
 potential=$7
+startseed=$8 #should set default to zero
 
-seeds=($(seq 1 $nseed))
+seeds=($(seq $startseed $nseed))
 seedbyfour="$(($nseed / 4))"
-seedints=($(seq 0 "$(($seedbyfour-1))"))
+startbyfour="$(($startseed / 4))"
+seedints=($(seq $startbyfour "$(($seedbyfour-1))"))
 
 grid_size=400
 if (( $(echo "$Nx==96" |bc -l) )); then

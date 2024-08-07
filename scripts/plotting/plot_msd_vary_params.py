@@ -7,12 +7,13 @@ import AnalysisTools.msd as msd
 import AnalysisTools.trajectory_stats as stats
 
 kT=0.0
-va=1.0
+va=2.0
 #taus = [0.1, 1.0, 10.0, float('inf')]
 #lambdas = [1.0, 3.0, 10.0, 30.0]
 #phis = [0.1,0.4]
 phis=[0.0]
-taus = [0.1, 1.0, 10.0, 100.0]#, float('inf')]
+#taus = [0.1, 1.0, 10.0, 100.0]#, float('inf')]
+taus = [0.1, 1.0, 10.0]#, float('inf')]
 lambdas = [1.0, 3.0, 5.0, 10.0, 20.0]
 Lx=200.000000
 Ly=200.000000
@@ -41,7 +42,10 @@ for phi in phis:
     for j in range(len(lambdas)):
         Lambda = lambdas[j]
         for i in range(len(taus)):
-            tau = taus[i]
+            if taus[i] != float('inf'):
+                tau = taus[i]/va
+            else:
+                tau = taus[i]
             if tau==float('inf'):
                 thedir = basedir + '/quenched/lambda=%f/Lx=%f_Ly=%f/nx=%d_ny=%d/interpolation=%s/%s/%s/' % (Lambda, Lx, Ly, nx, ny, interpolation, compressibility, cov_type)
             else:
@@ -52,7 +56,7 @@ for phi in phis:
             msdavg = msd_data['msd_0_avg']
             msderr = msd_data['msd_0_stderr']
             times = msd_data['times_avg']
-            taulabel = r'$\tau_a=%.01f$' % taus[i]
+            taulabel = r'$v_a \tau_a=%.01f$' % taus[i]
             if tau==float('inf'):
                 taulabel = r'$\tau_a=\infty$'
             axs[j].plot(times,msdavg/msdavg[1],color=colors_tau[i], label=taulabel)#, marker='o')
@@ -72,7 +76,10 @@ for phi in phis:
     for j in range(len(lambdas)):
         Lambda = lambdas[j]
         for i in range(len(taus)):
-            tau = taus[i]
+            if taus[i] != float('inf'):
+                tau = taus[i]/va
+            else:
+                tau = taus[i]
             if tau==float('inf'):
                 thedir = basedir + '/quenched/lambda=%f/Lx=%f_Ly=%f/nx=%d_ny=%d/interpolation=%s/%s/%s/' % (Lambda, Lx, Ly, nx, ny, interpolation, compressibility, cov_type)
             else:
