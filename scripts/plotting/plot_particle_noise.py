@@ -9,7 +9,7 @@ import AnalysisTools.particle_io as io
 
 fig, ax = plt.subplots(1,1)
 
-index = 5
+index = 3
 
 srate = 1
 maxlim=50
@@ -56,7 +56,6 @@ active_forces = traj['active_force']
 
 #ax.scatter(traj['pos'][-1,:,0], traj['pos'][-1,:,1], s=pointsize, linewidths=0.0, c='blue', alpha=0.5)
 ax.quiver(traj['pos'][index,:,0], traj['pos'][index,:,1], active_forces[index,:,0], active_forces[index,:,1], scale_units='xy', scale=2.0, width=0.003, color='blue')
-print(np.min(traj['pos'][-1,:,0]))
 ax.set_xlim([Lx/4+(Lx/12),Lx/2])
 ax.set_ylim([-Ly/8+(Ly/12),Ly/8])
 #ax.set_xlim([Lx/9,Lx/4-0.5-Lx/20])

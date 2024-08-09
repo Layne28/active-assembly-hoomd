@@ -8,7 +8,9 @@ import argparse
 import os
 #import GPUtil
 
-from ActiveNoise import noise as ActiveNoiseGen
+#from ActiveNoise import noise as ActiveNoiseGen
+from ActiveNoise import ActiveNoiseGenerator as ActiveNoiseGen
+from ActiveNoise import noise as altNoise
 from ActiveNoiseHoomd import ActiveNoiseForce as ActiveForce
 from ActiveNoiseHoomd import NoiseWriter
 #import ActiveNoiseForce as ActiveForce
@@ -179,8 +181,8 @@ def main():
     epsilon = 1.0
     nsteps=int(sim_time/dt)
     freq=int(record_time_freq/dt)
-    stepChunkSize=100#int(50)
-    littleChunkSize=100#50
+    stepChunkSize=50#int(50)
+    littleChunkSize=50#50
     
     #Check that parameters have acceptable values
     if phi<0.0 or phi>1.0:
@@ -325,6 +327,7 @@ def main():
     params['cov_type'] = cov_type
     params['compressibility'] = compressibility
     params['verbose'] = False
+    params['seed'] = seed
     if xp==cp:
         params['xpu'] = 'gpu'
     else:
@@ -359,6 +362,9 @@ def main():
 
     gsd_writer.logger = logger
 
+    #Create instance of ActiveNoiseGenerator
+    myGen = ActiveNoiseGen.ActiveNoiseGenerator(**params)
+
     #Run
     print('running...')
     #Treat quenched case separately
@@ -375,7 +381,8 @@ def main():
         params['nsteps'] = 1
         params['chunksize'] = 1
         init_arr = xp.array([]) #will need to change this if we want restart files to be read in
-        noisetraj, init_arr = ActiveNoiseGen.run(init_arr, **params)
+        noisetraj, init_arr = myGen.run(init_arr)
+        #noisetraj, init_arr = altNoise.run(init_arr, **params)
         if do_output_noise==1:
             noise_writer.write(np.array(noisetraj[...,-1]), simulation.timestep)  
         active_force = ActiveForce.ActiveNoiseForce(xp.array(noisetraj), params['chunksize'], edges, spacing, interpolation, simulation.device, is_quenched=1)
@@ -410,7 +417,8 @@ def main():
 
             #Create and output active force
             #noisetraj_old = noisetraj
-            noisetraj, init_arr = ActiveNoiseGen.run(init_arr, **params)
+            noisetraj, init_arr = myGen.run(init_arr)
+            #noisetraj, init_arr = altNoise.run(init_arr, **params)
             #print(noisetraj.shape)
             if step % freq == 0 and do_output_noise==1: #freq will never be less than stepChunkSize
                 print(simulation.timestep)
