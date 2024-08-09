@@ -27,7 +27,7 @@ minseed=1
 seeds=($(seq 1 $nseed))
 
 seedbyfour="$(($nseed / 4))"
-if (( $echo "$seedbyfour==0" | bc -l) ); then
+if (( $(echo "$seedbyfour==0" | bc -l) )); then
     echo "running 1 seed"
     seedbyfour=1
 fi

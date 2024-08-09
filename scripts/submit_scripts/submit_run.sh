@@ -13,11 +13,15 @@ module load conda/Mambaforge-23.1.0-1
 
 mamba activate hoomd
 
-nseed=$1
+seed=$1
 phi=$2
 L=$3
 tau=$4
 va=$5
+Lambda=$6
+potential=$7
+compressibility=$8
+kT=$9
 
 #phis=(0.1 0.4 0.7)
 phis=(0.1 0.4)

@@ -179,8 +179,8 @@ def main():
     epsilon = 1.0
     nsteps=int(sim_time/dt)
     freq=int(record_time_freq/dt)
-    stepChunkSize=int(50)
-    littleChunkSize=50
+    stepChunkSize=100#int(50)
+    littleChunkSize=100#50
     
     #Check that parameters have acceptable values
     if phi<0.0 or phi>1.0:
@@ -192,10 +192,11 @@ def main():
         exit()
 
     #Check for (arbitrary) parameter set for which we'll output active noise
-    if va==1.0 and phi==0.1 and kT==0.0 and potential=='wca':
-        do_output_noise = 1
-    else:
-        do_output_noise = 0
+    do_output_noise = 1
+    #if va==1.0 and (phi==0.1 or phi==0.02) and kT==0.0 and potential=='wca':
+    #    do_output_noise = 1
+    #else:
+    #    do_output_noise = 0
 
     #Read seed from file
     seednum = seed
@@ -204,6 +205,8 @@ def main():
         seed_line = lines[seed-1]
         seed = int(seed_line.strip())
     print('Using random seed: %d' % seed)
+
+    np.random.seed(seed)
 
     #Make output folder
     if not os.path.exists(out_folder):
@@ -374,7 +377,7 @@ def main():
         init_arr = xp.array([]) #will need to change this if we want restart files to be read in
         noisetraj, init_arr = ActiveNoiseGen.run(init_arr, **params)
         if do_output_noise==1:
-            noise_writer.write(np.array(noisetraj[...,0]), simulation.timestep)  
+            noise_writer.write(np.array(noisetraj[...,-1]), simulation.timestep)  
         active_force = ActiveForce.ActiveNoiseForce(xp.array(noisetraj), params['chunksize'], edges, spacing, interpolation, simulation.device, is_quenched=1)
         integrator.forces.append(active_force)
 
@@ -385,6 +388,9 @@ def main():
         #run simulation
         simulation.run(nsteps)
         print('done')
+
+
+    #Non-quenched
     else:
         nchunks = nsteps//stepChunkSize
         if do_output_noise==1:
@@ -403,11 +409,19 @@ def main():
                 init_arr = xp.array([])
 
             #Create and output active force
+            #noisetraj_old = noisetraj
             noisetraj, init_arr = ActiveNoiseGen.run(init_arr, **params)
+            #print(noisetraj.shape)
             if step % freq == 0 and do_output_noise==1: #freq will never be less than stepChunkSize
-                noise_writer.write(np.array(noisetraj[...,0]), simulation.timestep)
+                print(simulation.timestep)
+                if 'noisetraj_old' in locals():
+                    noise_writer.write(np.array(noisetraj_old[...,0]), simulation.timestep)
+                else:
+                    noise_writer.write(np.array(noisetraj[...,0]), simulation.timestep)
+            noisetraj_old = noisetraj
             active_force = ActiveForce.ActiveNoiseForce(xp.array(noisetraj), params['chunksize'], edges, spacing, interpolation, simulation.device)
             integrator.forces.append(active_force)
+            #print(active_force.shape)
 
             #add active force to logger
             logger.add(active_force, quantities=['forces'])
