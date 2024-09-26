@@ -4,6 +4,7 @@
 *.gsd
 slurm*.out
 images/*
+clusterinit*
 *.tga
 *.png
 log/*

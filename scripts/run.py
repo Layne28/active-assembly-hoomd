@@ -279,7 +279,7 @@ def main():
     if init_style=='uniform':
         input_file += '/equil/random_dim=%d_phi=%f_L=%f_seed=%d.gsd' % (dim, phi, Lx, seednum)
     else:
-        input_file += '/lattice/lattice_init_style=%s_dim=%d_phi=%f_L=%f.gsd'
+        input_file += '/lattice/lattice_init_style=%s_dim=%d_phi=%f_L=%f.gsd' % (init_style, dim, phi, Lx)
     simulation.timestep = 0
     simulation.create_state_from_gsd(filename=input_file)
     print('timestep', simulation.timestep)

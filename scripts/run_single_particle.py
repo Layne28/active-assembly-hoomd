@@ -113,6 +113,12 @@ def main():
                         type=str,
                         dest="seed_file",
                         default="$HOME/hoomd_seeds.txt")
+    
+    parser.add_argument("-donoise", "--do_output_noise",
+                        help="Whether to output noise trajectory",
+                        type=int,
+                        dest="do_output_noise",
+                        default=0)
 
     args = parser.parse_args()
 
@@ -134,6 +140,7 @@ def main():
     seed_file = args.seed_file
     seed_file = os.path.expandvars(seed_file)
     out_folder = os.path.expandvars(out_folder)
+    do_output_noise = args.do_output_noise
 
     Lx = args.L
     Ly = args.L
@@ -152,9 +159,6 @@ def main():
     if not (dim==2 or dim==3):
         print('Error: can only work in dimensions 2 or 3.')
         exit()
-
-    #Set this to zero for now
-    do_output_noise = 0
 
     #Read seed from file
     seednum = seed

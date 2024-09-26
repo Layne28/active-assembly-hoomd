@@ -10,11 +10,11 @@
 njob=16
 
 tmax=100.000000
-nseed=50
+nseed=1 #50
 
-potential="wca"
+potential="lj" #"wca"
 interp="linear"
-compressibility="compressible"
+compressibility="incompressible" #"compressible"
 cov_type="exponential"
 d=2
 Lx=200.000000
@@ -24,8 +24,8 @@ phi=$1
 #phis=(0.100000 0.400000 0.700000)
 #phis=(0.100000 0.400000)
 phis=($phi)
-kTs=(0.000000)
-vas=(1.000000)
+kTs=(0.300000) #(0.000000)
+vas=(3.000000) #(1.000000)
 #vas=($1)
 taus=("tau=0.100000" "tau=1.000000" "tau=10.000000" "tau=100.000000" "quenched")
 #lambdas=(1.000000 3.000000 10.000000 30.000000)
