@@ -6,7 +6,7 @@
 #SBATCH --nodes=1
 #SBATCH --constraint=gpu
 #SBATCH --ntasks-per-node=4
-#SBATCH --time=24:00:00
+#SBATCH --time=14:00:00
 
 module load parallel
 module load conda/Mambaforge-23.1.0-1
@@ -22,6 +22,7 @@ Lambda=$6
 potential=$7
 compressibility=$8
 kT=$9
+eps=${10}
 
 minseed=1
 seeds=($(seq 1 $nseed))
@@ -44,21 +45,22 @@ if (($(echo "$potential" = "none" | bc -l) )); then
     dt=0.01
 fi
 
-if (( $(echo "$va==2.0" |bc -l) )); then
-    dt=0.00005
-    trun=125
-    tfreq=0.5
-fi
-if (( $(echo "$va==0.5" |bc -l) )); then
-    dt=0.0002
-    trun=500
-    tfreq=2.0
-fi
-if (( $(echo "$va==0.1" |bc -l) )); then
-    dt=0.001
-    trun=2500
-    tfreq=10.0
-fi
+#For old hard sphere simulations
+#if (( $(echo "$va==2.0" |bc -l) )); then
+#    dt=0.00005
+#    trun=125
+#    tfreq=0.5
+#fi
+#if (( $(echo "$va==0.5" |bc -l) )); then
+#    dt=0.0002
+#    trun=500
+#    tfreq=2.0
+#fi
+#if (( $(echo "$va==0.1" |bc -l) )); then
+#    dt=0.001
+#    trun=2500
+#    tfreq=10.0
+#fi
 
 outfolder=$SCRATCH/active-assembly-hoomd/manyseed
 
@@ -70,7 +72,7 @@ for seedint in "${seedints[@]}"; do
         if [ $seed -le $nseed ]; then
             if [ $seed -ge $minseed ]; then
                 echo "seed $seed"
-                srun --exact -u -n 1 --gpus-per-task 1 -c 32 --mem-per-gpu=55G python $HOME/active-assembly-hoomd/scripts/run.py -f $tfreq -t $trun -o $outfolder -dt $dt --phi $phi -L $L -g $grid_size --seed $seed --tau $tau --va $va --lambda $Lambda --kT $kT --potential $potential --compressibility $compressibility > $SCRATCH/active-assembly-hoomd/log/run_manyseed_${compressibility}_phi=${phi}_L=${L}_va=${va}_tau=${tau}_lambda=${Lambda}_seed=${seed}.out &
+                srun --exact -u -n 1 --gpus-per-task 1 -c 32 --mem-per-gpu=55G python $HOME/active-assembly-hoomd/scripts/run.py -f $tfreq -t $trun -o $outfolder -dt $dt --phi $phi -L $L -g $grid_size --seed $seed --tau $tau --va $va --lambda $Lambda --kT $kT --potential $potential --compressibility $compressibility --epsilon $eps > $SCRATCH/active-assembly-hoomd/log/run_manyseed_${compressibility}_phi=${phi}_L=${L}_eps=${eps}_va=${va}_tau=${tau}_lambda=${Lambda}_seed=${seed}.out &
             fi
         fi
     done

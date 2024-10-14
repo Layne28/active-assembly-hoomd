@@ -67,6 +67,12 @@ def main():
                         type=float,
                         dest="kT",
                         default=0.0)
+    
+    parser.add_argument("-eps", "--epsilon",
+                        help="LJ epsilon",
+                        type=float,
+                        dest="epsilon",
+                        default=1.0)
 
     parser.add_argument("-v", "--va",
                         help="active velocity",
@@ -153,6 +159,7 @@ def main():
     grid_size = args.grid_size
     cov_type = args.cov_type
     kT = args.kT
+    epsilon = args.epsilon
     va = args.va
     tau = args.tau
     Lambda = args.Lambda
@@ -178,7 +185,7 @@ def main():
 
     #Set default parameter values
     sigma = 1.0
-    epsilon = 1.0
+    
     nsteps=int(sim_time/dt)
     freq=int(record_time_freq/dt)
     stepChunkSize=50#int(50)
@@ -196,9 +203,10 @@ def main():
     #Check for (arbitrary) parameter set for which we'll output active noise
     do_output_noise = 1
     #if va==1.0 and (phi==0.1 or phi==0.02) and kT==0.0 and potential=='wca':
-    #    do_output_noise = 1
-    #else:
-    #    do_output_noise = 0
+    if va==1.0 and (phi==0.1 or phi==0.02) and kT==1.0 and epsilon==3.0:
+        do_output_noise = 1
+    else:
+        do_output_noise = 0
 
     #Read seed from file
     seednum = seed
@@ -233,6 +241,7 @@ def main():
     out_folder += '/%s' % potential
     out_folder += '/%dd' % dim
     out_folder += '/kT=%f' % kT
+    out_folder += '/epsilon=%f' % epsilon
     out_folder += '/phi=%f' % phi
     out_folder += '/va=%f' % va
     if math.isinf(tau):
